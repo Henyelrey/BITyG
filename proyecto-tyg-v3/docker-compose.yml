@@ -1,0 +1,44 @@
+name: tyg-architecture
+
+services:
+  # Contenedor 1: El corazón transaccional de TyG
+  mysql-tyg-oltp:
+    image: mysql:8.4
+    container_name: tyg-oltp-container
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bd_transaccional
+      TZ: America/Lima
+    ports:
+      - "23306:3306" # Puerto externo 13306
+    volumes:
+      - ./mysql-oltp/init:/docker-entrypoint-initdb.d
+      - tyg_oltp_data:/var/lib/mysql
+    networks:
+      - tyg-network
+
+  # Contenedor 2: El Data Mart para Inteligencia de Negocios
+  mysql-tyg-bi:
+    image: mysql:8.4
+    container_name: tyg-bi-container
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tyg_datamart
+      TZ: America/Lima
+    ports:
+      - "33306:3306" # Puerto externo 23306 para diferenciarlo
+    volumes:
+      - ./mysql-bi/init:/docker-entrypoint-initdb.d
+      - tyg_bi_data:/var/lib/mysql
+    networks:
+      - tyg-network
+
+volumes:
+  tyg_oltp_data:
+  tyg_bi_data:
+
+networks:
+  tyg-network:
+    driver: bridge
