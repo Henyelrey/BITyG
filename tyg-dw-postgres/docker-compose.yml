@@ -1,0 +1,19 @@
+name: tyg-postgres-dw
+
+services:
+  postgres-dw:
+    image: postgres:15
+    container_name: tyg-postgres-dw
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: dw_tyg
+      TZ: America/Lima
+    ports:
+      - "5452:5432"
+    volumes:
+      - pg_dw_data:/var/lib/postgresql/data
+
+volumes:
+  pg_dw_data:
