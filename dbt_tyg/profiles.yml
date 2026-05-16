@@ -1,0 +1,13 @@
+tyg_datamart:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('PG_HOST', 'localhost') }}"
+      port: "{{ env_var('PG_PORT', '5432') | int }}"
+      user: "{{ env_var('PG_USER', 'postgres') }}"
+      password: "{{ env_var('PG_PASSWORD', 'root') }}"
+      dbname: "{{ env_var('PG_DB', 'tyg_datamart') }}"
+      schema: marts
+      threads: 4
+      connect_timeout: 10

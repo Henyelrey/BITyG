@@ -1,0 +1,25 @@
+name: 'tyg_datamart'
+version: '1.0.0'
+config-version: 2
+
+profile: 'tyg_datamart'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  tyg_datamart:
+    staging:
+      +materialized: view        # Vistas livianas sobre raw
+      +schema: staging
+    marts:
+      +materialized: incremental # Tablas físicas en schema marts
+      +schema: marts

@@ -1,0 +1,95 @@
+name: tyg-architecture-v4
+
+services:
+  # ─────────────────────────────────────────────────────────────
+  # Contenedor 1: OLTP — MySQL 8.4 (sin cambios, misma fuente)
+  # ─────────────────────────────────────────────────────────────
+  mysql-tyg-oltp:
+    image: mysql:8.4
+    container_name: tyg-oltp-container
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bd_transaccional
+      TZ: America/Lima
+    ports:
+      - "23306:3306"
+    volumes:
+      - ./mysql-oltp/init:/docker-entrypoint-initdb.d
+      - tyg_oltp_data:/var/lib/mysql
+    networks:
+      - tyg-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─────────────────────────────────────────────────────────────
+  # Contenedor 2: DW/DataMart — PostgreSQL 16 (NUEVO)
+  #   • Puerto 5432 expuesto al host
+  #   • Inicialización automática con schema + metadatos CDC
+  # ─────────────────────────────────────────────────────────────
+  postgres-tyg-bi:
+    image: postgres:16
+    container_name: tyg-bi-container
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: tyg_datamart
+      TZ: America/Lima
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-bi/init:/docker-entrypoint-initdb.d
+      - tyg_bi_data:/var/lib/postgresql/data
+    networks:
+      - tyg-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d tyg_datamart"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─────────────────────────────────────────────────────────────
+  # Contenedor 3: ETL Runner — Python con CDC + DBT
+  #   • Espera a que ambas BD estén listas (depends_on + healthcheck)
+  #   • Ejecuta ingest.py y luego dbt run en ciclo cada 5 min
+  # ─────────────────────────────────────────────────────────────
+  etl-runner:
+    build:
+      context: ./etl
+      dockerfile: Dockerfile
+    container_name: tyg-etl-container
+    restart: unless-stopped
+    depends_on:
+      mysql-tyg-oltp:
+        condition: service_healthy
+      postgres-tyg-bi:
+        condition: service_healthy
+    environment:
+      MYSQL_HOST: mysql-tyg-oltp
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DB: bd_transaccional
+      PG_HOST: postgres-tyg-bi
+      PG_PORT: 5432
+      PG_USER: postgres
+      PG_PASSWORD: root
+      PG_DB: tyg_datamart
+      ETL_INTERVAL_SECONDS: 300   # 5 minutos
+    volumes:
+      - ./dbt_tyg:/app/dbt_tyg
+      - ./etl:/app/etl
+    networks:
+      - tyg-network
+
+volumes:
+  tyg_oltp_data:
+  tyg_bi_data:
+
+networks:
+  tyg-network:
+    driver: bridge

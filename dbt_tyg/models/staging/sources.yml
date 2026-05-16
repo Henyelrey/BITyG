@@ -1,0 +1,45 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Capa de staging: datos crudos replicados desde MySQL por el CDC incremental"
+    schema: raw
+    tables:
+      - name: ventas
+        description: "Transacciones de venta de kits TyG"
+        columns:
+          - name: venta_id
+            tests: [not_null, unique]
+          - name: fecha_venta
+            tests: [not_null]
+          - name: canal_venta
+            tests:
+              - accepted_values:
+                  values: ['DIRECTO', 'PDV']
+
+      - name: recepciones
+        description: "Recepción de inventario de kits en oficinas"
+        columns:
+          - name: recepcion_id
+            tests: [not_null, unique]
+
+      - name: activaciones
+        description: "Activaciones de kits post-venta"
+        columns:
+          - name: activacion_id
+            tests: [not_null, unique]
+
+      - name: oficinas
+        description: "Catálogo de oficinas de TyG"
+        columns:
+          - name: oficina_id
+            tests: [not_null, unique]
+
+      - name: vendedores
+        description: "Vendedores del canal DIRECTO"
+
+      - name: asesores
+        description: "Asesores del canal PDV"
+
+      - name: metas
+        description: "Metas mensuales de kits por oficina/vendedor"

@@ -1,0 +1,19 @@
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ingresos_s
+from "tyg_datamart"."marts_marts"."hecho_ventas"
+where ingresos_s is null
+
+
+
+      
+    ) dbt_internal_test

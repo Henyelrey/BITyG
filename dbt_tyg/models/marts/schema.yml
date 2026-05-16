@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: stg_ventas
+    description: "Vista staging: enriquece raw.ventas con lógica de negocio TyG (equivalente a vw_g_ventas_tyg en MySQL)"
+    columns:
+      - name: venta_id
+        tests: [not_null, unique]
+      - name: monto_calculado
+        tests: [not_null]
+      - name: canal_venta
+        tests:
+          - accepted_values:
+              values: ['DIRECTO', 'PDV']
+
+  - name: dim_tiempo
+    description: "Dimensión tiempo con jerarquía Año→Trimestre→Mes→Semana→Día"
+    columns:
+      - name: dtiem_id
+        tests: [not_null, unique]
+      - name: fecha
+        tests: [not_null]
+
+  - name: dim_oficina
+    description: "Dimensión oficina con jerarquía Región→Departamento→Zona→Oficina"
+    columns:
+      - name: oficina_id
+        tests: [not_null, unique]
+
+  - name: hecho_ventas
+    description: >
+      Tabla de hechos principal. Grano: una fila por venta.
+      KPIs: P1-1 Tasa Activación, P1-2 Ingresos, P1-3 Contribución %.
+    columns:
+      - name: venta_id
+        tests: [not_null, unique]
+      - name: ingresos_s
+        tests: [not_null]
+      - name: canal_venta
+        tests:
+          - accepted_values:
+              values: ['DIRECTO', 'PDV']
+
+  - name: hecho_inventario
+    description: >
+      Hechos de inventario por unidad (recepción).
+      KPIs: P2-1 Kits Riesgo 90d, P2-2 Días Inactivo, P2-3 Rotación Lote.
+    columns:
+      - name: recepcion_id
+        tests: [not_null, unique]
+
+  - name: hecho_canal
+    description: >
+      Hechos de mix de canal agregados por mes × oficina.
+      KPI: P3-1 % participación Directo vs PDV.
+    columns:
+      - name: dtiem_id
+        tests: [not_null]
+      - name: dofic_id
+        tests: [not_null]
+
+  - name: hecho_desempeno
+    description: >
+      Hechos de desempeño por mes × oficina × asesor/vendedor.
+      KPIs: P3-2 Cumplimiento Meta, P3-3 Kits x Asesor y % Inactivos.
