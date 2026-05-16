@@ -11,7 +11,7 @@
     
 
     merge into "tyg_datamart"."marts_marts"."hecho_inventario" as DBT_INTERNAL_DEST
-        using "hecho_inventario__dbt_tmp054739726299" as DBT_INTERNAL_SOURCE
+        using "hecho_inventario__dbt_tmp055753410509" as DBT_INTERNAL_SOURCE
         on (
                 DBT_INTERNAL_SOURCE.recepcion_id = DBT_INTERNAL_DEST.recepcion_id
             )
