@@ -135791,3 +135791,1288 @@ having count(*) > 1
 [0m05:57:56.493478 [debug] [MainThread]: Command `dbt test` succeeded at 05:57:56.493400 after 1.04 seconds
 [0m05:57:56.493794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x702cca31acc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x702cc41b3fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x702cc2646210>]}
 [0m05:57:56.494099 [debug] [MainThread]: Flushing usage events
+[0m06:02:59.272110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170ecf8560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170f718830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170ec2d880>]}
+
+
+============================== 06:02:59.274682 | 20df0825-7835-49e5-8bec-f064898df591 ==============================
+[0m06:02:59.274682 [info ] [MainThread]: Running with dbt=1.8.2
+[0m06:02:59.275133 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/app/dbt_tyg', 'log_path': '/app/dbt_tyg/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir /app/dbt_tyg --project-dir /app/dbt_tyg', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m06:02:59.379296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170e3168d0>]}
+[0m06:02:59.413267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170ebd1730>]}
+[0m06:02:59.414450 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m06:02:59.454647 [debug] [MainThread]: checksum: f0a141b9de567cb7f131613ba2682f40b3a1c6a157f81c6e5435862eff68f109, vars: {}, profile: , target: , version: 1.8.2
+[0m06:02:59.652541 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:02:59.653017 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:02:59.678612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170df29100>]}
+[0m06:02:59.757715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170d7d96a0>]}
+[0m06:02:59.758163 [info ] [MainThread]: Found 7 models, 27 data tests, 7 sources, 428 macros
+[0m06:02:59.758532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170d39c470>]}
+[0m06:02:59.760425 [info ] [MainThread]: 
+[0m06:02:59.761022 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m06:02:59.763721 [debug] [ThreadPool]: Acquiring new postgres connection 'list_tyg_datamart'
+[0m06:02:59.770813 [debug] [ThreadPool]: Acquiring new postgres connection 'list_tyg_datamart'
+[0m06:02:59.787872 [debug] [ThreadPool]: Using postgres connection "list_tyg_datamart"
+[0m06:02:59.788159 [debug] [ThreadPool]: Using postgres connection "list_tyg_datamart"
+[0m06:02:59.788433 [debug] [ThreadPool]: On list_tyg_datamart: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "connection_name": "list_tyg_datamart"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:02:59.788754 [debug] [ThreadPool]: On list_tyg_datamart: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "connection_name": "list_tyg_datamart"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m06:02:59.789046 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:02:59.789322 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:02:59.794204 [debug] [ThreadPool]: SQL status: SELECT 31 in 0.005 seconds
+[0m06:02:59.794463 [debug] [ThreadPool]: SQL status: SELECT 31 in 0.005 seconds
+[0m06:02:59.795301 [debug] [ThreadPool]: On list_tyg_datamart: Close
+[0m06:02:59.796329 [debug] [ThreadPool]: On list_tyg_datamart: Close
+[0m06:02:59.797765 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_tyg_datamart, now list_tyg_datamart_marts_marts)
+[0m06:02:59.798185 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_tyg_datamart, now list_tyg_datamart_marts_staging)
+[0m06:02:59.801669 [debug] [ThreadPool]: Using postgres connection "list_tyg_datamart_marts_marts"
+[0m06:02:59.802859 [debug] [ThreadPool]: Using postgres connection "list_tyg_datamart_marts_staging"
+[0m06:02:59.803170 [debug] [ThreadPool]: On list_tyg_datamart_marts_marts: BEGIN
+[0m06:02:59.803442 [debug] [ThreadPool]: On list_tyg_datamart_marts_staging: BEGIN
+[0m06:02:59.803721 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m06:02:59.804011 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m06:02:59.807500 [debug] [ThreadPool]: SQL status: BEGIN in 0.004 seconds
+[0m06:02:59.808079 [debug] [ThreadPool]: SQL status: BEGIN in 0.004 seconds
+[0m06:02:59.808326 [debug] [ThreadPool]: Using postgres connection "list_tyg_datamart_marts_marts"
+[0m06:02:59.808717 [debug] [ThreadPool]: Using postgres connection "list_tyg_datamart_marts_staging"
+[0m06:02:59.809090 [debug] [ThreadPool]: On list_tyg_datamart_marts_marts: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "connection_name": "list_tyg_datamart_marts_marts"} */
+select
+      'tyg_datamart' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts_marts'
+    union all
+    select
+      'tyg_datamart' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts_marts'
+    union all
+    select
+      'tyg_datamart' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts_marts'
+  
+[0m06:02:59.809443 [debug] [ThreadPool]: On list_tyg_datamart_marts_staging: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "connection_name": "list_tyg_datamart_marts_staging"} */
+select
+      'tyg_datamart' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts_staging'
+    union all
+    select
+      'tyg_datamart' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts_staging'
+    union all
+    select
+      'tyg_datamart' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts_staging'
+  
+[0m06:02:59.811409 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.001 seconds
+[0m06:02:59.811666 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.002 seconds
+[0m06:02:59.812580 [debug] [ThreadPool]: On list_tyg_datamart_marts_staging: ROLLBACK
+[0m06:02:59.813485 [debug] [ThreadPool]: On list_tyg_datamart_marts_marts: ROLLBACK
+[0m06:02:59.813920 [debug] [ThreadPool]: On list_tyg_datamart_marts_staging: Close
+[0m06:02:59.814204 [debug] [ThreadPool]: On list_tyg_datamart_marts_marts: Close
+[0m06:02:59.818612 [debug] [MainThread]: Using postgres connection "master"
+[0m06:02:59.818934 [debug] [MainThread]: On master: BEGIN
+[0m06:02:59.819183 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m06:02:59.822864 [debug] [MainThread]: SQL status: BEGIN in 0.004 seconds
+[0m06:02:59.823784 [debug] [MainThread]: Using postgres connection "master"
+[0m06:02:59.824275 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m06:02:59.828928 [debug] [MainThread]: SQL status: SELECT 3 in 0.004 seconds
+[0m06:02:59.829846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170e391d90>]}
+[0m06:02:59.830219 [debug] [MainThread]: On master: ROLLBACK
+[0m06:02:59.830675 [debug] [MainThread]: Using postgres connection "master"
+[0m06:02:59.831146 [debug] [MainThread]: On master: BEGIN
+[0m06:02:59.831830 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m06:02:59.832339 [debug] [MainThread]: On master: COMMIT
+[0m06:02:59.832745 [debug] [MainThread]: Using postgres connection "master"
+[0m06:02:59.833062 [debug] [MainThread]: On master: COMMIT
+[0m06:02:59.833506 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m06:02:59.833966 [debug] [MainThread]: On master: Close
+[0m06:02:59.834453 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m06:02:59.834754 [info ] [MainThread]: 
+[0m06:02:59.837556 [debug] [Thread-1 (]: Began running node model.tyg_datamart.dim_oficina
+[0m06:02:59.837861 [debug] [Thread-2 (]: Began running node model.tyg_datamart.dim_tiempo
+[0m06:02:59.838165 [debug] [Thread-3 (]: Began running node model.tyg_datamart.hecho_canal
+[0m06:02:59.838798 [debug] [Thread-4 (]: Began running node model.tyg_datamart.hecho_desempeno
+[0m06:02:59.838509 [info ] [Thread-1 (]: 1 of 7 START sql incremental model marts_marts.dim_oficina ..................... [RUN]
+[0m06:02:59.839268 [info ] [Thread-2 (]: 2 of 7 START sql incremental model marts_marts.dim_tiempo ...................... [RUN]
+[0m06:02:59.839672 [info ] [Thread-3 (]: 3 of 7 START sql incremental model marts_marts.hecho_canal ..................... [RUN]
+[0m06:02:59.840048 [info ] [Thread-4 (]: 4 of 7 START sql incremental model marts_marts.hecho_desempeno ................. [RUN]
+[0m06:02:59.840498 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_tyg_datamart_marts_marts, now model.tyg_datamart.dim_oficina)
+[0m06:02:59.841036 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_tyg_datamart_marts_staging, now model.tyg_datamart.dim_tiempo)
+[0m06:02:59.841440 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.tyg_datamart.hecho_canal'
+[0m06:02:59.841907 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.tyg_datamart.hecho_desempeno'
+[0m06:02:59.842205 [debug] [Thread-1 (]: Began compiling node model.tyg_datamart.dim_oficina
+[0m06:02:59.842491 [debug] [Thread-2 (]: Began compiling node model.tyg_datamart.dim_tiempo
+[0m06:02:59.842779 [debug] [Thread-3 (]: Began compiling node model.tyg_datamart.hecho_canal
+[0m06:02:59.843051 [debug] [Thread-4 (]: Began compiling node model.tyg_datamart.hecho_desempeno
+[0m06:02:59.850983 [debug] [Thread-1 (]: Writing injected SQL for node "model.tyg_datamart.dim_oficina"
+[0m06:02:59.853732 [debug] [Thread-2 (]: Writing injected SQL for node "model.tyg_datamart.dim_tiempo"
+[0m06:02:59.856161 [debug] [Thread-3 (]: Writing injected SQL for node "model.tyg_datamart.hecho_canal"
+[0m06:02:59.858869 [debug] [Thread-4 (]: Writing injected SQL for node "model.tyg_datamart.hecho_desempeno"
+[0m06:02:59.863084 [debug] [Thread-2 (]: Began executing node model.tyg_datamart.dim_tiempo
+[0m06:02:59.863400 [debug] [Thread-4 (]: Began executing node model.tyg_datamart.hecho_desempeno
+[0m06:02:59.868848 [debug] [Thread-3 (]: Began executing node model.tyg_datamart.hecho_canal
+[0m06:02:59.891024 [debug] [Thread-1 (]: Began executing node model.tyg_datamart.dim_oficina
+[0m06:02:59.900930 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.dim_tiempo"
+[0m06:02:59.902610 [debug] [Thread-4 (]: Using postgres connection "model.tyg_datamart.hecho_desempeno"
+[0m06:02:59.905631 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.hecho_canal"
+[0m06:02:59.907770 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.dim_oficina"
+[0m06:02:59.908170 [debug] [Thread-2 (]: On model.tyg_datamart.dim_tiempo: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.dim_tiempo"} */
+
+    
+  
+    
+
+  create temporary table "dim_tiempo__dbt_tmp060259881243"
+  
+  
+    as
+  
+  (
+    -- =============================================================
+-- dim_tiempo.sql — Dimensión Tiempo
+-- Genera la jerarquía: Año → Trimestre → Mes → Semana → Día
+-- Incluye fechas de venta Y fechas de recepción (KPI P2)
+-- Materialización incremental: agrega solo fechas nuevas.
+-- =============================================================
+
+
+WITH fechas_ventas AS (
+    SELECT DISTINCT fecha_venta AS fecha
+    FROM "tyg_datamart"."raw"."ventas"
+    WHERE fecha_venta IS NOT NULL
+    
+      AND fecha_venta > (SELECT COALESCE(MAX(fecha), '2000-01-01') FROM "tyg_datamart"."marts_marts"."dim_tiempo")
+    
+),
+
+fechas_recepciones AS (
+    SELECT DISTINCT fecha_recepcion AS fecha
+    FROM "tyg_datamart"."raw"."recepciones"
+    WHERE fecha_recepcion IS NOT NULL
+    
+      AND fecha_recepcion > (SELECT COALESCE(MAX(fecha), '2000-01-01') FROM "tyg_datamart"."marts_marts"."dim_tiempo")
+    
+),
+
+todas_fechas AS (
+    SELECT fecha FROM fechas_ventas
+    UNION
+    SELECT fecha FROM fechas_recepciones
+)
+
+SELECT
+    TO_CHAR(fecha, 'YYYYMMDD')::INT            AS dtiem_id,
+    fecha,
+    EXTRACT(DAY   FROM fecha)::SMALLINT        AS dia,
+    EXTRACT(WEEK  FROM fecha)::SMALLINT        AS semana,
+    EXTRACT(MONTH FROM fecha)::SMALLINT        AS mes,
+    TO_CHAR(fecha, 'TMMonth')                  AS nombre_mes,
+    EXTRACT(QUARTER FROM fecha)::SMALLINT      AS trimestre,
+    EXTRACT(YEAR  FROM fecha)::SMALLINT        AS anio,
+    NULL::DATE                                 AS fecha_recepcion,
+    fecha                                      AS fecha_venta
+FROM todas_fechas
+  );
+  
+  
+[0m06:02:59.908629 [debug] [Thread-4 (]: On model.tyg_datamart.hecho_desempeno: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_desempeno"} */
+
+    
+  
+    
+
+  create temporary table "hecho_desempeno__dbt_tmp060259886852"
+  
+  
+    as
+  
+  (
+    -- =============================================================
+-- hecho_desempeno.sql — Desempeño de Asesores / PDV
+-- KPI P3-2 Cumplimiento Meta | P3-3 Kits x Asesor % Inactivos
+-- Grano: mes × oficina × asesor_o_pdv
+-- =============================================================
+
+
+WITH ventas_asesor AS (
+    SELECT
+        DATE_TRUNC('month', v.fecha_venta)         AS mes_venta,
+        v.oficina_id,
+        COALESCE(v.vendedor_id, v.asesor_pdv_id)   AS persona_id,
+        v.canal_venta,
+        COUNT(*)                                    AS kits_totales,
+        SUM(COALESCE(a.flag_activo::INT, 0))        AS kits_activos
+    FROM "tyg_datamart"."raw"."ventas" v
+    LEFT JOIN "tyg_datamart"."raw"."activaciones" a ON v.venta_id = a.venta_id
+
+    
+    WHERE v.fecha_venta >= (
+        SELECT DATE_TRUNC('month', COALESCE(MAX(_dbt_updated_at), '2000-01-01'))
+        FROM "tyg_datamart"."marts_marts"."hecho_desempeno"
+    )
+    
+
+    GROUP BY 1, 2, 3, 4
+),
+
+metas_mes AS (
+    SELECT
+        MAKE_DATE(anio, mes_num, 1)  AS mes_meta,
+        oficina_id,
+        vendedor_id,
+        meta_kits
+    FROM "tyg_datamart"."raw"."metas"
+)
+
+SELECT
+    TO_CHAR(va.mes_venta, 'YYYYMMDD')::INT                          AS dtiem_id,
+    va.oficina_id                                                    AS dofic_id,
+    va.persona_id                                                    AS dases_id,
+
+    va.kits_totales                                                  AS kits_por_asesor,
+    va.kits_activos                                                  AS kits_activos_asesor,
+    (va.kits_totales - va.kits_activos)                              AS kits_inactivos_asesor,
+
+    COALESCE(m.meta_kits, 0)                                        AS meta_kits_mes,
+
+    -- KPI P3-2: Cumplimiento de meta
+    ROUND(
+        va.kits_totales::NUMERIC / NULLIF(m.meta_kits, 0) * 100
+    , 2)                                                             AS cumplimiento_meta_pct,
+
+    -- KPI P3-3: % kits inactivos del asesor
+    ROUND(
+        (va.kits_totales - va.kits_activos)::NUMERIC
+        / NULLIF(va.kits_totales, 0) * 100
+    , 2)                                                             AS kits_inactivos_pct,
+
+    NOW()                                                            AS _dbt_updated_at
+
+FROM ventas_asesor va
+LEFT JOIN metas_mes m
+    ON va.mes_venta   = m.mes_meta
+   AND va.oficina_id  = m.oficina_id
+   AND va.persona_id  = m.vendedor_id
+  );
+  
+  
+[0m06:02:59.909045 [debug] [Thread-3 (]: On model.tyg_datamart.hecho_canal: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_canal"} */
+
+    
+  
+    
+
+  create temporary table "hecho_canal__dbt_tmp060259903869"
+  
+  
+    as
+  
+  (
+    -- =============================================================
+-- hecho_canal.sql — Mix de Canal (Directo vs PDV)
+-- KPI P3-1: % participación de cada canal por mes y oficina
+-- Grano: mes × oficina
+-- =============================================================
+
+
+SELECT
+    TO_CHAR(DATE_TRUNC('month', v.fecha_venta), 'YYYYMMDD')::INT  AS dtiem_id,
+    v.oficina_id                                                    AS dofic_id,
+
+    COUNT(*) FILTER (WHERE v.canal_venta = 'DIRECTO')              AS kits_canal_directo,
+    COUNT(*) FILTER (WHERE v.canal_venta = 'PDV')                  AS kits_canal_pdv,
+
+    SUM(CASE WHEN v.canal_venta = 'DIRECTO' THEN 220.00 ELSE 0 END)::NUMERIC(12,2)
+                                                                   AS ingresos_directo,
+    SUM(CASE WHEN v.canal_venta = 'PDV'     THEN 160.00 ELSE 0 END)::NUMERIC(12,2)
+                                                                   AS ingresos_pdv,
+
+    -- KPI P3-1: % kits canal DIRECTO sobre total del mes/oficina
+    ROUND(
+        COUNT(*) FILTER (WHERE v.canal_venta = 'DIRECTO')::NUMERIC
+        / NULLIF(COUNT(*), 0) * 100
+    , 2)                                                           AS mix_canal_pct,
+
+    NOW()                                                          AS _dbt_updated_at
+
+FROM "tyg_datamart"."raw"."ventas" v
+
+
+WHERE v.fecha_venta >= (
+    SELECT DATE_TRUNC('month', COALESCE(MAX(_dbt_updated_at), '2000-01-01'))
+    FROM "tyg_datamart"."marts_marts"."hecho_canal"
+)
+
+
+GROUP BY 1, 2
+  );
+  
+  
+[0m06:02:59.909399 [debug] [Thread-1 (]: On model.tyg_datamart.dim_oficina: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.dim_oficina"} */
+
+    
+  
+    
+
+  create temporary table "dim_oficina__dbt_tmp060259906938"
+  
+  
+    as
+  
+  (
+    
+
+WITH source_data AS (
+    SELECT
+        oficina_id,
+        nom_oficina,
+        departamento,
+        region,
+        zona,
+        updated_at
+    FROM "tyg_datamart"."raw"."oficinas"
+    
+    
+    WHERE updated_at > (
+        SELECT COALESCE(MAX(updated_at), '2000-01-01'::TIMESTAMP)
+        FROM "tyg_datamart"."marts_marts"."dim_oficina"
+    )
+    
+)
+
+SELECT
+    ROW_NUMBER() OVER (ORDER BY oficina_id) AS dofic_id,
+    oficina_id,
+    nom_oficina,
+    departamento,
+    region,
+    zona,
+    updated_at
+FROM source_data
+  );
+  
+  
+[0m06:02:59.909755 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m06:02:59.910048 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m06:02:59.910334 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m06:02:59.910622 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m06:02:59.917008 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.006 seconds
+[0m06:02:59.917401 [debug] [Thread-2 (]: SQL status: SELECT 0 in 0.008 seconds
+[0m06:02:59.923511 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m06:02:59.923795 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m06:02:59.926914 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.dim_oficina"
+[0m06:02:59.928595 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.dim_tiempo"
+[0m06:02:59.930394 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.hecho_canal"
+[0m06:02:59.932430 [debug] [Thread-4 (]: Using postgres connection "model.tyg_datamart.hecho_desempeno"
+[0m06:02:59.932828 [debug] [Thread-1 (]: On model.tyg_datamart.dim_oficina: BEGIN
+[0m06:02:59.933136 [debug] [Thread-2 (]: On model.tyg_datamart.dim_tiempo: BEGIN
+[0m06:02:59.933462 [debug] [Thread-3 (]: On model.tyg_datamart.hecho_canal: BEGIN
+[0m06:02:59.933752 [debug] [Thread-4 (]: On model.tyg_datamart.hecho_desempeno: BEGIN
+[0m06:02:59.934298 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m06:02:59.934604 [debug] [Thread-2 (]: SQL status: BEGIN in 0.000 seconds
+[0m06:02:59.934918 [debug] [Thread-3 (]: SQL status: BEGIN in 0.000 seconds
+[0m06:02:59.935260 [debug] [Thread-4 (]: SQL status: BEGIN in 0.000 seconds
+[0m06:02:59.935494 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.dim_oficina"
+[0m06:02:59.935954 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.dim_tiempo"
+[0m06:02:59.936388 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.hecho_canal"
+[0m06:02:59.936749 [debug] [Thread-4 (]: Using postgres connection "model.tyg_datamart.hecho_desempeno"
+[0m06:02:59.937116 [debug] [Thread-1 (]: On model.tyg_datamart.dim_oficina: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.dim_oficina"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'dim_oficina__dbt_tmp060259906938'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.937442 [debug] [Thread-2 (]: On model.tyg_datamart.dim_tiempo: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.dim_tiempo"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'dim_tiempo__dbt_tmp060259881243'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.937759 [debug] [Thread-3 (]: On model.tyg_datamart.hecho_canal: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_canal"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_canal__dbt_tmp060259903869'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.938057 [debug] [Thread-4 (]: On model.tyg_datamart.hecho_desempeno: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_desempeno"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_desempeno__dbt_tmp060259886852'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.942670 [debug] [Thread-2 (]: SQL status: SELECT 10 in 0.004 seconds
+[0m06:02:59.943026 [debug] [Thread-3 (]: SQL status: SELECT 8 in 0.004 seconds
+[0m06:02:59.946659 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.dim_tiempo"
+[0m06:02:59.946910 [debug] [Thread-1 (]: SQL status: SELECT 7 in 0.009 seconds
+[0m06:02:59.947168 [debug] [Thread-4 (]: SQL status: SELECT 10 in 0.008 seconds
+[0m06:02:59.949026 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.hecho_canal"
+[0m06:02:59.949383 [debug] [Thread-2 (]: On model.tyg_datamart.dim_tiempo: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.dim_tiempo"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'dim_tiempo'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.951234 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.dim_oficina"
+[0m06:02:59.953112 [debug] [Thread-4 (]: Using postgres connection "model.tyg_datamart.hecho_desempeno"
+[0m06:02:59.953468 [debug] [Thread-3 (]: On model.tyg_datamart.hecho_canal: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_canal"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_canal'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.953941 [debug] [Thread-1 (]: On model.tyg_datamart.dim_oficina: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.dim_oficina"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'dim_oficina'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.954420 [debug] [Thread-4 (]: On model.tyg_datamart.hecho_desempeno: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_desempeno"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_desempeno'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.955601 [debug] [Thread-2 (]: SQL status: SELECT 10 in 0.002 seconds
+[0m06:02:59.960142 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.dim_tiempo"
+[0m06:02:59.960555 [debug] [Thread-3 (]: SQL status: SELECT 8 in 0.006 seconds
+[0m06:02:59.960784 [debug] [Thread-4 (]: SQL status: SELECT 10 in 0.006 seconds
+[0m06:02:59.960993 [debug] [Thread-1 (]: SQL status: SELECT 7 in 0.006 seconds
+[0m06:02:59.961218 [debug] [Thread-2 (]: On model.tyg_datamart.dim_tiempo: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.dim_tiempo"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'dim_tiempo'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.963148 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.hecho_canal"
+[0m06:02:59.965766 [debug] [Thread-4 (]: Using postgres connection "model.tyg_datamart.hecho_desempeno"
+[0m06:02:59.967566 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.dim_oficina"
+[0m06:02:59.968112 [debug] [Thread-3 (]: On model.tyg_datamart.hecho_canal: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_canal"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_canal'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.968564 [debug] [Thread-4 (]: On model.tyg_datamart.hecho_desempeno: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_desempeno"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_desempeno'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.968919 [debug] [Thread-1 (]: On model.tyg_datamart.dim_oficina: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.dim_oficina"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'dim_oficina'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:02:59.969502 [debug] [Thread-2 (]: SQL status: SELECT 10 in 0.002 seconds
+[0m06:02:59.975842 [debug] [Thread-3 (]: SQL status: SELECT 8 in 0.007 seconds
+[0m06:02:59.981012 [debug] [Thread-2 (]: Writing runtime sql for node "model.tyg_datamart.dim_tiempo"
+[0m06:02:59.982322 [debug] [Thread-3 (]: Writing runtime sql for node "model.tyg_datamart.hecho_canal"
+[0m06:02:59.982683 [debug] [Thread-1 (]: SQL status: SELECT 7 in 0.013 seconds
+[0m06:02:59.982912 [debug] [Thread-4 (]: SQL status: SELECT 10 in 0.014 seconds
+[0m06:02:59.984410 [debug] [Thread-1 (]: Writing runtime sql for node "model.tyg_datamart.dim_oficina"
+[0m06:02:59.985780 [debug] [Thread-4 (]: Writing runtime sql for node "model.tyg_datamart.hecho_desempeno"
+[0m06:02:59.986757 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.dim_tiempo"
+[0m06:02:59.987399 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.hecho_canal"
+[0m06:02:59.987646 [debug] [Thread-2 (]: On model.tyg_datamart.dim_tiempo: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.dim_tiempo"} */
+
+      
+        
+            delete from "tyg_datamart"."marts_marts"."dim_tiempo"
+            where (
+                dtiem_id) in (
+                select (dtiem_id)
+                from "dim_tiempo__dbt_tmp060259881243"
+            );
+
+        
+    
+
+    insert into "tyg_datamart"."marts_marts"."dim_tiempo" ("dtiem_id", "fecha", "dia", "semana", "mes", "nombre_mes", "trimestre", "anio", "fecha_recepcion", "fecha_venta")
+    (
+        select "dtiem_id", "fecha", "dia", "semana", "mes", "nombre_mes", "trimestre", "anio", "fecha_recepcion", "fecha_venta"
+        from "dim_tiempo__dbt_tmp060259881243"
+    )
+  
+[0m06:02:59.988233 [debug] [Thread-3 (]: On model.tyg_datamart.hecho_canal: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_canal"} */
+
+      
+        
+            delete from "tyg_datamart"."marts_marts"."hecho_canal"
+            using "hecho_canal__dbt_tmp060259903869"
+            where (
+                
+                    "hecho_canal__dbt_tmp060259903869".dtiem_id = "tyg_datamart"."marts_marts"."hecho_canal".dtiem_id
+                    and 
+                
+                    "hecho_canal__dbt_tmp060259903869".dofic_id = "tyg_datamart"."marts_marts"."hecho_canal".dofic_id
+                    
+                
+                
+            );
+        
+    
+
+    insert into "tyg_datamart"."marts_marts"."hecho_canal" ("dtiem_id", "dofic_id", "kits_canal_directo", "kits_canal_pdv", "ingresos_directo", "ingresos_pdv", "mix_canal_pct", "_dbt_updated_at")
+    (
+        select "dtiem_id", "dofic_id", "kits_canal_directo", "kits_canal_pdv", "ingresos_directo", "ingresos_pdv", "mix_canal_pct", "_dbt_updated_at"
+        from "hecho_canal__dbt_tmp060259903869"
+    )
+  
+[0m06:02:59.989315 [debug] [Thread-2 (]: SQL status: INSERT 0 0 in 0.000 seconds
+[0m06:02:59.989576 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.dim_oficina"
+[0m06:02:59.989801 [debug] [Thread-3 (]: SQL status: INSERT 0 1 in 0.001 seconds
+[0m06:02:59.990011 [debug] [Thread-4 (]: Using postgres connection "model.tyg_datamart.hecho_desempeno"
+[0m06:02:59.999015 [debug] [Thread-2 (]: On model.tyg_datamart.dim_tiempo: COMMIT
+[0m06:02:59.999469 [debug] [Thread-1 (]: On model.tyg_datamart.dim_oficina: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.dim_oficina"} */
+
+      
+        
+            delete from "tyg_datamart"."marts_marts"."dim_oficina"
+            where (
+                dofic_id) in (
+                select (dofic_id)
+                from "dim_oficina__dbt_tmp060259906938"
+            );
+
+        
+    
+
+    insert into "tyg_datamart"."marts_marts"."dim_oficina" ("dofic_id", "oficina_id", "nom_oficina", "departamento", "region", "zona", "updated_at")
+    (
+        select "dofic_id", "oficina_id", "nom_oficina", "departamento", "region", "zona", "updated_at"
+        from "dim_oficina__dbt_tmp060259906938"
+    )
+  
+[0m06:03:00.000660 [debug] [Thread-3 (]: On model.tyg_datamart.hecho_canal: COMMIT
+[0m06:03:00.001102 [debug] [Thread-4 (]: On model.tyg_datamart.hecho_desempeno: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_desempeno"} */
+
+      
+        
+            delete from "tyg_datamart"."marts_marts"."hecho_desempeno"
+            using "hecho_desempeno__dbt_tmp060259886852"
+            where (
+                
+                    "hecho_desempeno__dbt_tmp060259886852".dtiem_id = "tyg_datamart"."marts_marts"."hecho_desempeno".dtiem_id
+                    and 
+                
+                    "hecho_desempeno__dbt_tmp060259886852".dofic_id = "tyg_datamart"."marts_marts"."hecho_desempeno".dofic_id
+                    and 
+                
+                    "hecho_desempeno__dbt_tmp060259886852".dases_id = "tyg_datamart"."marts_marts"."hecho_desempeno".dases_id
+                    
+                
+                
+            );
+        
+    
+
+    insert into "tyg_datamart"."marts_marts"."hecho_desempeno" ("dtiem_id", "dofic_id", "dases_id", "kits_por_asesor", "kits_activos_asesor", "kits_inactivos_asesor", "meta_kits_mes", "cumplimiento_meta_pct", "kits_inactivos_pct", "_dbt_updated_at")
+    (
+        select "dtiem_id", "dofic_id", "dases_id", "kits_por_asesor", "kits_activos_asesor", "kits_inactivos_asesor", "meta_kits_mes", "cumplimiento_meta_pct", "kits_inactivos_pct", "_dbt_updated_at"
+        from "hecho_desempeno__dbt_tmp060259886852"
+    )
+  
+[0m06:03:00.001541 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.dim_tiempo"
+[0m06:03:00.002123 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.hecho_canal"
+[0m06:03:00.002463 [debug] [Thread-1 (]: SQL status: INSERT 0 0 in 0.001 seconds
+[0m06:03:00.002849 [debug] [Thread-2 (]: On model.tyg_datamart.dim_tiempo: COMMIT
+[0m06:03:00.003177 [debug] [Thread-3 (]: On model.tyg_datamart.hecho_canal: COMMIT
+[0m06:03:00.003410 [debug] [Thread-4 (]: SQL status: INSERT 0 1 in 0.001 seconds
+[0m06:03:00.004320 [debug] [Thread-1 (]: On model.tyg_datamart.dim_oficina: COMMIT
+[0m06:03:00.005658 [debug] [Thread-4 (]: On model.tyg_datamart.hecho_desempeno: COMMIT
+[0m06:03:00.006021 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.dim_oficina"
+[0m06:03:00.006318 [debug] [Thread-2 (]: SQL status: COMMIT in 0.002 seconds
+[0m06:03:00.006531 [debug] [Thread-4 (]: Using postgres connection "model.tyg_datamart.hecho_desempeno"
+[0m06:03:00.006989 [debug] [Thread-1 (]: On model.tyg_datamart.dim_oficina: COMMIT
+[0m06:03:00.007297 [debug] [Thread-3 (]: SQL status: COMMIT in 0.002 seconds
+[0m06:03:00.008515 [debug] [Thread-2 (]: On model.tyg_datamart.dim_tiempo: Close
+[0m06:03:00.008873 [debug] [Thread-4 (]: On model.tyg_datamart.hecho_desempeno: COMMIT
+[0m06:03:00.009898 [debug] [Thread-3 (]: On model.tyg_datamart.hecho_canal: Close
+[0m06:03:00.011448 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x761710a775c0>]}
+[0m06:03:00.011861 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m06:03:00.012894 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x761708c73440>]}
+[0m06:03:00.013500 [info ] [Thread-2 (]: 2 of 7 OK created sql incremental model marts_marts.dim_tiempo ................. [[32mINSERT 0 0[0m in 0.17s]
+[0m06:03:00.014401 [debug] [Thread-1 (]: On model.tyg_datamart.dim_oficina: Close
+[0m06:03:00.014737 [debug] [Thread-4 (]: SQL status: COMMIT in 0.003 seconds
+[0m06:03:00.015195 [info ] [Thread-3 (]: 3 of 7 OK created sql incremental model marts_marts.hecho_canal ................ [[32mINSERT 0 1[0m in 0.17s]
+[0m06:03:00.016851 [debug] [Thread-2 (]: Finished running node model.tyg_datamart.dim_tiempo
+[0m06:03:00.017618 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x761708c713d0>]}
+[0m06:03:00.018742 [debug] [Thread-4 (]: On model.tyg_datamart.hecho_desempeno: Close
+[0m06:03:00.019415 [debug] [Thread-3 (]: Finished running node model.tyg_datamart.hecho_canal
+[0m06:03:00.020528 [debug] [Thread-2 (]: Began running node model.tyg_datamart.hecho_inventario
+[0m06:03:00.021390 [info ] [Thread-1 (]: 1 of 7 OK created sql incremental model marts_marts.dim_oficina ................ [[32mINSERT 0 0[0m in 0.18s]
+[0m06:03:00.022386 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x761708c70aa0>]}
+[0m06:03:00.022726 [debug] [Thread-3 (]: Began running node model.tyg_datamart.stg_ventas
+[0m06:03:00.023443 [info ] [Thread-2 (]: 5 of 7 START sql incremental model marts_marts.hecho_inventario ................ [RUN]
+[0m06:03:00.024058 [debug] [Thread-1 (]: Finished running node model.tyg_datamart.dim_oficina
+[0m06:03:00.025122 [info ] [Thread-4 (]: 4 of 7 OK created sql incremental model marts_marts.hecho_desempeno ............ [[32mINSERT 0 1[0m in 0.18s]
+[0m06:03:00.025715 [info ] [Thread-3 (]: 6 of 7 START sql view model marts_staging.stg_ventas ........................... [RUN]
+[0m06:03:00.026304 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.tyg_datamart.dim_tiempo, now model.tyg_datamart.hecho_inventario)
+[0m06:03:00.027183 [debug] [Thread-4 (]: Finished running node model.tyg_datamart.hecho_desempeno
+[0m06:03:00.027674 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.tyg_datamart.hecho_canal, now model.tyg_datamart.stg_ventas)
+[0m06:03:00.028701 [debug] [Thread-2 (]: Began compiling node model.tyg_datamart.hecho_inventario
+[0m06:03:00.029358 [debug] [Thread-3 (]: Began compiling node model.tyg_datamart.stg_ventas
+[0m06:03:00.032180 [debug] [Thread-2 (]: Writing injected SQL for node "model.tyg_datamart.hecho_inventario"
+[0m06:03:00.034797 [debug] [Thread-3 (]: Writing injected SQL for node "model.tyg_datamart.stg_ventas"
+[0m06:03:00.039558 [debug] [Thread-3 (]: Began executing node model.tyg_datamart.stg_ventas
+[0m06:03:00.046849 [debug] [Thread-2 (]: Began executing node model.tyg_datamart.hecho_inventario
+[0m06:03:00.051799 [debug] [Thread-3 (]: Writing runtime sql for node "model.tyg_datamart.stg_ventas"
+[0m06:03:00.054176 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.hecho_inventario"
+[0m06:03:00.055096 [debug] [Thread-2 (]: On model.tyg_datamart.hecho_inventario: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_inventario"} */
+
+    
+  
+    
+
+  create temporary table "hecho_inventario__dbt_tmp060300053214"
+  
+  
+    as
+  
+  (
+    
+
+WITH ventas_agg AS (
+    -- ✅ 1 fila por recepción: última fecha de venta
+    SELECT recepcion_id, MAX(fecha_venta) AS fecha_venta
+    FROM "tyg_datamart"."raw"."ventas"
+    GROUP BY recepcion_id
+),
+
+source_data AS (
+    SELECT
+        r.recepcion_id,
+        r.oficina_id,
+        r.producto_id,
+        r.fecha_recepcion,
+        r.lote,
+        r.estado_recepcion,
+        r.dias_inactivo,
+        r.ingresado_sin_venta,
+        v.fecha_venta,
+        r.updated_at,
+        NOW() AS _dbt_updated_at
+    FROM "tyg_datamart"."raw"."recepciones" r
+    LEFT JOIN ventas_agg v ON r.recepcion_id = v.recepcion_id
+
+    
+    WHERE r.updated_at > (
+        SELECT COALESCE(MAX(t._dbt_updated_at), '2000-01-01'::TIMESTAMP) 
+        FROM "tyg_datamart"."marts_marts"."hecho_inventario" t
+    )
+    
+),
+
+-- ✅ Garantiza unicidad estricta incluso si el JOIN o CDC generan duplicados
+deduplicated AS (
+    SELECT *,
+           ROW_NUMBER() OVER (PARTITION BY recepcion_id ORDER BY _dbt_updated_at DESC) AS rn
+    FROM source_data
+)
+
+SELECT
+    recepcion_id,
+    TO_CHAR(fecha_recepcion, 'YYYYMMDD')::INT AS dtiem_id,
+    oficina_id AS dofic_id,
+    recepcion_id AS dest_id,
+    dias_inactivo,
+    CASE WHEN dias_inactivo > 90 AND estado_recepcion <> 'VENDIDO' THEN TRUE ELSE FALSE END AS kits_riesgo_90d,
+    CASE WHEN fecha_venta IS NOT NULL THEN (fecha_venta::DATE - fecha_recepcion::DATE)::NUMERIC(8,2) ELSE NULL::NUMERIC(8,2) END AS rotation_lote,
+    lote AS serie,
+    _dbt_updated_at
+FROM deduplicated
+WHERE rn = 1  -- ✅ Solo conserva la versión más reciente por recepcion_id
+  );
+  
+  
+[0m06:03:00.055565 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m06:03:00.060653 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.stg_ventas"
+[0m06:03:00.061157 [debug] [Thread-3 (]: On model.tyg_datamart.stg_ventas: BEGIN
+[0m06:03:00.061436 [debug] [Thread-2 (]: SQL status: SELECT 0 in 0.006 seconds
+[0m06:03:00.061697 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m06:03:00.063862 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.hecho_inventario"
+[0m06:03:00.064608 [debug] [Thread-2 (]: On model.tyg_datamart.hecho_inventario: BEGIN
+[0m06:03:00.065139 [debug] [Thread-2 (]: SQL status: BEGIN in 0.000 seconds
+[0m06:03:00.065554 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.hecho_inventario"
+[0m06:03:00.065921 [debug] [Thread-2 (]: On model.tyg_datamart.hecho_inventario: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_inventario"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_inventario__dbt_tmp060300053214'
+        
+      order by ordinal_position
+
+  
+[0m06:03:00.067776 [debug] [Thread-3 (]: SQL status: BEGIN in 0.006 seconds
+[0m06:03:00.068172 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.stg_ventas"
+[0m06:03:00.068571 [debug] [Thread-3 (]: On model.tyg_datamart.stg_ventas: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.stg_ventas"} */
+
+  create view "tyg_datamart"."marts_staging"."stg_ventas__dbt_tmp"
+    
+    
+  as (
+    -- =============================================================
+-- stg_ventas.sql — Staging de Ventas
+-- Limpieza, estandarización y enriquecimiento
+-- =============================================================
+
+
+WITH source AS (
+    SELECT * FROM "tyg_datamart"."raw"."ventas"
+),
+
+staging AS (
+    SELECT
+        v.venta_id,
+        v.oficina_id,
+        v.vendedor_id,
+        v.asesor_pdv_id,
+        v.cliente_id,
+        v.producto_id,
+        v.recepcion_id,
+        v.fecha_venta,
+        v.mes,
+        v.monto_venta,
+        v.canal_venta,
+        v.estado_venta,
+        v.created_at,
+        v.updated_at,
+
+        -- Monto calculado según canal de venta (regla de negocio TyG)
+        CASE
+            WHEN v.canal_venta = 'DIRECTO' THEN 220.00
+            WHEN v.canal_venta = 'PDV'     THEN 160.00
+            ELSE v.monto_venta
+        END AS monto_calculado,
+        
+        -- Enriquecimiento con datos de recepción
+        r.fecha_recepcion,
+        r.lote              AS serie_lote,
+        r.estado_recepcion,
+        r.dias_inactivo,
+        
+        -- Activación
+        COALESCE(a.flag_activo, FALSE) AS es_activacion
+        
+    FROM source v
+    LEFT JOIN "tyg_datamart"."raw"."recepciones"  r ON v.recepcion_id = r.recepcion_id
+    LEFT JOIN "tyg_datamart"."raw"."activaciones" a ON v.venta_id     = a.venta_id
+)
+
+SELECT * FROM staging
+  );
+[0m06:03:00.069766 [debug] [Thread-2 (]: SQL status: SELECT 9 in 0.003 seconds
+[0m06:03:00.072104 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.hecho_inventario"
+[0m06:03:00.072459 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m06:03:00.072745 [debug] [Thread-2 (]: On model.tyg_datamart.hecho_inventario: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_inventario"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_inventario'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:03:00.077466 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.stg_ventas"
+[0m06:03:00.078252 [debug] [Thread-3 (]: On model.tyg_datamart.stg_ventas: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.stg_ventas"} */
+alter table "tyg_datamart"."marts_staging"."stg_ventas" rename to "stg_ventas__dbt_backup"
+[0m06:03:00.079035 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m06:03:00.081223 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.stg_ventas"
+[0m06:03:00.081508 [debug] [Thread-2 (]: SQL status: SELECT 9 in 0.004 seconds
+[0m06:03:00.081830 [debug] [Thread-3 (]: On model.tyg_datamart.stg_ventas: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.stg_ventas"} */
+alter table "tyg_datamart"."marts_staging"."stg_ventas__dbt_tmp" rename to "stg_ventas"
+[0m06:03:00.084090 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.hecho_inventario"
+[0m06:03:00.084890 [debug] [Thread-2 (]: On model.tyg_datamart.hecho_inventario: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_inventario"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_inventario'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:03:00.085168 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m06:03:00.087734 [debug] [Thread-3 (]: On model.tyg_datamart.stg_ventas: COMMIT
+[0m06:03:00.088082 [debug] [Thread-2 (]: SQL status: SELECT 9 in 0.003 seconds
+[0m06:03:00.088368 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.stg_ventas"
+[0m06:03:00.099295 [debug] [Thread-3 (]: On model.tyg_datamart.stg_ventas: COMMIT
+[0m06:03:00.102515 [debug] [Thread-2 (]: Writing runtime sql for node "model.tyg_datamart.hecho_inventario"
+[0m06:03:00.104320 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m06:03:00.109277 [debug] [Thread-3 (]: Applying DROP to: "tyg_datamart"."marts_staging"."stg_ventas__dbt_backup"
+[0m06:03:00.113241 [debug] [Thread-3 (]: Using postgres connection "model.tyg_datamart.stg_ventas"
+[0m06:03:00.113790 [debug] [Thread-3 (]: On model.tyg_datamart.stg_ventas: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.stg_ventas"} */
+drop view if exists "tyg_datamart"."marts_staging"."stg_ventas__dbt_backup" cascade
+[0m06:03:00.115425 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.hecho_inventario"
+[0m06:03:00.115983 [debug] [Thread-2 (]: On model.tyg_datamart.hecho_inventario: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_inventario"} */
+
+      -- back compat for old kwarg name
+  
+  
+        
+            
+            
+        
+    
+
+    
+
+    merge into "tyg_datamart"."marts_marts"."hecho_inventario" as DBT_INTERNAL_DEST
+        using "hecho_inventario__dbt_tmp060300053214" as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.recepcion_id = DBT_INTERNAL_DEST.recepcion_id
+            )
+
+    
+    when matched then update set
+        "recepcion_id" = DBT_INTERNAL_SOURCE."recepcion_id","dtiem_id" = DBT_INTERNAL_SOURCE."dtiem_id","dofic_id" = DBT_INTERNAL_SOURCE."dofic_id","dest_id" = DBT_INTERNAL_SOURCE."dest_id","dias_inactivo" = DBT_INTERNAL_SOURCE."dias_inactivo","kits_riesgo_90d" = DBT_INTERNAL_SOURCE."kits_riesgo_90d","rotation_lote" = DBT_INTERNAL_SOURCE."rotation_lote","serie" = DBT_INTERNAL_SOURCE."serie","_dbt_updated_at" = DBT_INTERNAL_SOURCE."_dbt_updated_at"
+    
+
+    when not matched then insert
+        ("recepcion_id", "dtiem_id", "dofic_id", "dest_id", "dias_inactivo", "kits_riesgo_90d", "rotation_lote", "serie", "_dbt_updated_at")
+    values
+        ("recepcion_id", "dtiem_id", "dofic_id", "dest_id", "dias_inactivo", "kits_riesgo_90d", "rotation_lote", "serie", "_dbt_updated_at")
+
+
+  
+[0m06:03:00.116386 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m06:03:00.117628 [debug] [Thread-3 (]: On model.tyg_datamart.stg_ventas: Close
+[0m06:03:00.117897 [debug] [Thread-2 (]: SQL status: MERGE 0 in 0.001 seconds
+[0m06:03:00.118429 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x761708c732c0>]}
+[0m06:03:00.119396 [debug] [Thread-2 (]: On model.tyg_datamart.hecho_inventario: COMMIT
+[0m06:03:00.120035 [info ] [Thread-3 (]: 6 of 7 OK created sql view model marts_staging.stg_ventas ...................... [[32mCREATE VIEW[0m in 0.09s]
+[0m06:03:00.120443 [debug] [Thread-2 (]: Using postgres connection "model.tyg_datamart.hecho_inventario"
+[0m06:03:00.120952 [debug] [Thread-3 (]: Finished running node model.tyg_datamart.stg_ventas
+[0m06:03:00.121388 [debug] [Thread-2 (]: On model.tyg_datamart.hecho_inventario: COMMIT
+[0m06:03:00.122454 [debug] [Thread-1 (]: Began running node model.tyg_datamart.hecho_ventas
+[0m06:03:00.122987 [info ] [Thread-1 (]: 7 of 7 START sql incremental model marts_marts.hecho_ventas .................... [RUN]
+[0m06:03:00.123499 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.tyg_datamart.dim_oficina, now model.tyg_datamart.hecho_ventas)
+[0m06:03:00.123815 [debug] [Thread-2 (]: SQL status: COMMIT in 0.002 seconds
+[0m06:03:00.124236 [debug] [Thread-1 (]: Began compiling node model.tyg_datamart.hecho_ventas
+[0m06:03:00.125175 [debug] [Thread-2 (]: On model.tyg_datamart.hecho_inventario: Close
+[0m06:03:00.128882 [debug] [Thread-1 (]: Writing injected SQL for node "model.tyg_datamart.hecho_ventas"
+[0m06:03:00.129810 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x761708bfc950>]}
+[0m06:03:00.130710 [info ] [Thread-2 (]: 5 of 7 OK created sql incremental model marts_marts.hecho_inventario ........... [[32mMERGE 0[0m in 0.10s]
+[0m06:03:00.131427 [debug] [Thread-2 (]: Finished running node model.tyg_datamart.hecho_inventario
+[0m06:03:00.136850 [debug] [Thread-1 (]: Began executing node model.tyg_datamart.hecho_ventas
+[0m06:03:00.139596 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.hecho_ventas"
+[0m06:03:00.140070 [debug] [Thread-1 (]: On model.tyg_datamart.hecho_ventas: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_ventas"} */
+
+    
+  
+    
+
+  create temporary table "hecho_ventas__dbt_tmp060300138574"
+  
+  
+    as
+  
+  (
+    -- =============================================================
+-- hecho_ventas.sql — Tabla de Hechos Principal
+-- KPIs: P1-1 Tasa Activación | P1-2 Ingresos | P1-3 Contribución
+-- Grano: una fila por venta individual
+-- =============================================================
+
+
+WITH base AS (
+    SELECT * FROM "tyg_datamart"."marts_staging"."stg_ventas"
+    
+    WHERE updated_at > (
+        SELECT COALESCE(MAX(_dbt_updated_at), '2000-01-01'::TIMESTAMP) 
+        FROM "tyg_datamart"."marts_marts"."hecho_ventas"
+    )
+    
+),
+
+totales_por_oficina_mes AS (
+    SELECT
+        oficina_id,
+        DATE_TRUNC('month', fecha_venta) AS mes_venta,
+        SUM(monto_calculado) AS total_ingresos_mes
+    FROM "tyg_datamart"."marts_staging"."stg_ventas"
+    GROUP BY 1, 2
+)
+
+SELECT
+    b.venta_id,
+    TO_CHAR(b.fecha_venta, 'YYYYMMDD')::INT            AS dtiem_id,
+    o.oficina_id                                        AS dofic_id,
+    r_dim.recepcion_id                                  AS dest_id,
+
+    -- Métricas de hechos
+    1                                                   AS kits_vendidos,
+    CASE WHEN b.es_activacion THEN 1 ELSE 0 END        AS kits_activos,
+    b.monto_calculado                                   AS ingresos_s,
+
+    -- KPI P1-1: Tasa de activación
+    CASE WHEN b.es_activacion THEN 100.00 ELSE 0.00 END AS tasa_activacion_pct,
+
+    -- KPI P1-3: Contribución % sobre el total del mes/oficina
+    ROUND(
+        b.monto_calculado / NULLIF(t.total_ingresos_mes, 0) * 100
+    , 2)                                                AS contribucion_pct,
+
+    b.serie_lote                                        AS serie,
+    b.canal_venta,
+    NOW()                                               AS _dbt_updated_at   -- ✅ CORREGIDO (era doble alias)
+
+FROM base b
+LEFT JOIN "tyg_datamart"."raw"."oficinas"    o     ON b.oficina_id    = o.oficina_id
+LEFT JOIN "tyg_datamart"."raw"."recepciones" r_dim ON b.recepcion_id  = r_dim.recepcion_id
+LEFT JOIN totales_por_oficina_mes t
+    ON  b.oficina_id = t.oficina_id
+   AND DATE_TRUNC('month', b.fecha_venta) = t.mes_venta
+  );
+  
+  
+[0m06:03:00.140520 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m06:03:00.147562 [debug] [Thread-1 (]: SQL status: SELECT 0 in 0.007 seconds
+[0m06:03:00.149751 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.hecho_ventas"
+[0m06:03:00.150119 [debug] [Thread-1 (]: On model.tyg_datamart.hecho_ventas: BEGIN
+[0m06:03:00.150596 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m06:03:00.151126 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.hecho_ventas"
+[0m06:03:00.151532 [debug] [Thread-1 (]: On model.tyg_datamart.hecho_ventas: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_ventas"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_ventas__dbt_tmp060300138574'
+        
+      order by ordinal_position
+
+  
+[0m06:03:00.155286 [debug] [Thread-1 (]: SQL status: SELECT 12 in 0.003 seconds
+[0m06:03:00.157671 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.hecho_ventas"
+[0m06:03:00.158272 [debug] [Thread-1 (]: On model.tyg_datamart.hecho_ventas: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_ventas"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_ventas'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:03:00.160523 [debug] [Thread-1 (]: SQL status: SELECT 12 in 0.002 seconds
+[0m06:03:00.162665 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.hecho_ventas"
+[0m06:03:00.163094 [debug] [Thread-1 (]: On model.tyg_datamart.hecho_ventas: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_ventas"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "tyg_datamart".INFORMATION_SCHEMA.columns
+      where table_name = 'hecho_ventas'
+        
+        and table_schema = 'marts_marts'
+        
+      order by ordinal_position
+
+  
+[0m06:03:00.165013 [debug] [Thread-1 (]: SQL status: SELECT 12 in 0.001 seconds
+[0m06:03:00.166582 [debug] [Thread-1 (]: Writing runtime sql for node "model.tyg_datamart.hecho_ventas"
+[0m06:03:00.173178 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.hecho_ventas"
+[0m06:03:00.173592 [debug] [Thread-1 (]: On model.tyg_datamart.hecho_ventas: /* {"app": "dbt", "dbt_version": "1.8.2", "profile_name": "tyg_datamart", "target_name": "dev", "node_id": "model.tyg_datamart.hecho_ventas"} */
+
+      
+        
+            delete from "tyg_datamart"."marts_marts"."hecho_ventas"
+            where (
+                venta_id) in (
+                select (venta_id)
+                from "hecho_ventas__dbt_tmp060300138574"
+            );
+
+        
+    
+
+    insert into "tyg_datamart"."marts_marts"."hecho_ventas" ("venta_id", "dtiem_id", "dofic_id", "dest_id", "kits_vendidos", "kits_activos", "ingresos_s", "tasa_activacion_pct", "contribucion_pct", "serie", "canal_venta", "_dbt_updated_at")
+    (
+        select "venta_id", "dtiem_id", "dofic_id", "dest_id", "kits_vendidos", "kits_activos", "ingresos_s", "tasa_activacion_pct", "contribucion_pct", "serie", "canal_venta", "_dbt_updated_at"
+        from "hecho_ventas__dbt_tmp060300138574"
+    )
+  
+[0m06:03:00.174349 [debug] [Thread-1 (]: SQL status: INSERT 0 0 in 0.000 seconds
+[0m06:03:00.175323 [debug] [Thread-1 (]: On model.tyg_datamart.hecho_ventas: COMMIT
+[0m06:03:00.175640 [debug] [Thread-1 (]: Using postgres connection "model.tyg_datamart.hecho_ventas"
+[0m06:03:00.175906 [debug] [Thread-1 (]: On model.tyg_datamart.hecho_ventas: COMMIT
+[0m06:03:00.177524 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m06:03:00.178144 [debug] [Thread-1 (]: On model.tyg_datamart.hecho_ventas: Close
+[0m06:03:00.178631 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '20df0825-7835-49e5-8bec-f064898df591', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x761708b42960>]}
+[0m06:03:00.179124 [info ] [Thread-1 (]: 7 of 7 OK created sql incremental model marts_marts.hecho_ventas ............... [[32mINSERT 0 0[0m in 0.06s]
+[0m06:03:00.179797 [debug] [Thread-1 (]: Finished running node model.tyg_datamart.hecho_ventas
+[0m06:03:00.181367 [debug] [MainThread]: Using postgres connection "master"
+[0m06:03:00.181763 [debug] [MainThread]: On master: BEGIN
+[0m06:03:00.182101 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m06:03:00.185967 [debug] [MainThread]: SQL status: BEGIN in 0.004 seconds
+[0m06:03:00.186358 [debug] [MainThread]: On master: COMMIT
+[0m06:03:00.186968 [debug] [MainThread]: Using postgres connection "master"
+[0m06:03:00.187287 [debug] [MainThread]: On master: COMMIT
+[0m06:03:00.187667 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m06:03:00.188053 [debug] [MainThread]: On master: Close
+[0m06:03:00.188737 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:03:00.189017 [debug] [MainThread]: Connection 'model.tyg_datamart.hecho_inventario' was properly closed.
+[0m06:03:00.189264 [debug] [MainThread]: Connection 'model.tyg_datamart.hecho_ventas' was properly closed.
+[0m06:03:00.189538 [debug] [MainThread]: Connection 'model.tyg_datamart.stg_ventas' was properly closed.
+[0m06:03:00.189819 [debug] [MainThread]: Connection 'model.tyg_datamart.hecho_desempeno' was properly closed.
+[0m06:03:00.190206 [info ] [MainThread]: 
+[0m06:03:00.190613 [info ] [MainThread]: Finished running 6 incremental models, 1 view model in 0 hours 0 minutes and 0.43 seconds (0.43s).
+[0m06:03:00.191626 [debug] [MainThread]: Command end result
+[0m06:03:00.288359 [info ] [MainThread]: 
+[0m06:03:00.288929 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m06:03:00.289437 [info ] [MainThread]: 
+[0m06:03:00.289926 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m06:03:00.291270 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.062663, "process_user_time": 1.468575, "process_kernel_time": 0.174444, "process_mem_max_rss": "120932", "process_in_blocks": "55160", "process_out_blocks": "0"}
+[0m06:03:00.291762 [debug] [MainThread]: Command `dbt run` succeeded at 06:03:00.291678 after 1.06 seconds
+[0m06:03:00.292163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170ece3e30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170ece3b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76170f19e2d0>]}
+[0m06:03:00.292609 [debug] [MainThread]: Flushing usage events
