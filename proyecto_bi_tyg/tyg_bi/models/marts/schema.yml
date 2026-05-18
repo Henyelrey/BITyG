@@ -1,0 +1,147 @@
+version: 2
+
+models:
+  # =========================================================================
+  # 🥇 CAPA MARTS (GOLD) - MODELADO DIMENSIONAL
+  # =========================================================================
+
+  - name: fact_ventas
+    description: "Tabla de hechos que consolida todas las transacciones de ventas individuales e indicadores de activación."
+    columns:
+      - name: venta_id
+        description: "Código identificador único de la transacción de venta."
+        tests:
+          - unique
+          - not_null
+      - name: dtiem_id
+        description: "Llave foránea que conecta con la dimensión de tiempo (Formato AAAAMMDD)."
+        tests:
+          - not_null
+      - name: dofic_id
+        description: "Llave foránea que conecta con la dimensión de oficinas."
+        tests:
+          - not_null
+      - name: dest_id
+        description: "Llave foránea que conecta con la dimensión de estados y riesgos."
+        tests:
+          - not_null
+
+  - name: dim_oficina
+    description: "Dimensión que contiene el catálogo y los atributos descriptivos de las oficinas de la empresa."
+    columns:
+      - name: dofic_id
+        description: "Clave surrogate autogenerada para la dimensión oficina."
+        tests:
+          - unique
+          - not_null
+      - name: oficina_id
+        description: "Código original de la oficina en el sistema transaccional."
+        tests:
+          - not_null
+
+  - name: dim_asesor_pdv
+    description: "Dimensión que almacena la información unificada de vendedores directos y asesores externos."
+    columns:
+      - name: dases_id
+        description: "Clave surrogate autogenerada para la dimensión de asesores (dases_id)."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_tiempo
+    description: "Dimensión histórica de fechas para permitir agrupaciones por año, mes, día y periodos comerciales."
+    columns:
+      - name: dtiem_id
+        description: "Clave primaria de tiempo en formato entero numérico (AAAAMMDD)."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_estado
+    description: "Dimensión técnica que clasifica el estado de los productos y calcula los flags de riesgo transaccional."
+    columns:
+      - name: dest_id
+        description: "Clave surrogate que identifica de forma única cada estado consolidado."
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_canal
+    description: "Tabla de hechos orientada al análisis del mix de canales comerciales por mes y oficina."
+    columns:
+      - name: dtiem_id
+        description: "Llave foránea de tiempo mensual."
+        tests:
+          - not_null
+      - name: dofic_id
+        description: "Llave foránea de la oficina asociada."
+        tests:
+          - not_null
+
+  - name: fact_inventario
+    description: "Tabla de hechos encargada del control de existencias, recepciones de productos y trazabilidad de series."
+    columns:
+      - name: serie
+        description: "Número de serie único del producto en inventario."
+        tests:
+          - not_null
+
+  # =========================================================================
+  # 🥈 CAPA STAGING (SILVER) - LIMPIEZA Y ESTANDARIZACIÓN
+  # =========================================================================
+
+  - name: stg_ventas
+    description: "Datos limpios extraídos de la tabla cruda de ventas."
+    columns:
+      - name: venta_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_activaciones
+    description: "Modelado inicial de activaciones con homogeneización del flag lógico activo."
+    columns:
+      - name: activacion_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_asesores
+    description: "Estandarización de la información maestra de los asesores externos."
+    columns:
+      - name: asesor_pdv_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_oficinas
+    description: "Limpieza de las estructuras geográficas y operativas de las sucursales."
+    columns:
+      - name: oficina_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_productos
+    description: "Catálogo estandarizado de productos, descripciones comerciales y precios base."
+    columns:
+      - name: producto_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_recepciones
+    description: "Registro depurado de la recepción física de mercancía y días de inactividad por lote."
+    columns:
+      - name: recepcion_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_vendedores
+    description: "Datos limpios del personal de la fuerza de ventas directa."
+    columns:
+      - name: vendedor_id
+        tests:
+          - unique
+          - not_null
