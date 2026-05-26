@@ -58,8 +58,8 @@ agregado as (
 
 final as (
     select
-        -- Claves surrogate de dimensiones
-        t.dtiem_id,
+        -- Claves surrogate de dimensiones (Si falta en dim_tiempo, forzamos el id generado para evitar NULLs)
+        coalesce(t.dtiem_id, cast(to_char(a.fecha_mes, 'YYYYMMDD') as integer)) as dtiem_id,
         o.dofic_id,
 
         -- Medidas P3a

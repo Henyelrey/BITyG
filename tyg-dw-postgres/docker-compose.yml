@@ -17,3 +17,7 @@ services:
 
 volumes:
   pg_dw_data:
+
+networks:
+  tyg-network:
+    driver: bridge
