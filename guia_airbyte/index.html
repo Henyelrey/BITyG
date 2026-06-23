@@ -1,0 +1,1136 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Henyelrey.github.io/BITyG/guia_airbyte/">
+      
+      
+        <link rel="prev" href="../documentacion/">
+      
+      
+        <link rel="next" href="../comparativos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Guia Airbyte - T&D Angeles E.I.R.L. Business Intelligence</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-de-ingesta-con-airbyte" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="T&amp;D Angeles E.I.R.L. Business Intelligence" class="md-header__button md-logo" aria-label="T&D Angeles E.I.R.L. Business Intelligence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            T&D Angeles E.I.R.L. Business Intelligence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guia Airbyte
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="T&amp;D Angeles E.I.R.L. Business Intelligence" class="md-nav__button md-logo" aria-label="T&D Angeles E.I.R.L. Business Intelligence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    T&D Angeles E.I.R.L. Business Intelligence
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia Airbyte
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia Airbyte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-que-contiene-hoy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Qué contiene hoy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-que-hace-este-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Qué hace este stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-que-no-hace-todavia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Qué no hace todavía
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-origen-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Origen MySQL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conectores-incluidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conectores incluidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-cuando-usar-este-enfoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Cuándo usar este enfoque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-cdc-change-data-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. CDC (Change Data Capture)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Componentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-postgresql-dw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 PostgreSQL DW
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Requisitos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-como-levantar-el-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Cómo levantar el stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-como-poblar-el-origen-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Cómo poblar el origen MySQL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-ejecucion-manual-desde-cero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Ejecución manual desde cero
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-como-validar-que-quedo-operativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Cómo validar que quedó operativo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-flujo-recomendado-de-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Flujo recomendado de migración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-integracion-con-dbt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Integración con dbt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-limitaciones-actuales-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Limitaciones actuales del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-proximos-pasos-sugeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Próximos pasos sugeridos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comparativos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparativos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-que-contiene-hoy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Qué contiene hoy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-que-hace-este-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Qué hace este stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-que-no-hace-todavia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Qué no hace todavía
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-origen-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Origen MySQL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conectores-incluidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conectores incluidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-cuando-usar-este-enfoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Cuándo usar este enfoque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-cdc-change-data-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. CDC (Change Data Capture)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Componentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-postgresql-dw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 PostgreSQL DW
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Requisitos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-como-levantar-el-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Cómo levantar el stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-como-poblar-el-origen-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Cómo poblar el origen MySQL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-ejecucion-manual-desde-cero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Ejecución manual desde cero
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-como-validar-que-quedo-operativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Cómo validar que quedó operativo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-flujo-recomendado-de-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Flujo recomendado de migración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-integracion-con-dbt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Integración con dbt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-limitaciones-actuales-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Limitaciones actuales del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-proximos-pasos-sugeridos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Próximos pasos sugeridos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-de-ingesta-con-airbyte">Guía de Ingesta con Airbyte</h1>
+<p>Esta guía detalla el proceso técnico para implementar, configurar y ejecutar el pipeline de extracción y carga (EL) de datos para T&amp;D Angeles E.I.R.L., utilizando <strong>Airbyte</strong> como motor principal.</p>
+<hr />
+<h2 id="1-introduccion">1. Introducción</h2>
+<p>En el entorno de distribución de kits DIRECTV de T&amp;D Angeles, los datos operativos se generan en una base de datos transaccional MySQL. Para evitar sobrecargar este sistema con consultas analíticas pesadas, implementamos una arquitectura de ingesta que replica estos datos hacia un Data Warehouse centralizado en PostgreSQL utilizando Airbyte.</p>
+<h2 id="2-objetivo">2. Objetivo</h2>
+<p>Automatizar y estandarizar la extracción de datos (tablas de ventas, asesores, PDV, oficinas y metas) desde el sistema OLTP (MySQL) y su carga en bruto (Raw Data) hacia el DataMart (PostgreSQL), preparando el terreno para su posterior transformación con dbt.</p>
+<h2 id="3-que-contiene-hoy">3. Qué contiene hoy</h2>
+<p>El repositorio y la arquitectura actual contienen:</p>
+<ul>
+<li>Archivos de configuración y <em>scripts</em> para levantar la base de datos de origen (MySQL) y destino (PostgreSQL).</li>
+<li>Configuración de contenedores Docker para ejecutar la interfaz y el <em>scheduler</em> de Airbyte.</li>
+<li>Definición de la conexión (Source - Destination) para la replicación de tablas de negocio.</li>
+</ul>
+<h2 id="4-que-hace-este-stack">4. Qué hace este stack</h2>
+<ol>
+<li><strong>Conecta:</strong> Establece un puente seguro entre MySQL y PostgreSQL.</li>
+<li><strong>Extrae:</strong> Lee los registros de ventas y catálogos directamente de MySQL.</li>
+<li><strong>Carga:</strong> Deposita los datos en su formato original en un esquema transitorio (generalmente <code>public</code> o <code>airbyte_internal</code> / <code>raw</code> en Postgres).</li>
+<li><strong>Tipifica:</strong> Realiza una normalización básica de los tipos de datos en la llegada.</li>
+</ol>
+<h2 id="5-que-no-hace-todavia">5. Qué no hace todavía</h2>
+<ul>
+<li><strong>Orquestación automatizada:</strong> Actualmente no cuenta con una herramienta como Apache Airflow o Dagster; las ejecuciones de Airbyte y dbt dependen de activaciones manuales o <em>cron jobs</em> básicos en el host.</li>
+<li><strong>Transformación (T):</strong> Airbyte <strong>solo</strong> hace Extracción y Carga (EL). La limpieza, unión y lógicas de negocio (como el cálculo de ingresos por tipo de canal) están delegadas estrictamente a dbt.</li>
+</ul>
+<h2 id="6-origen-mysql">6. Origen MySQL</h2>
+<p>El sistema fuente es una base de datos relacional MySQL que soporta la operación diaria de la empresa. Contiene un histórico de más de 1500 transacciones mensuales de salidas y activaciones de kits.</p>
+<h2 id="7-conectores-incluidos">7. Conectores incluidos</h2>
+<ul>
+<li><strong>Source:</strong> <code>MySQL</code> (Conector oficial de Airbyte para lectura de bases relacionales).</li>
+<li><strong>Destination:</strong> <code>PostgreSQL</code> (Conector oficial de Airbyte para escritura en bases relacionales).</li>
+</ul>
+<h2 id="8-cuando-usar-este-enfoque">8. Cuándo usar este enfoque</h2>
+<p>Este enfoque (Batch / Micro-batch con Airbyte) es ideal para T&amp;D Angeles porque:</p>
+<ol>
+<li>Las decisiones gerenciales sobre metas y stock no requieren latencia de milisegundos (tiempo real), sino cortes diarios o intradía (cada 6 o 12 horas).</li>
+<li>Permite desacoplar el servidor de producción del esfuerzo computacional de los dashboards de Power BI.</li>
+</ol>
+<h2 id="9-cdc-change-data-capture">9. CDC (Change Data Capture)</h2>
+<p>Aunque actualmente las cargas pueden funcionar en modo "Full Refresh" o "Incremental" (basado en columnas como <code>fecha_venta</code>), Airbyte soporta <strong>CDC</strong> leyendo el <em>binlog</em> (Binary Log) de MySQL. Esto significa que puede identificar exactamente qué filas de kits insertaron, actualizaron (ej: pasaron de "Inactivo" a "Activo") o eliminaron, sincronizando solo esos cambios hacia PostgreSQL para mayor eficiencia.</p>
+<h2 id="10-componentes">10. Componentes</h2>
+<h3 id="101-mysql">10.1 MySQL</h3>
+<p>Servidor transaccional que contiene las tablas: <code>ventas</code>, <code>vendedores</code>, <code>pdv</code>, <code>oficinas</code> y <code>metas</code>.</p>
+<h3 id="102-postgresql-dw">10.2 PostgreSQL DW</h3>
+<p>Data Warehouse analítico. Recibe los datos crudos en un esquema inicial y posteriormente aloja los esquemas intermedios y el DataMart final (<code>dw_marts</code>) modelado en estrella.</p>
+<h2 id="11-requisitos">11. Requisitos</h2>
+<p>Para desplegar este ecosistema en una máquina local o servidor, necesitas:</p>
+<ul>
+<li><strong>Docker y Docker Compose</strong> instalados.</li>
+<li><strong>DBeaver</strong> (o cualquier cliente SQL) para validación.</li>
+<li><strong>Git</strong> para clonar el repositorio del proyecto.</li>
+<li><strong>dbt Core</strong> (o dbt CLI) instalado en el entorno de desarrollo.</li>
+<li>Al menos 8GB de RAM y 20GB de disco disponible en el host.</li>
+</ul>
+<h2 id="12-como-levantar-el-stack">12. Cómo levantar el stack</h2>
+<p>Para levantar la interfaz de Airbyte localmente mediante Docker:</p>
+<ol>
+<li>Clona el repositorio oficial de Airbyte (si se usa la versión local open-source):
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/airbytehq/airbyte.git
+<span class="nb">cd</span><span class="w"> </span>airbyte
+</code></pre></div></li>
+<li>Ejecuta el script de inicio o levanta los contenedores:
+<div class="highlight"><pre><span></span><code>./run-ab-platform.sh
+<span class="c1"># O alternativamente: docker-compose up -d</span>
+</code></pre></div></li>
+<li>Espera unos minutos y accede a la UI desde tu navegador en <code>http://localhost:8010</code>.</li>
+</ol>
+<p><img alt="Inicio Airbyte" src="../assets/airbyte_inicio.png" /></p>
+<h2 id="13-como-poblar-el-origen-mysql">13. Cómo poblar el origen MySQL</h2>
+<p>Si estás levantando el entorno desde cero para pruebas:</p>
+<ol>
+<li>Accede a tu contenedor de MySQL o instancia local.</li>
+<li>Ejecuta el archivo de volcado <code>dump_ventas_td_angeles.sql</code> (o el script DDL/DML correspondiente a tu proyecto) para crear las tablas e insertar los registros de prueba.</li>
+</ol>
+<h2 id="14-ejecucion-manual-desde-cero">14. Ejecución manual desde cero</h2>
+<p>Sigue estos pasos enumerados para configurar la sincronización de tu proyecto:</p>
+<ol>
+<li><strong>Crear el Origen (Source):</strong></li>
+<li>En la UI de Airbyte, ve a <em>Sources</em> &gt; <em>New Source</em>.</li>
+<li>Selecciona <strong>MySQL</strong>.</li>
+<li>Ingresa las credenciales (Host, Puerto 3306, Usuario, Contraseña y nombre de la BD).</li>
+<li>Configura el método de replicación (estándar o CDC si habilitaste los binlogs).</li>
+</ol>
+<p><img alt="Configuración Source MySQL" src="../assets/airbyte_source.png" /></p>
+<ol>
+<li><strong>Crear el Destino (Destination):</strong></li>
+<li>Ve a <em>Destinations</em> &gt; <em>New Destination</em>.</li>
+<li>Selecciona <strong>PostgreSQL</strong>.</li>
+<li>Ingresa credenciales (Host, Puerto 5432, Usuario, Contraseña, BD: <code>dw_td_angeles</code>).</li>
+<li>Define el esquema por defecto, por ejemplo: <code>airbyte_raw</code>.</li>
+</ol>
+<p><em>(Inserta aquí captura del formulario de conexión al Destination Postgres)</em></p>
+<p><img alt="Configuración Destination Postgres" src="../assets/airbyte_destination.png" /></p>
+<ol>
+<li><strong>Crear la Conexión:</strong></li>
+<li>Ve a <em>Connections</em> &gt; <em>New Connection</em>.</li>
+<li>Selecciona el Source (MySQL) y el Destination (PostgreSQL) recién creados.</li>
+<li>Selecciona los <em>Streams</em> (tablas) que deseas sincronizar: <code>ventas</code>, <code>asesores</code>, <code>pdv</code>, <code>oficinas</code>, <code>metas</code>.</li>
+<li>Define el modo de sincronización: <strong>Incremental | Append</strong> (recomendado para ventas) o <strong>Full Refresh | Overwrite</strong> (recomendado para dimensiones pequeñas como oficinas).</li>
+</ol>
+<p><em>(Inserta aquí captura de la selección de tablas/streams en Airbyte)</em></p>
+<p><img alt="Configuración de la Conexión" src="assets/airbyte_connection.png" /></p>
+<ol>
+<li><strong>Ejecutar la Sincronización:</strong></li>
+<li>Haz clic en <strong>Sync Now</strong>.</li>
+<li>Espera a que el log muestre el estado de <em>Completed</em>.</li>
+</ol>
+<p><img alt="Sync Exitoso" src="../assets/airbyte_success.png" /></p>
+<h2 id="15-como-validar-que-quedo-operativo">15. Cómo validar que quedó operativo</h2>
+<ol>
+<li>Abre <strong>DBeaver</strong> y conéctate a tu base de datos <strong>PostgreSQL</strong>.</li>
+<li>Navega al esquema configurado (ej: <code>airbyte_raw</code>).</li>
+<li>Comprueba que las tablas existan. Normalmente, Airbyte las crea con un prefijo o como tablas crudas (ej. <code>_airbyte_raw_ventas</code>).</li>
+<li>Haz un <code>SELECT COUNT(*)</code> y compáralo con la tabla de origen en MySQL para asegurar que no hubo pérdida de datos.</li>
+</ol>
+<h2 id="16-flujo-recomendado-de-migracion">16. Flujo recomendado de migración</h2>
+<p>El ciclo de vida del dato (Data Pipeline) que se recomienda ejecutar en el día a día es el siguiente:</p>
+<ol>
+<li><strong>(Airbyte) Ingesta Cruda:</strong> MySQL -&gt; PostgreSQL (Esquema <code>raw</code>).</li>
+<li><strong>(dbt) Staging:</strong> Limpieza de nulos y casteo de tipos (ej. solventar la sincronización de fechas y zonas horarias entre MySQL y Postgres) -&gt; Esquema <code>staging</code>.</li>
+<li><strong>(dbt) Marts:</strong> Creación del modelo en estrella (Dimensiones y tabla de Hechos con cálculo de S/.220 para asesores y S/.160 para PDV) -&gt; Esquema <code>dw_marts</code>.</li>
+<li><strong>(Power BI) Consumo:</strong> Lectura directa del esquema <code>dw_marts</code>.</li>
+</ol>
+<h2 id="17-integracion-con-dbt">17. Integración con dbt</h2>
+<p>Una vez que Airbyte finaliza su trabajo, <code>dbt</code> toma el control. Para que dbt reconozca los datos de Airbyte, se definen como <code>sources</code> en el archivo <code>src_td_angeles.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+
+<span class="nt">sources</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airbyte_raw</span>
+<span class="w">    </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">public</span>
+<span class="w">    </span><span class="nt">tables</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ventas</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendedores</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdv</span>
+</code></pre></div>
+<p>Luego, en los modelos de la capa Silver (ej: <code>stg_ventas.sql</code>), se extraen con la sintaxis:
+<code>SELECT * FROM {{ source('airbyte_raw', 'ventas') }}</code></p>
+<h2 id="18-limitaciones-actuales-del-proyecto">18. Limitaciones actuales del proyecto</h2>
+<p>Según los hallazgos en las sesiones de desarrollo, identificamos las siguientes restricciones:</p>
+<ol>
+<li><strong>Procesamiento acoplado al Host:</strong> La ejecución de Airbyte y los comandos <code>dbt run</code> dependen de los recursos y la activación manual desde la máquina local o servidor host. Si la terminal se cierra, no hay automatización nativa.</li>
+<li><strong>Sincronización de Fechas:</strong> Hubo un grado de complejidad al sincronizar los formatos de fecha (<code>DATETIME</code> vs <code>TIMESTAMP</code>) entre MySQL y Postgres, lo que requirió tratamiento adicional en los scripts de dbt.</li>
+<li><strong>Falta de test automáticos:</strong> Aunque se hicieron pruebas genéricas, queda pendiente optimizar la ejecución de <code>dbt test</code> para que prevenga que datos corruptos lleguen al Dashboard.</li>
+</ol>
+<h2 id="19-proximos-pasos-sugeridos">19. Próximos pasos sugeridos</h2>
+<ul>
+<li><strong>Implementar un Orquestador:</strong> Integrar Apache Airflow o Prefect para programar el pipeline completo (gatillar <code>dbt run</code> automáticamente justo después de que Airbyte termine su sincronización exitosamente).</li>
+<li><strong>Mejorar las estrategias incrementales:</strong> Configurar modelos incrementales en dbt para que no reprocese los históricos de ventas que ya están limpios y cargados en el DataMart.</li>
+<li><strong>Alertas:</strong> Configurar notificaciones (vía Slack o correo) si falla una extracción en Airbyte o un test en dbt.</li>
+</ul>
+<h2 id="20-referencias">20. Referencias</h2>
+<ul>
+<li><a href="https://docs.airbyte.com/">Documentación oficial de Airbyte</a></li>
+<li><a href="https://docs.airbyte.com/integrations/sources/mysql">Conector Airbyte MySQL Source</a></li>
+<li><a href="https://docs.airbyte.com/integrations/destinations/postgres">Conector Airbyte Postgres Destination</a></li>
+<li><a href="https://docs.getdbt.com/">Documentación oficial de dbt</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3090 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Henyelrey.github.io/BITyG/documentacion/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../guia_airbyte/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Documentacion - T&D Angeles E.I.R.L. Business Intelligence</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentacion-oficial-del-proyecto-bi" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="T&amp;D Angeles E.I.R.L. Business Intelligence" class="md-header__button md-logo" aria-label="T&D Angeles E.I.R.L. Business Intelligence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            T&D Angeles E.I.R.L. Business Intelligence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentacion
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="T&amp;D Angeles E.I.R.L. Business Intelligence" class="md-nav__button md-logo" aria-label="T&D Angeles E.I.R.L. Business Intelligence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    T&D Angeles E.I.R.L. Business Intelligence
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentacion
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-datos-generales-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Datos generales del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Resumen ejecutivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-problema-de-negocio-y-objetivo-analitico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Problema de negocio y objetivo analítico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Problema de negocio y objetivo analítico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-problema-de-negocio-heredado-de-u1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Problema de negocio heredado de U1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-objetivo-analitico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Objetivo analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-preguntas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Preguntas de negocio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. KPIs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. KPIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpis-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPIs principales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KPIs principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-1-tasa-de-activacion-de-kits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-1: Tasa de Activación de Kits (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-2-ingresos-totales-por-oficina-s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-2: Ingresos Totales por Oficina (S/.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-3-contribucion-porcentual-de-oficina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-3: Contribución Porcentual de Oficina (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpis-secundarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPIs secundarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KPIs secundarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-1-kits-en-riesgo-inactivos-90-dias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-1: Kits en Riesgo — Inactivos &gt; 90 días
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-2-dias-promedio-de-inactividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-2: Días Promedio de Inactividad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-3-rotacion-de-lote-dias-promedio-desde-recepcion-a-venta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-3: Rotación de Lote (días promedio desde recepción a venta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-1-mix-de-canal-ventas-directo-vs-pdv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-1: Mix de Canal — % Ventas Directo vs. PDV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-2-cumplimiento-de-meta-de-activaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-2: Cumplimiento de Meta de Activaciones (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-3-kits-vendidos-por-asesor-kits-inactivos-por-asesor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-3: Kits Vendidos por Asesor / % Kits Inactivos por Asesor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-criterios-de-interpretacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Criterios de interpretación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Criterios de interpretación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fichas-de-interpretacion-proceso-1-ventas-y-activacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichas de Interpretación - Proceso 1: Ventas y Activación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichas de Interpretación - Proceso 1: Ventas y Activación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-1-tasa-de-activacion-de-kits_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-1: Tasa de Activación de Kits (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-2-ingresos-totales-por-oficina-s_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-2: Ingresos Totales por Oficina (S/.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-3-contribucion-porcentual-de-oficina_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-3: Contribución Porcentual de Oficina (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichas-de-interpretacion-proceso-2-inventario-y-riesgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichas de Interpretación - Proceso 2: Inventario y Riesgo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichas de Interpretación - Proceso 2: Inventario y Riesgo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-1-kits-en-riesgo-inactivos-90-dias_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-1: Kits en Riesgo — Inactivos &gt; 90 días
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-2-dias-promedio-de-inactividad_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-2: Días Promedio de Inactividad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-3-rotacion-de-lote-dias-promedio-desde-recepcion-a-venta_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-3: Rotación de Lote (días promedio desde recepción a venta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichas-de-interpretacion-proceso-3-canal-y-desempeno-de-asesores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichas de Interpretación - Proceso 3: Canal y Desempeño de Asesores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichas de Interpretación - Proceso 3: Canal y Desempeño de Asesores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-1-mix-de-canal-ventas-directo-vs-pdv_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-1: Mix de Canal — % Ventas Directo vs. PDV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-2-cumplimiento-de-meta-de-activaciones_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-2: Cumplimiento de Meta de Activaciones (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-3-kits-vendidos-por-asesor-kits-inactivos-por-asesor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-3: Kits Vendidos por Asesor / % Kits Inactivos por Asesor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-arquitectura-bi-implementada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Arquitectura BI implementada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Arquitectura BI implementada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-diagrama-de-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Diagrama de arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-componentes-implementados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Componentes implementados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-fuente-transaccional-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Fuente transaccional OLTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Fuente transaccional OLTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-tablas-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Tablas utilizadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-evidencia-del-origen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Evidencia del origen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-pipeline-de-ingesta-y-transformacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Pipeline de ingesta y transformación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Pipeline de ingesta y transformación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-ingesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Ingesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-capas-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Capas de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-modelos-de-transformacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Modelos de transformación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-evidencia-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Evidencia de ejecución
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-data-warehouse-datamart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Data Warehouse / DataMart
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Data Warehouse / DataMart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-modelo-dimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Modelo dimensional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-diagrama-del-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Diagrama del modelo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-reglas-de-negocio-aplicadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Reglas de negocio aplicadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-modelo-semantico-en-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Modelo semántico en Power BI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Modelo semántico en Power BI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Relaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-medidas-dax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Medidas DAX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-jerarquias-y-campos-de-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Jerarquías y campos de análisis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-dashboard-interactivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Dashboard interactivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#101-paginas-del-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Páginas del dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-interactividad-implementada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Interactividad implementada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-comparativos-y-kpis-obligatorios-del-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Comparativos y KPIs obligatorios del dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-capturas-obligatorias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 Capturas obligatorias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-validacion-de-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Validación de KPIs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Validación de KPIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-conciliacion-sql-vs-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Conciliación SQL vs Power BI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-consultas-de-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Consultas de validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-hallazgos-de-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Hallazgos de validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-trazabilidad-fuente-modelo-kpi-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Trazabilidad fuente-modelo-KPI-dashboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-calidad-de-datos-y-gobierno-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Calidad de datos y gobierno mínimo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Calidad de datos y gobierno mínimo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-controles-aplicados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Controles aplicados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-reglas-de-gobierno-documentadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Reglas de gobierno documentadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-hallazgos-interpretacion-y-decision-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Hallazgos, interpretación y decisión recomendada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Hallazgos, interpretación y decisión recomendada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-decision-final-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Decisión final propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-sustentacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Sustentación técnica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Sustentación técnica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-presentacion-ppt-de-sustentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Presentación PPT de sustentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-evidencias-obligatorias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Evidencias obligatorias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-aporte-individual-del-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Aporte individual del equipo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentacion-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentacion Completa
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_airbyte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia Airbyte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comparativos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparativos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-datos-generales-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Datos generales del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Resumen ejecutivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-problema-de-negocio-y-objetivo-analitico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Problema de negocio y objetivo analítico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Problema de negocio y objetivo analítico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-problema-de-negocio-heredado-de-u1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Problema de negocio heredado de U1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-objetivo-analitico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Objetivo analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-preguntas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Preguntas de negocio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. KPIs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. KPIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpis-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPIs principales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KPIs principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-1-tasa-de-activacion-de-kits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-1: Tasa de Activación de Kits (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-2-ingresos-totales-por-oficina-s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-2: Ingresos Totales por Oficina (S/.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-3-contribucion-porcentual-de-oficina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-3: Contribución Porcentual de Oficina (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpis-secundarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPIs secundarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KPIs secundarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-1-kits-en-riesgo-inactivos-90-dias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-1: Kits en Riesgo — Inactivos &gt; 90 días
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-2-dias-promedio-de-inactividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-2: Días Promedio de Inactividad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-3-rotacion-de-lote-dias-promedio-desde-recepcion-a-venta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-3: Rotación de Lote (días promedio desde recepción a venta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-1-mix-de-canal-ventas-directo-vs-pdv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-1: Mix de Canal — % Ventas Directo vs. PDV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-2-cumplimiento-de-meta-de-activaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-2: Cumplimiento de Meta de Activaciones (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-3-kits-vendidos-por-asesor-kits-inactivos-por-asesor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-3: Kits Vendidos por Asesor / % Kits Inactivos por Asesor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-criterios-de-interpretacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Criterios de interpretación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Criterios de interpretación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fichas-de-interpretacion-proceso-1-ventas-y-activacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichas de Interpretación - Proceso 1: Ventas y Activación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichas de Interpretación - Proceso 1: Ventas y Activación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-1-tasa-de-activacion-de-kits_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-1: Tasa de Activación de Kits (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-2-ingresos-totales-por-oficina-s_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-2: Ingresos Totales por Oficina (S/.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p1-3-contribucion-porcentual-de-oficina_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P1-3: Contribución Porcentual de Oficina (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichas-de-interpretacion-proceso-2-inventario-y-riesgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichas de Interpretación - Proceso 2: Inventario y Riesgo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichas de Interpretación - Proceso 2: Inventario y Riesgo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-1-kits-en-riesgo-inactivos-90-dias_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-1: Kits en Riesgo — Inactivos &gt; 90 días
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-2-dias-promedio-de-inactividad_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-2: Días Promedio de Inactividad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p2-3-rotacion-de-lote-dias-promedio-desde-recepcion-a-venta_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P2-3: Rotación de Lote (días promedio desde recepción a venta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichas-de-interpretacion-proceso-3-canal-y-desempeno-de-asesores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichas de Interpretación - Proceso 3: Canal y Desempeño de Asesores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fichas de Interpretación - Proceso 3: Canal y Desempeño de Asesores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-1-mix-de-canal-ventas-directo-vs-pdv_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-1: Mix de Canal — % Ventas Directo vs. PDV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-2-cumplimiento-de-meta-de-activaciones_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-2: Cumplimiento de Meta de Activaciones (%)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpi-p3-3-kits-vendidos-por-asesor-kits-inactivos-por-asesor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KPI P3-3: Kits Vendidos por Asesor / % Kits Inactivos por Asesor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-arquitectura-bi-implementada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Arquitectura BI implementada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Arquitectura BI implementada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-diagrama-de-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Diagrama de arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-componentes-implementados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Componentes implementados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-fuente-transaccional-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Fuente transaccional OLTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Fuente transaccional OLTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-tablas-utilizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Tablas utilizadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-evidencia-del-origen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Evidencia del origen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-pipeline-de-ingesta-y-transformacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Pipeline de ingesta y transformación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Pipeline de ingesta y transformación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-ingesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Ingesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-capas-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Capas de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-modelos-de-transformacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Modelos de transformación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-evidencia-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Evidencia de ejecución
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-data-warehouse-datamart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Data Warehouse / DataMart
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Data Warehouse / DataMart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-modelo-dimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Modelo dimensional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-diagrama-del-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Diagrama del modelo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-reglas-de-negocio-aplicadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Reglas de negocio aplicadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-modelo-semantico-en-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Modelo semántico en Power BI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Modelo semántico en Power BI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-relaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Relaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-medidas-dax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Medidas DAX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-jerarquias-y-campos-de-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Jerarquías y campos de análisis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-dashboard-interactivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Dashboard interactivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#101-paginas-del-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Páginas del dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-interactividad-implementada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Interactividad implementada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-comparativos-y-kpis-obligatorios-del-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Comparativos y KPIs obligatorios del dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104-capturas-obligatorias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 Capturas obligatorias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-validacion-de-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Validación de KPIs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Validación de KPIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-conciliacion-sql-vs-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Conciliación SQL vs Power BI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-consultas-de-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Consultas de validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-hallazgos-de-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Hallazgos de validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-trazabilidad-fuente-modelo-kpi-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Trazabilidad fuente-modelo-KPI-dashboard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-calidad-de-datos-y-gobierno-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Calidad de datos y gobierno mínimo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Calidad de datos y gobierno mínimo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-controles-aplicados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Controles aplicados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-reglas-de-gobierno-documentadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Reglas de gobierno documentadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-hallazgos-interpretacion-y-decision-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Hallazgos, interpretación y decisión recomendada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Hallazgos, interpretación y decisión recomendada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-decision-final-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Decisión final propuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-sustentacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Sustentación técnica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Sustentación técnica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-presentacion-ppt-de-sustentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Presentación PPT de sustentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-evidencias-obligatorias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Evidencias obligatorias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-aporte-individual-del-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Aporte individual del equipo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentacion-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentacion Completa
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="documentacion-oficial-del-proyecto-bi">Documentación Oficial del Proyecto BI</h1>
+<p>Este documento detalla técnicamente el proceso completo de Inteligencia de Negocios para <strong>T&amp;D Angeles E.I.R.L.</strong>, desde el origen de los datos hasta la toma de decisiones.</p>
+<hr />
+<h2 id="1-datos-generales-del-proyecto">1. Datos generales del proyecto</h2>
+<ul>
+<li><strong>Nombre del proyecto:</strong> Análisis integral de Ventas y Activaciones de Kits DIRECTV</li>
+<li><strong>Empresa analizada:</strong> T&amp;D Angeles E.I.R.L.</li>
+<li><strong>Proceso de negocio analizado:</strong> Ciclo de distribución, venta y activación de kits prepago.</li>
+<li><strong>Herramientas utilizadas:</strong><ul>
+<li><strong>OLTP:</strong> MySQL</li>
+<li><strong>Ingesta:</strong> Airbyte</li>
+<li><strong>Data Warehouse:</strong> PostgreSQL</li>
+<li><strong>Transformación:</strong> dbt (Data Build Tool)</li>
+<li><strong>Visualización:</strong> Power BI</li>
+</ul>
+</li>
+<li><strong>Equipo de Desarrollo:</strong><ul>
+<li>Henyelrey Lucio Garcia Chura</li>
+<li>Nick Saim Mayta Jara</li>
+<li>Jhan Logan Ramos Quispe</li>
+<li>Brayan Raul Condori Quispe</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="2-resumen-ejecutivo">2. Resumen ejecutivo</h2>
+<p>El proyecto implementa un Modern Data Stack para modernizar la gestión de datos de T&amp;D Angeles E.I.R.L[cite: 6]. Se migró de un modelo de reportes manuales basados en consultas sobre bases de datos transaccionales (MySQL), hacia una arquitectura analítica robusta[cite: 6]. Mediante <strong>Airbyte</strong>, los datos se extraen hacia un DataMart en <strong>PostgreSQL</strong>, donde <strong>dbt</strong> modela y aplica reglas de negocio (división de canales Asesor/PDV, estado de kits, etc.)[cite: 6]. Finalmente, <strong>Power BI</strong> consume este modelo semántico brindando a los gerentes visibilidad en tiempo real sobre el stock, activaciones e ingresos, garantizando el control sobre el cumplimiento de metas ante DIRECTV[cite: 6].</p>
+<hr />
+<h2 id="3-problema-de-negocio-y-objetivo-analitico">3. Problema de negocio y objetivo analítico</h2>
+<h3 id="31-problema-de-negocio-heredado-de-u1">3.1 Problema de negocio heredado de U1</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Elemento</th>
+<th style="text-align: left;">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Área o proceso involucrado</strong></td>
+<td style="text-align: left;">Gestión Comercial y Logística de Kits Prepago. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Problema identificado</strong></td>
+<td style="text-align: left;">La empresa carece de visibilidad centralizada sobre el rendimiento de ventas por oficina, canal y asesor. <!--[cite: 6] --> De 1503 kits registrados, el 21.1% (318 kits) permanecen inactivos sin seguimiento sistemático, no existe un indicador consolidado de riesgo (&gt;90 días desde la recepción), el control de cumplimiento de metas es manual y la gerencia no dispone de información consolidada por canal (Directo vs. PDV) para la toma de decisiones comerciales. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usuarios principales</strong></td>
+<td style="text-align: left;">Gerente Comercial, Jefe de Oficina, Jefe de Logística, Analista de Calidad, Jefe de Canal y Supervisor de Asesores. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Decisiones que se buscan mejorar</strong></td>
+<td style="text-align: left;"><ul><li>¿Qué oficinas presentan mayor cantidad de kits inactivos y cuál es el riesgo financiero asociado? <!--[cite: 6] --></li><li>¿Qué canal de venta (Directo o PDV) genera mayor contribución al ingreso total? <!--[cite: 6] --></li><li>¿Qué asesores o PDV tienen el mejor cumplimiento de meta de activación? <!--[cite: 6] --></li><li>¿Cuántos kits superan los 90 días sin activarse y en qué oficinas están concentrados? <!--[cite: 6] --></li><li>¿Cuál es la tasa de activación mensual por oficina y región? <!--[cite: 6] --></li></ul></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impacto esperado</strong></td>
+<td style="text-align: left;">Evitar penalizaciones contractuales ante DIRECTV, anticipar pérdidas por kits expirados, priorizar esfuerzos comerciales en las oficinas de menor rotación, optimizar la estrategia de distribución y ajustar eficientemente las comisiones e incentivos de los canales de venta. <!--[cite: 6] --></td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-objetivo-analitico">3.2 Objetivo analítico</h3>
+<p>El objetivo analítico del proyecto es consolidar el ecosistema de datos en un DataMart analítico automatizado que permita medir la rentabilidad por canal de venta, supervisar la tasa de activación de kits y auditar el rendimiento geográfico de las oficinas a través de un dashboard dinámico. <!--[cite: 6] --></p>
+<h3 id="33-preguntas-de-negocio">3.3 Preguntas de negocio</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pregunta de negocio</th>
+<th style="text-align: left;">KPI relacionado</th>
+<th style="text-align: left;">Usuario</th>
+<th style="text-align: left;">Visual del dashboard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">¿Cuál es el canal de ventas (Asesores vs PDV) que genera mayor volumen de ingresos y activaciones?</td>
+<td style="text-align: left;">Ingresos Totales por Oficina (S/.) <!--[cite: 6] --> / Mix de Canal % <!--[cite: 6] --></td>
+<td style="text-align: left;">Gerente Comercial / Jefe de Canal <!--[cite: 6] --></td>
+<td style="text-align: left;">Gráfico de rectángulos (Treemap) de ingresos por oficina y Gráfico de barras de Suma de Monto de venta por Canal.</td>
+</tr>
+<tr>
+<td style="text-align: left;">¿Cuál es la tasa de conversión de kits "Inactivos" a "Activos" (tasa de activación por oficina y mes)?</td>
+<td style="text-align: left;">Tasa de Activación de Kits (%) <!--[cite: 6] --></td>
+<td style="text-align: left;">Gerente Comercial / Jefe de Oficina <!--[cite: 6] --></td>
+<td style="text-align: left;">Gráfico de medidor (Gauge) de Tasa de Activación y Medida Destino, y Gráfico de líneas temporal por Año, Trimestre, Mes y Día.</td>
+</tr>
+<tr>
+<td style="text-align: left;">¿Qué oficinas/asesores lideran el cumplimiento de metas impuestas por DIRECTV?</td>
+<td style="text-align: left;">Cumplimiento de Meta de Activaciones (%) <!--[cite: 6] --></td>
+<td style="text-align: left;">Supervisor de Asesores / Gerente Comercial <!--[cite: 6] --></td>
+<td style="text-align: left;">Gráfico de columnas de Suma de Meta_Kits por Oficina y Tarjeta de Tasa de Activación contra Meta.</td>
+</tr>
+<tr>
+<td style="text-align: left;">¿Cuántos kits llevan más de 90 días sin activarse (kits en riesgo) y cómo se distribuyen geográficamente?</td>
+<td style="text-align: left;">Kits en Riesgo - Inactivos &gt; 90 días <!--[cite: 6] --></td>
+<td style="text-align: left;">Jefe de Logística / Analista de Calidad <!--[cite: 6] --></td>
+<td style="text-align: left;">Gráfico de barras horizontales de Kits en Riesgo por Oficina y Tabla detallada con número de serie, lote, año, mes y días en stock.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="4-kpis">4. KPIs</h3>
+<h4 id="kpis-principales">KPIs principales</h4>
+<h5 id="kpi-p1-1-tasa-de-activacion-de-kits">KPI P1-1: Tasa de Activación de Kits (%)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>KPI</strong></td>
+<td style="text-align: left;">Tasa de Activación de Kits (%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Proceso de Negocio</strong></td>
+<td style="text-align: left;">P1 — Ventas y Activación</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Definición</strong></td>
+<td style="text-align: left;">Porcentaje de kits vendidos (activados) sobre el total de kits recibidos en un período, por oficina o región. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fórmula</strong></td>
+<td style="text-align: left;"><code>Tasa_Activacion = (Kits_Activos / Kits_Recibidos) × 100</code> <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia</strong></td>
+<td style="text-align: left;">Mensual <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usuarios</strong></td>
+<td style="text-align: left;">Gerente Comercial, Jefe de Oficina, DIRECTV <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fuente de Datos</strong></td>
+<td style="text-align: left;">BD transaccional: tablas VENTAS y KITS (campos: estado, fecha_venta, id_oficina) <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impacto</strong></td>
+<td style="text-align: left;">Permite identificar qué oficinas tienen baja rotación de inventario y tomar acciones preventivas antes de que kits entren en riesgo de penalización ante DIRECTV. <!--[cite: 6] --></td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p1-2-ingresos-totales-por-oficina-s">KPI P1-2: Ingresos Totales por Oficina (S/.)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>KPI</strong></td>
+<td style="text-align: left;">Ingresos Totales por Oficina (S/.)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Proceso de Negocio</strong></td>
+<td style="text-align: left;">P1 — Ventas y Activación</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Definición</strong></td>
+<td style="text-align: left;">Suma de los montos de venta generados por cada oficina en un período. El canal directo genera S/. 220 por kit y el canal PDV genera S/. 160 por kit. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fórmula</strong></td>
+<td style="text-align: left;"><code>Ingresos_S = SUM(monto_venta) GROUP BY id_oficina, mes</code> <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia</strong></td>
+<td style="text-align: left;">Mensual <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usuarios</strong></td>
+<td style="text-align: left;">Gerente Comercial, Jefe de Oficina, Área de Contabilidad <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fuente de Datos</strong></td>
+<td style="text-align: left;">BD transaccional: tabla VENTAS (campo: monto, id_oficina, fecha_venta) <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impacto</strong></td>
+<td style="text-align: left;">Facilita el control financiero y permite identificar qué oficinas generan mayor aporte al presupuesto mensual de la empresa. <!--[cite: 6] --></td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p1-3-contribucion-porcentual-de-oficina">KPI P1-3: Contribución Porcentual de Oficina (%)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>KPI</strong></td>
+<td style="text-align: left;">Contribución Porcentual de Oficina (%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Proceso de Negocio</strong></td>
+<td style="text-align: left;">P1 — Ventas y Activación</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Definición</strong></td>
+<td style="text-align: left;">Porcentaje del ingreso total que aporta cada oficina regional, permitiendo identificar cuáles tienen mayor peso comercial. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fórmula</strong></td>
+<td style="text-align: left;"><code>Contribucion_pct = (Ingresos_Oficina / Ingresos_Total) × 100</code> <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia</strong></td>
+<td style="text-align: left;">Mensual <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usuarios</strong></td>
+<td style="text-align: left;">Gerente Comercial, Gerente General <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fuente de Datos</strong></td>
+<td style="text-align: left;">BD transaccional: tabla VENTAS (campo: monto, id_oficina) <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impacto</strong></td>
+<td style="text-align: left;">Permite priorizar esfuerzos comerciales en las oficinas de mayor impacto y redistribuir recursos en las de menor contribución. <!--[cite: 6] --></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="kpis-secundarios">KPIs secundarios</h4>
+<h5 id="kpi-p2-1-kits-en-riesgo-inactivos-90-dias">KPI P2-1: Kits en Riesgo — Inactivos &gt; 90 días</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>KPI</strong></td>
+<td style="text-align: left;">Kits en Riesgo — Inactivos &gt; 90 días</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Proceso de Negocio</strong></td>
+<td style="text-align: left;">P2 — Inventario y Riesgo</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Definición</strong></td>
+<td style="text-align: left;">Cantidad de kits que llevan más de 90 días desde su fecha de recepción sin ser activados, clasificados por oficina y región. Un kit en riesgo puede implicar penalización contractual con DIRECTV. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fórmula</strong></td>
+<td style="text-align: left;"><code>Kits_Riesgo_90d = COUNT(serie) WHERE (FECHA_ACTUAL - fecha_recepcion) &gt; 90 AND estado = 'Inactivo'</code> <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia</strong></td>
+<td style="text-align: left;">Semanal / Mensual <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usuarios</strong></td>
+<td style="text-align: left;">Gerente Comercial, Jefe de Logística, Jefe de Oficina, Analista de Calidad <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fuente de Datos</strong></td>
+<td style="text-align: left;">BD transaccional: tabla KITS (campos: fecha_recepcion, id_estado) + tabla ESTADOS <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impacto</strong></td>
+<td style="text-align: left;">Permite anticipar pérdidas por kits expirados o penalizaciones contractuales por baja activación, facilitando acciones correctivas de redistribución o campañas de activación urgente. <!--[cite: 6] --></td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p2-2-dias-promedio-de-inactividad">KPI P2-2: Días Promedio de Inactividad</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>KPI</strong></td>
+<td style="text-align: left;">Días Promedio de Inactividad</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Proceso de Negocio</strong></td>
+<td style="text-align: left;">P2 — Inventario y Riesgo</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Definición</strong></td>
+<td style="text-align: left;">Promedio de días transcurridos entre la fecha de recepción del kit y la fecha actual (o de venta), calculado para todos los kits con estado Inactivo por oficina. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fórmula</strong></td>
+<td style="text-align: left;"><code>Dias_Inactivo_Prom = AVG(DATEDIFF(CURRENT_DATE, fecha_recepcion)) WHERE estado = 'Inactivo'</code> <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia</strong></td>
+<td style="text-align: left;">Semanal <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usuarios</strong></td>
+<td style="text-align: left;">Jefe de Logística, Jefe de Oficina <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fuente de Datos</strong></td>
+<td style="text-align: left;">BD transaccional: tabla KITS (campos: fecha_recepcion, id_estado) <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impacto</strong></td>
+<td style="text-align: left;">Identifica oficinas con kits envejecidos en almacén. Un promedio elevado indica baja rotación and necesidad de campañas de activación. <!--[cite: 6] --></td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p2-3-rotacion-de-lote-dias-promedio-desde-recepcion-a-venta">KPI P2-3: Rotación de Lote (días promedio desde recepción a venta)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>KPI</strong></td>
+<td style="text-align: left;">Rotación de Lote (días promedio desde recepción a venta)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Proceso de Negocio</strong></td>
+<td style="text-align: left;">P2 — Inventario y Riesgo</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Definición</strong></td>
+<td style="text-align: left;">Tiempo promedio en días que tarda un kit en ser vendido desde que fue recibido en oficina, agrupado por lote o mes de recepción. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fórmula</strong></td>
+<td style="text-align: left;"><code>Rotation_Lote = AVG(DATEDIFF(fecha_venta, fecha_recepcion)) WHERE estado = 'Activo'</code> <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia</strong></td>
+<td style="text-align: left;">Mensual <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usuarios</strong></td>
+<td style="text-align: left;">Jefe de Logística, Gerente Comercial <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fuente de Datos</strong></td>
+<td style="text-align: left;">BD transaccional: tabla KITS y VENTAS (campos: fecha_recepcion, fecha_venta, id_serie) <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impacto</strong></td>
+<td style="text-align: left;">Permite evaluar la velocidad de rotación del inventario por lote y por oficina. Lotes con baja rotación requieren intervención comercial urgente. <!--[cite: 6] --></td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p3-1-mix-de-canal-ventas-directo-vs-pdv">KPI P3-1: Mix de Canal — % Ventas Directo vs. PDV</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>KPI</strong></td>
+<td style="text-align: left;">Mix de Canal — % Ventas Directo vs. PDV</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Proceso de Negocio</strong></td>
+<td style="text-align: left;">P3 — Canal y Desempeño</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Definición</strong></td>
+<td style="text-align: left;">Distribución porcentual de las ventas entre el canal directo (asesores propios, S/. 220) y el canal PDV (puntos de venta externos, S/. 160), por región y mes. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fórmula</strong></td>
+<td style="text-align: left;"><code>Mix_Canal_PDV = (Kits_PDV / Total_Kits_Vendidos) × 100</code> <br> <code>Mix_Canal_Directo = (Kits_Directo / Total_Kits_Vendidos) × 100</code> <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia</strong></td>
+<td style="text-align: left;">Mensual <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usuarios</strong></td>
+<td style="text-align: left;">Jefe de Canal, Gerente Comercial <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fuente de Datos</strong></td>
+<td style="text-align: left;">BD transaccional: tabla VENTAS (campo: canal) + tabla CLIENTES_PDV (campo: tipo_canal) <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impacto</strong></td>
+<td style="text-align: left;">Permite optimizar la estrategia de distribución, identificar dependencia excesiva de un canal y ajustar comisiones o incentivos según el tipo de canal. <!--[cite: 6] --></td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p3-2-cumplimiento-de-meta-de-activaciones">KPI P3-2: Cumplimiento de Meta de Activaciones (%)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>KPI</strong></td>
+<td style="text-align: left;">Cumplimiento de Meta de Activaciones (%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Proceso de Negocio</strong></td>
+<td style="text-align: left;">P3 — Canal y Desempeño</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Definición</strong></td>
+<td style="text-align: left;">Porcentaje de kits activados sobre la meta mensual asignada por DIRECTV a cada oficina o asesor. Requiere la tabla METAS como fuente adicional al OLTP. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fórmula</strong></td>
+<td style="text-align: left;"><code>Cumplimiento_Meta_pct = (Kits_Activos_Mes / Meta_Kits_Mes) × 100</code> <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia</strong></td>
+<td style="text-align: left;">Mensual <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usuarios</strong></td>
+<td style="text-align: left;">Supervisor de Asesores, Jefe de Oficina, Gerente Comercial, DIRECTV <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fuente de Datos</strong></td>
+<td style="text-align: left;">BD transaccional (VENTAS, KITS) + Tabla METAS (id_meta, id_oficina, mes, anio, meta_kits) <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impacto</strong></td>
+<td style="text-align: left;">Facilita la evaluación del rendimiento de cada oficina y asesor frente a la meta oficial de DIRECTV, siendo base para decisiones de incentivos, reasignación o capacitación. <!--[cite: 6] --></td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p3-3-kits-vendidos-por-asesor-kits-inactivos-por-asesor">KPI P3-3: Kits Vendidos por Asesor / % Kits Inactivos por Asesor</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>KPI</strong></td>
+<td style="text-align: left;">Kits Vendidos por Asesor / % Kits Inactivos por Asesor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Proceso de Negocio</strong></td>
+<td style="text-align: left;">P3 — Canal y Desempeño</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Definición</strong></td>
+<td style="text-align: left;">Cantidad de kits vendidos por cada asesor o PDV en el mes, y el porcentaje de esos kits que permanecen inactivos. Permite identificar asesores con baja tasa de activación. <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fórmula</strong></td>
+<td style="text-align: left;"><code>Kits_x_Asesor = COUNT(serie) GROUP BY id_cliente_pdv</code> <br> <code>Pct_Inactivos = (Kits_Inactivos_Asesor / Kits_Vendidos_Asesor) × 100</code> <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia</strong></td>
+<td style="text-align: left;">Mensual <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usuarios</strong></td>
+<td style="text-align: left;">Supervisor de Asesores, Jefe de Oficina <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fuente de Datos</strong></td>
+<td style="text-align: left;">BD transaccional: tabla VENTAS + KITS + CLIENTES_PDV (campos: id_cliente_pdv, tipo_canal, estado) <!--[cite: 6] --></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impacto</strong></td>
+<td style="text-align: left;">Identifica asesores o PDV con alto volumen de kits inactivos, permitiendo intervenciones de capacitación o restricción de stock para mejorar la tasa de activación. <!--[cite: 6] --></td>
+</tr>
+</tbody>
+</table>
+<h3 id="41-criterios-de-interpretacion">4.1 Criterios de interpretación</h3>
+<h4 id="fichas-de-interpretacion-proceso-1-ventas-y-activacion">Fichas de Interpretación - Proceso 1: Ventas y Activación</h4>
+<h5 id="kpi-p1-1-tasa-de-activacion-de-kits_1">KPI P1-1: Tasa de Activación de Kits (%)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Bajo</th>
+<th style="text-align: left;">Esperado</th>
+<th style="text-align: left;">Alto / cumplido</th>
+<th style="text-align: left;">Accion sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Tasa de Activación de Kits (%)</strong></td>
+<td style="text-align: left;">&lt; 80% de activación (Actualmente la empresa se sitúa en 78.9%[cite: 6]).</td>
+<td style="text-align: left;">Entre 80% y 89% de activación de kits recibidos[cite: 6].</td>
+<td style="text-align: left;">≥ 90% de activación (Meta óptima según Directv[cite: 6]).</td>
+<td style="text-align: left;">Lanzar campañas de activación urgente y redistribuir stock de oficinas estancadas hacia las de mejor rotación[cite: 6].</td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p1-2-ingresos-totales-por-oficina-s_1">KPI P1-2: Ingresos Totales por Oficina (S/.)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Bajo</th>
+<th style="text-align: left;">Esperado</th>
+<th style="text-align: left;">Alto / cumplido</th>
+<th style="text-align: left;">Accion sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Ingresos Totales por Oficina (S/.)</strong></td>
+<td style="text-align: left;">&lt; 80% del presupuesto de recaudación estimado para la oficina[cite: 6].</td>
+<td style="text-align: left;">Entre 80% y 99% de la cuota de ingresos asignada[cite: 6].</td>
+<td style="text-align: left;">≥ 100% de la meta de ingresos alcanzada (S/. 220 directo / S/. 160 PDV[cite: 6]).</td>
+<td style="text-align: left;">Identificar las oficinas que generan menor aporte al presupuesto mensual para aplicar estrategias de impulso comercial[cite: 6].</td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p1-3-contribucion-porcentual-de-oficina_1">KPI P1-3: Contribución Porcentual de Oficina (%)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Bajo</th>
+<th style="text-align: left;">Esperado</th>
+<th style="text-align: left;">Alto / cumplido</th>
+<th style="text-align: left;">Accion sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Contribución Porcentual de Oficina (%)</strong></td>
+<td style="text-align: left;">&lt; 5% del aporte total global de ingresos (peso comercial deficiente[cite: 6]).</td>
+<td style="text-align: left;">Entre 5% y 15% de participación sobre el ingreso total de la empresa[cite: 6].</td>
+<td style="text-align: left;">&gt; 15% de contribución porcentual (oficinas líderes del peso comercial[cite: 6]).</td>
+<td style="text-align: left;">Priorizar esfuerzos y recursos en las sucursales de mayor impacto económico y reestructurar las de baja participación[cite: 6].</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="fichas-de-interpretacion-proceso-2-inventario-y-riesgo">Fichas de Interpretación - Proceso 2: Inventario y Riesgo</h4>
+<h5 id="kpi-p2-1-kits-en-riesgo-inactivos-90-dias_1">KPI P2-1: Kits en Riesgo — Inactivos &gt; 90 días</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Bajo</th>
+<th style="text-align: left;">Esperado</th>
+<th style="text-align: left;">Alto / cumplido</th>
+<th style="text-align: left;">Accion sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Kits en Riesgo — Inactivos &gt; 90 días</strong></td>
+<td style="text-align: left;">&gt; 15% de kits estancados sin activar por más de 90 días (Riesgo alto de penalización[cite: 6]).</td>
+<td style="text-align: left;">Entre 5% y 15% de kits en almacén superando el límite de inactividad[cite: 6].</td>
+<td style="text-align: left;">&lt; 5% de kits en riesgo (Control logístico e inventario saludable[cite: 6]).</td>
+<td style="text-align: left;">Lanzar alertas logísticas inmediatas, priorizar la salida de lotes antiguos y ejecutar activaciones de contingencia[cite: 6].</td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p2-2-dias-promedio-de-inactividad_1">KPI P2-2: Días Promedio de Inactividad</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Bajo</th>
+<th style="text-align: left;">Esperado</th>
+<th style="text-align: left;">Alto / cumplido</th>
+<th style="text-align: left;">Accion sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Días Promedio de Inactividad</strong></td>
+<td style="text-align: left;">&gt; 60 días en promedio transcurridos desde la recepción del kit sin registrar venta[cite: 6].</td>
+<td style="text-align: left;">Entre 30 y 60 días promedio de inactividad en el almacén de la oficina[cite: 6].</td>
+<td style="text-align: left;">&lt; 30 días promedio transcurridos (Alta rotación física en oficina[cite: 6]).</td>
+<td style="text-align: left;">Identificar las oficinas con kits envejecidos en almacén para acelerar promociones o redistribución de stock[cite: 6].</td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p2-3-rotacion-de-lote-dias-promedio-desde-recepcion-a-venta_1">KPI P2-3: Rotación de Lote (días promedio desde recepción a venta)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Bajo</th>
+<th style="text-align: left;">Esperado</th>
+<th style="text-align: left;">Alto / cumplido</th>
+<th style="text-align: left;">Accion sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Rotación de Lote</strong></td>
+<td style="text-align: left;">&gt; 45 días promedio en concretar la venta de un kit desde su fecha de lote de recepción[cite: 6].</td>
+<td style="text-align: left;">Entre 30 y 45 días promedio en el ciclo recepción-venta de kits activos[cite: 6].</td>
+<td style="text-align: left;">&lt; 30 días promedio (Velocidad de venta y rotación de lote ideal[cite: 6]).</td>
+<td style="text-align: left;">Realizar una intervención comercial urgente sobre los lotes estancados por fecha de recepción para agilizar su salida[cite: 6].</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="fichas-de-interpretacion-proceso-3-canal-y-desempeno-de-asesores">Fichas de Interpretación - Proceso 3: Canal y Desempeño de Asesores</h4>
+<h5 id="kpi-p3-1-mix-de-canal-ventas-directo-vs-pdv_1">KPI P3-1: Mix de Canal — % Ventas Directo vs. PDV</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Bajo</th>
+<th style="text-align: left;">Esperado</th>
+<th style="text-align: left;">Alto / cumplido</th>
+<th style="text-align: left;">Accion sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Mix de Canal</strong></td>
+<td style="text-align: left;">Dependencia crítica (&gt; 90%) de un solo canal de venta, afectando el margen o volumen[cite: 6].</td>
+<td style="text-align: left;">Proporción equilibrada alineada a la rentabilidad (ej: 30% Directo / 70% PDV[cite: 6]).</td>
+<td style="text-align: left;">Proporción exacta según la meta estratégica de distribución del período[cite: 6].</td>
+<td style="text-align: left;">Ajustar las comisiones de los asesores o los incentivos de los puntos PDV para balancear el mix comercial[cite: 6].</td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p3-2-cumplimiento-de-meta-de-activaciones_1">KPI P3-2: Cumplimiento de Meta de Activaciones (%)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Bajo</th>
+<th style="text-align: left;">Esperado</th>
+<th style="text-align: left;">Alto / cumplido</th>
+<th style="text-align: left;">Accion sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Cumplimiento de Meta</strong></td>
+<td style="text-align: left;">&lt; 80% del cumplimiento de las activaciones frente a la meta exigida por DIRECTV[cite: 6].</td>
+<td style="text-align: left;">Entre 80% y 99% de alcance de la meta mensual oficial de la sucursal[cite: 6].</td>
+<td style="text-align: left;">≥ 100% de la meta de activaciones lograda (Saludable / Sujeto a incentivos[cite: 6]).</td>
+<td style="text-align: left;">Tomar decisiones directas de capacitación a asesores de bajo rendimiento o reasignación de cuotas de stock[cite: 6].</td>
+</tr>
+</tbody>
+</table>
+<h5 id="kpi-p3-3-kits-vendidos-por-asesor-kits-inactivos-por-asesor_1">KPI P3-3: Kits Vendidos por Asesor / % Kits Inactivos por Asesor</h5>
+<p>| KPI | Bajo | Esperado | Alto / cumplido | Accion</p>
+<hr />
+<h2 id="5-arquitectura-bi-implementada">5. Arquitectura BI implementada</h2>
+<h3 id="51-diagrama-de-arquitectura">5.1 Diagrama de arquitectura</h3>
+<p><em>(Inserta aquí la imagen de tu diagrama de arquitectura)</em>
+<img alt="Diagrama de Arquitectura" src="assets/arquitectura_bi.png" /></p>
+<h3 id="52-componentes-implementados">5.2 Componentes implementados</h3>
+<ol>
+<li><strong>Fuente de Datos:</strong> Servidor MySQL alojando las tablas del ERP/Sistema de ventas de la empresa.</li>
+<li><strong>Motor de Ingesta:</strong> Airbyte (configurado con conectores MySQL -&gt; Postgres).</li>
+<li><strong>Almacenamiento (Data Warehouse):</strong> PostgreSQL estructurado por esquemas separados para RAW, STAGING y MARTS.</li>
+<li><strong>Transformación:</strong> Proyecto dbt orquestando la limpieza de fechas, estandarización de estados ("Activo", "Inactivo") y consolidación de la fact table.</li>
+<li><strong>Capa Semántica y BI:</strong> Power BI Desktop conectado vía DirectQuery/Import Mode a PostgreSQL.</li>
+</ol>
+<hr />
+<h2 id="6-fuente-transaccional-oltp">6. Fuente transaccional OLTP</h2>
+<h3 id="61-tablas-utilizadas">6.1 Tablas utilizadas</h3>
+<ul>
+<li><code>ventas</code>: Registra cada transacción, fecha, oficina y estado del kit.</li>
+<li><code>vendedores</code> / <code>asesores</code>: Personal propio de T&amp;D Angeles.</li>
+<li><code>pdv</code>: Puntos de venta externos asociados.</li>
+<li><code>oficinas</code>: Sucursales regionales (Juliaca, Cusco, Madre de Dios, etc.).</li>
+<li><code>metas</code>: Tablas de cuotas asignadas por DIRECTV a cada oficina.</li>
+</ul>
+<h3 id="62-evidencia-del-origen">6.2 Evidencia del origen</h3>
+<p><img alt="Evidencia MySQL" src="../assets/evidencia_mysql.png" /></p>
+<hr />
+<h2 id="7-pipeline-de-ingesta-y-transformacion">7. Pipeline de ingesta y transformación</h2>
+<h3 id="71-ingesta">7.1 Ingesta</h3>
+<p>Configurada a través de <strong>Airbyte</strong>. Se crearon flujos de replicación para pasar las tablas transaccionales en su forma "cruda" al esquema <code>airbyte_internal</code> / <code>raw</code> de PostgreSQL. </p>
+<h3 id="72-capas-de-datos">7.2 Capas de datos</h3>
+<ul>
+<li><strong>Capa Bronze (Raw):</strong> Datos extraídos tal cual desde MySQL.</li>
+<li><strong>Capa Silver (Staging):</strong> Uso de dbt para crear modelos como <code>stg_ventas</code>, limpiando nulos, estandarizando tipos de datos (resolviendo los problemas de sincronización de fechas detectados).</li>
+<li><strong>Capa Gold (Marts):</strong> Modelos finales, agrupados en dimensiones (<code>dim_oficina</code>, <code>dim_canal</code>) y tablas de hechos (<code>fact_ventas</code>).</li>
+</ul>
+<h3 id="73-modelos-de-transformacion">7.3 Modelos de transformación</h3>
+<p>Se aplicaron reglas directamente en el código de dbt:
+<div class="highlight"><pre><span></span><code><span class="c1">-- Ejemplo lógico de transformación dbt para cálculo de ingresos</span>
+<span class="k">SELECT</span><span class="w"> </span>
+<span class="w">    </span><span class="n">id_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">fecha_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">id_oficina</span><span class="p">,</span>
+<span class="w">    </span><span class="n">canal_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">estado_kit</span><span class="p">,</span>
+<span class="w">    </span><span class="k">CASE</span><span class="w"> </span>
+<span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">canal_venta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Asesor&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">220</span><span class="w"> </span>
+<span class="w">        </span><span class="k">WHEN</span><span class="w"> </span><span class="n">canal_venta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;PDV&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">160</span><span class="w"> </span>
+<span class="w">        </span><span class="k">ELSE</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">monto_ingreso</span>
+<span class="k">FROM</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="k">ref</span><span class="p">(</span><span class="s1">&#39;stg_ventas&#39;</span><span class="p">)</span><span class="w"> </span><span class="err">}}</span>
+</code></pre></div></p>
+<hr />
+<h3 id="74-evidencia-de-ejecucion">7.4 Evidencia de ejecución</h3>
+<p><em>(Inserta capturas de la UI de Airbyte ejecutándose y la terminal con el comando dbt run en verde)</em></p>
+<p><img alt="Ejecución de Airbyte y dbt" src="../assets/evidencia_ejecucion.png" /></p>
+<hr />
+<h2 id="8-data-warehouse-datamart">8. Data Warehouse / DataMart</h2>
+<h3 id="81-modelo-dimensional">8.1 Modelo dimensional</h3>
+<p>Se construyó bajo un esquema en Estrella (Star Schema).</p>
+<ul>
+<li><strong>Hechos:</strong> <code>Fact_Ventas</code> (Granularidad: Venta individual por kit).</li>
+<li><strong>Dimensiones:</strong> * <code>Dim_Tiempo</code> (Calendario)<ul>
+<li><code>Dim_Oficina</code> (Geográfica)</li>
+<li><code>Dim_Canal</code> (Asesores / PDV)</li>
+<li><code>Dim_Estado</code> (Activo / Inactivo)</li>
+</ul>
+</li>
+</ul>
+<h3 id="82-diagrama-del-modelo">8.2 Diagrama del modelo</h3>
+<p><em>(Inserta aquí la captura del modelo entidad-relación del DataMart)</em></p>
+<p><img alt="Diagrama del Modelo de Datos" src="../assets/diagrama_modelo.png" /></p>
+<h3 id="83-reglas-de-negocio-aplicadas">8.3 Reglas de negocio aplicadas</h3>
+<ul>
+<li><strong>Atribución de Canal:</strong> Las tarifas (S/. 220 y S/. 160) se asignan dinámicamente según el tipo de canal de distribución.</li>
+<li><strong>Temporalidad:</strong> Todas las fechas de MySQL se convirtieron a <code>TIMESTAMP</code> estándar en PostgreSQL para asegurar comparabilidad mensual.</li>
+</ul>
+<hr />
+<h2 id="9-modelo-semantico-en-power-bi">9. Modelo semántico en Power BI</h2>
+<h3 id="91-relaciones">9.1 Relaciones</h3>
+<p>El modelo en Power BI replica el esquema en estrella, estableciendo relaciones de <strong>1 a Muchos (1:*)</strong> con dirección de filtro <strong>Única</strong> desde las Dimensiones hacia la tabla de Hechos.</p>
+<h3 id="92-medidas-dax">9.2 Medidas DAX</h3>
+<p>Se implementaron medidas explícitas para evitar dependencias implícitas:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Total de ingresos</span>
+Total_Ingresos = SUM(Fact_Ventas[monto_ingreso])
+
+<span class="c1">// Cantidad total de kits vendidos</span>
+Total_Kits = COUNTROWS(Fact_Ventas)
+
+<span class="c1">// Tasa de Activación</span>
+Tasa_Activacion = 
+<span class="nf">DIVIDE</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">CALCULATE</span><span class="p">(</span><span class="na">[Total_Kits]</span><span class="p">,</span><span class="w"> </span><span class="na">Dim_Estado[Estado]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Activo&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="na">[Total_Kits]</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="m">0</span>
+<span class="p">)</span>
+
+<span class="c1">// % Cumplimiento de Meta</span>
+Cumplimiento_Meta = DIVIDE([Total_Kits], SUM(Dim_Oficina[Meta_Mensual]), 0)
+</code></pre></div>
+<hr />
+<h3 id="93-jerarquias-y-campos-de-analisis">9.3 Jerarquías y campos de análisis</h3>
+<p>Jerarquía Geográfica: Región -&gt; Ciudad -&gt; Oficina.</p>
+<p>Jerarquía Temporal: Año -&gt; Trimestre -&gt; Mes -&gt; Día.</p>
+<hr />
+<h3 id="10-dashboard-interactivo">10. Dashboard interactivo</h3>
+<p>El producto final consta de tableros directivos.</p>
+<hr />
+<h3 id="101-paginas-del-dashboard">10.1 Páginas del dashboard</h3>
+<p>(Inserta aquí las capturas de cada página del Dashboard. Ej: Resumen General, Detalle por Oficina)</p>
+<hr />
+<h3 id="102-interactividad-implementada">10.2 Interactividad implementada</h3>
+<p>Uso de Bookmarks para cambiar de vista.</p>
+<p>Drill-through (Obtención de detalles) desde la gráfica de Región para ver a los vendedores específicos de la zona.</p>
+<p>Uso de Tooltips personalizados para ver los detalles de kits activos/inactivos al pasar el mouse por el gráfico de barras.</p>
+<hr />
+<h3 id="103-comparativos-y-kpis-obligatorios-del-dashboard">10.3 Comparativos y KPIs obligatorios del dashboard</h3>
+<p>El dashboard incluye: Tarjetas superiores con KPIs principales (Monto Total, Kits Totales, % Activados), Gráficos de barra comparando ventas de Asesores vs PDV, y un gráfico de medidor (Gauge) evaluando el alcance de la meta mensual.</p>
+<hr />
+<h3 id="104-capturas-obligatorias">10.4 Capturas obligatorias</h3>
+<p>(Inserta aquí acercamientos a los gráficos más importantes)</p>
+<hr />
+<h2 id="11-validacion-de-kpis">11. Validación de KPIs</h2>
+<h3 id="111-conciliacion-sql-vs-power-bi">11.1 Conciliación SQL vs Power BI</h3>
+<p>Para asegurar la fiabilidad, comparamos los datos del DW (PostgreSQL) con los resultados de Power BI.</p>
+<h3 id="112-consultas-de-validacion">11.2 Consultas de validación</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Validando el Ingreso Total de un mes específico para conciliar con Power BI</span>
+SELECT 
+<span class="w">    </span>EXTRACT(MONTH FROM fecha_venta) as mes,
+<span class="w">    </span><span class="nf">SUM</span><span class="p">(</span>monto_ingreso) as Total_Ingresos
+FROM dw_marts.fact_ventas
+GROUP BY 1;
+</code></pre></div>
+<h3 id="113-hallazgos-de-validacion">11.3 Hallazgos de validación</h3>
+<p>Los montos obtenidos mediante las consultas SQL coinciden exactamente a nivel céntimos con las tarjetas mostradas en Power BI, verificando que no hubo pérdida de datos durante la ingesta con Airbyte ni errores lógicos en DAX.</p>
+<h2 id="12-trazabilidad-fuente-modelo-kpi-dashboard">12. Trazabilidad fuente-modelo-KPI-dashboard</h2>
+<ul>
+<li>
+<p>Origen: MySQL (tabla: ventas, columna: precio_sugerido)</p>
+</li>
+<li>
+<p>Ingesta: Airbyte (stream: ventas_raw)</p>
+</li>
+<li>
+<p>Transformación: dbt (modelo: stg_ventas -&gt; fact_ventas, columna: monto_ingreso)</p>
+</li>
+<li>
+<p>Modelo BI: Power BI (Medida: Total_Ingresos)</p>
+</li>
+<li>
+<p>Dashboard: Tarjeta Superior Izquierda (Ingresos Totales en S/.)</p>
+</li>
+</ul>
+<h2 id="13-calidad-de-datos-y-gobierno-minimo">13. Calidad de datos y gobierno mínimo</h2>
+<h3 id="131-controles-aplicados">13.1 Controles aplicados</h3>
+<p>Unicidad: Pruebas genéricas en dbt (unique, not_null) en las Primary Keys de los kits (IDs).</p>
+<p>Integridad Referencial: Test de relationships en dbt asegurando que todo id_oficina en la tabla de ventas exista en la tabla de sucursales.</p>
+<h3 id="132-reglas-de-gobierno-documentadas">13.2 Reglas de gobierno documentadas</h3>
+<p>Si en el futuro la empresa modifica los precios por canal (S/. 220 o S/. 160), la actualización está gobernada para realizarse en la capa de transformación (dbt) y no en la visualización, asegurando una "Única Fuente de Verdad".</p>
+<h2 id="14-hallazgos-interpretacion-y-decision-recomendada">14. Hallazgos, interpretación y decisión recomendada</h2>
+<p>Hallazgos principales:</p>
+<p>Existe una clara diferencia de volumen entre los PDV y los Asesores Directos.</p>
+<p>Algunas oficinas como Juliaca cumplen rápidamente sus metas, pero oficinas en otras regiones tienen una alta tasa de kits en estado "Inactivo".</p>
+<h3 id="141-decision-final-propuesta">14.1 Decisión final propuesta</h3>
+<p>Recomendación Gerencial: Se sugiere reestructurar la asignación de metas por parte de DIRECTV, enfocando campañas de activación (no solo venta) en las regiones con menor porcentaje de conversión, y potenciar con bonos a los Asesores del canal propio para incrementar la rentabilidad directa de la empresa.</p>
+<h2 id="15-sustentacion-tecnica">15. Sustentación técnica</h2>
+<h3 id="151-presentacion-ppt-de-sustentacion">15.1 Presentación PPT de sustentación</h3>
+<p>(Enlace a la presentación de Canva, Google Slides o archivo subido)</p>
+<h2 id="16-evidencias-obligatorias">16. Evidencias obligatorias</h2>
+<p>(Espacio designado para colocar pantallazos de: el modelo físico, ejecuciones y repositorios)</p>
+<h2 id="17-aporte-individual-del-equipo">17. Aporte individual del equipo</h2>
+<p>IntegranteComponente / Actividad RealizadaEvidencia / AutoevaluaciónNick Saim Mayta JaraSesión 1/2: Creación del proceso y sincronización de fechas.Resolución de complejidad en fechas MySQL-PostgreSQL.Henyelrey Lucio Garcia ChuraSesión 5/6: Implementación del flujo de Airbyte e ingesta.Operación y validación de conectores; pendiente optimizar test automáticos.Jhan Logan Ramos QuispeModelos Marts (dbt): Armado de tablas de hechos.Resolución de relaciones de fact tables para la estructura en estrella.Brayan Raul Condori QuispePower BI y DAX: Modelo semántico y dashboards.Diseño visual y aplicación de las medidas en tarjetas y gráficos.</p>
+<h2 id="18-conclusiones">18. Conclusiones</h2>
+<p>La integración de Airbyte, dbt y Power BI sobre un DataMart en PostgreSQL ha logrado superar con éxito las limitaciones del sistema transaccional de T&amp;D Angeles E.I.R.L. El equipo logró desacoplar el origen de datos de la capa analítica, logrando automatización, estandarización de indicadores (precios y activaciones) y una escalabilidad sólida para el futuro. Este proyecto evidencia la superioridad de un pipeline de datos moderno sobre las tradicionales extracciones manuales.</p>
+<h2 id="documentacion-completa">Documentacion Completa</h2>
+<p>Link del documento: <a href="https://upeuedupe-my.sharepoint.com/:w:/g/personal/henyelrey_garcia_upeu_edu_pe/IQD3mQHHgqjTTY9GxZzlW86yAVUNNByAL9nSXUt_cl2xZvs?e=8hwzzh">Ver Documentación Completa en SharePoint</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
