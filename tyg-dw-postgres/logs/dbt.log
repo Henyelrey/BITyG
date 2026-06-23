@@ -1,0 +1,15 @@
+[0m18:48:12.955287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B00BBAFF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B00BBA120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B7E513410>]}
+
+
+============================== 18:48:12.960392 | 665ce442-7273-4f34-b3bf-4bb0b70fb263 ==============================
+[0m18:48:12.960392 [info ] [MainThread]: Running with dbt=1.11.8
+[0m18:48:12.960917 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ASUS\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m18:48:12.961490 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\BITIG\tyg-dw-postgres\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:48:12.962047 [debug] [MainThread]: Command `dbt run` failed at 18:48:12.962047 after 0.21 seconds
+[0m18:48:12.962631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B00C1CEC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B0245BF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B0078DC40>]}
+[0m18:48:12.962631 [debug] [MainThread]: Flushing usage events
+[0m18:48:13.879600 [debug] [MainThread]: An error was encountered while trying to flush usage events
