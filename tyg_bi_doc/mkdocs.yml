@@ -1,0 +1,38 @@
+site_name: T&D Angeles E.I.R.L. Business Intelligence
+site_url: https://Henyelrey.github.io/BITyG/
+
+theme:
+  name: material
+  language: es
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+  icon:
+    logo: material/school
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - content.code.copy
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+nav:
+  - Inicio: index.md
+  - Documentacion: documentacion.md
+  - Guia Airbyte: guia_airbyte.md
+  - Comparativos: comparativos.md
