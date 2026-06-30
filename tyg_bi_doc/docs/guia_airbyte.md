@@ -1,172 +1,160 @@
-# Guía de Ingesta con Airbyte
+# Guía de Ingesta y Replicación de Datos con Airbyte
 
-Esta guía detalla el proceso técnico para implementar, configurar y ejecutar el pipeline de extracción y carga (EL) de datos para T&D Angeles E.I.R.L., utilizando **Airbyte** como motor principal.
+Esta guía técnica describe el proceso detallado para implementar, configurar y ejecutar el pipeline de Extracción y Carga (EL) en el proyecto de Business Intelligence de **T&D Angeles E.I.R.L.** El flujo de datos consiste en replicar los datos transaccionales desde el sistema origen (MySQL) hacia el Data Warehouse analítico (PostgreSQL) utilizando **Airbyte** como motor de ingesta de datos.
 
 ---
 
-## 1. Introducción
-En el entorno de distribución de kits DIRECTV de T&D Angeles, los datos operativos se generan en una base de datos transaccional MySQL. Para evitar sobrecargar este sistema con consultas analíticas pesadas, implementamos una arquitectura de ingesta que replica estos datos hacia un Data Warehouse centralizado en PostgreSQL utilizando Airbyte.
+## 1. Introducción y Objetivo
 
-## 2. Objetivo
-Automatizar y estandarizar la extracción de datos (tablas de ventas, asesores, PDV, oficinas y metas) desde el sistema OLTP (MySQL) y su carga en bruto (Raw Data) hacia el DataMart (PostgreSQL), preparando el terreno para su posterior transformación con dbt.
+El pipeline de Extracción y Carga (EL) está diseñado para mover los datos operativos de la empresa sin impactar el rendimiento del entorno transaccional. La arquitectura técnica establece un flujo directo desde el motor de base de datos OLTP **MySQL 8.4** (expuesto en el puerto `23306`) hacia el Data Warehouse analítico en **PostgreSQL 16** (expuesto en el puerto `5452`, base de datos centralizada `dw_tyg`). 
 
-## 3. Qué contiene hoy
-El repositorio y la arquitectura actual contienen:
+El objetivo principal es consolidar la ingesta en bruto (Raw Data) de las tablas esenciales del negocio (`ventas`, `vendedores`, `pdv`, `oficinas` y `metas`) de forma automatizada y consistente. Esto establece la base de datos de entrada limpia en el esquema de destino, facilitando las posteriores transformaciones y modelado de datos con **dbt**.
 
-* Archivos de configuración y *scripts* para levantar la base de datos de origen (MySQL) y destino (PostgreSQL).
-* Configuración de contenedores Docker para ejecutar la interfaz y el *scheduler* de Airbyte.
-* Definición de la conexión (Source - Destination) para la replicación de tablas de negocio.
+---
 
-## 4. Qué hace este stack
-1. **Conecta:** Establece un puente seguro entre MySQL y PostgreSQL.
-2. **Extrae:** Lee los registros de ventas y catálogos directamente de MySQL.
-3. **Carga:** Deposita los datos en su formato original en un esquema transitorio (generalmente `public` o `airbyte_internal` / `raw` en Postgres).
-4. **Tipifica:** Realiza una normalización básica de los tipos de datos en la llegada.
+## 2. Requisitos Previos y Componentes
 
-## 5. Qué no hace todavía
-* **Orquestación automatizada:** Actualmente no cuenta con una herramienta como Apache Airflow o Dagster; las ejecuciones de Airbyte y dbt dependen de activaciones manuales o *cron jobs* básicos en el host.
-* **Transformación (T):** Airbyte **solo** hace Extracción y Carga (EL). La limpieza, unión y lógicas de negocio (como el cálculo de ingresos por tipo de canal) están delegadas estrictamente a dbt.
+Para el despliegue del entorno y la ejecución del pipeline de ingesta se requieren las siguientes herramientas:
 
-## 6. Origen MySQL
-El sistema fuente es una base de datos relacional MySQL que soporta la operación diaria de la empresa. Contiene un histórico de más de 1500 transacciones mensuales de salidas y activaciones de kits.
+*   **Docker & Docker Compose**: Para la virtualización y orquestación del stack multi-contenedor.
+*   **DBeaver (o cliente SQL equivalente)**: Para conectarse a los motores de base de datos, validar el estado físico y ejecutar consultas de cuadratura.
+*   **dbt Core (versión v1.11)**: Para compilar e integrar los esquemas crudos generados por Airbyte.
 
-## 7. Conectores incluidos
-* **Source:** `MySQL` (Conector oficial de Airbyte para lectura de bases relacionales).
-* **Destination:** `PostgreSQL` (Conector oficial de Airbyte para escritura en bases relacionales).
+!!! warning "Configuración Obligatoria de MySQL para CDC (Change Data Capture)"
+    Para permitir que Airbyte lea las transacciones de MySQL en tiempo real sin sobrecargar el servidor mediante consultas recurrentes, se debe configurar la replicación basada en registros binarios (CDC).
+    
+    Es obligatorio editar el archivo de configuración `my.cnf` (o `mysqld.cnf`) de MySQL con los siguientes parámetros antes de iniciar el motor:
+    
+    ```ini
+    [mysqld]
+    log-bin=mysql-bin
+    binlog_format=ROW
+    binlog_row_image=FULL
+    expire_logs_days=10
+    ```
+    
+    *   `log-bin=mysql-bin`: Habilita la generación de archivos binlog.
+    *   `binlog_format=ROW`: Fuerza a que los registros binarios contengan los cambios a nivel de fila individual.
+    *   `binlog_row_image=FULL`: Registra el estado completo (anterior y posterior) de cada fila modificada.
 
-## 8. Cuándo usar este enfoque
-Este enfoque (Batch / Micro-batch con Airbyte) es ideal para T&D Angeles porque:
+---
 
-1. Las decisiones gerenciales sobre metas y stock no requieren latencia de milisegundos (tiempo real), sino cortes diarios o intradía (cada 6 o 12 horas).
-2. Permite desacoplar el servidor de producción del esfuerzo computacional de los dashboards de Power BI.
+## 3. Guía de Ejecución Paso a Paso
 
-## 9. CDC (Change Data Capture)
-Aunque actualmente las cargas pueden funcionar en modo "Full Refresh" o "Incremental" (basado en columnas como `fecha_venta`), Airbyte soporta **CDC** leyendo el *binlog* (Binary Log) de MySQL. Esto significa que puede identificar exactamente qué filas de kits insertaron, actualizaron (ej: pasaron de "Inactivo" a "Activo") o eliminaron, sincronizando solo esos cambios hacia PostgreSQL para mayor eficiencia.
+Siga de forma secuencial la siguiente lista numerada para levantar el stack e iniciar la sincronización de datos:
 
-## 10. Componentes
+1.  **Levantar el entorno multi-contenedor**:  
+    Clone el repositorio del proyecto y navegue a la carpeta raíz que contiene el archivo `docker-compose.yml`. Inicie los contenedores en segundo plano ejecutando la infraestructura de bases de datos y la plataforma Airbyte:
+    ```bash
+    git clone https://github.com/Henyelrey/BITyG.git
+    cd BITyG
+    docker compose up -d
+    ```
+    Asegúrese de que todos los servicios estén en estado *Running* utilizando el comando `docker compose ps`.
 
-### 10.1 MySQL
-Servidor transaccional que contiene las tablas: `ventas`, `vendedores`, `pdv`, `oficinas` y `metas`.
+2.  **Cargar el histórico en el origen MySQL**:  
+    Restaurar el esquema y poblar la base de datos transaccional con el histórico de 1,670 transacciones. Utilice DBeaver conectándose al puerto `23306` (credenciales del entorno de desarrollo) o ejecute la importación directamente en el contenedor de MySQL a través de la terminal:
+    ```bash
+    docker exec -i mysql_db mysql -u root -pSecurePass123! transactional_db < bd_transaccional.sql
+    ```
+    !!! note "Confirmación de registros"
+        Valide en su gestor SQL que la tabla `ventas` del origen contenga exactamente **1,670 filas** antes de proceder a la ingesta.
 
-### 10.2 PostgreSQL DW
-Data Warehouse analítico. Recibe los datos crudos en un esquema inicial y posteriormente aloja los esquemas intermedios y el DataMart final (`dw_marts`) modelado en estrella.
+3.  **Configurar el origen (Source) en la interfaz de Airbyte**:  
+    Acceda al panel de administración de Airbyte ingresando a `http://localhost:8000` (o al puerto configurado en el archivo de entorno). Diríjase a **Sources** > **New Source** y seleccione el conector oficial de **MySQL**. Configure los siguientes parámetros:
+    *   **Host**: `host.docker.internal` (o el nombre de red del contenedor mysql).
+    *   **Port**: `3306` (puerto interno de Docker).
+    *   **Database Name**: Nombre de la base de datos transaccional.
+    *   **Username / Password**: Credenciales de lectura.
+    *   **Replication Method**: Seleccione **CDC (Change Data Capture)** para habilitar la lectura incremental basada en el binlog.
+    
+    Haga clic en **Set up source** para validar la conexión.
 
-## 11. Requisitos
-Para desplegar este ecosistema en una máquina local o servidor, necesitas:
+4.  **Configurar el destino (Destination) en Airbyte**:  
+    Vaya a **Destinations** > **New Destination** y seleccione el conector de **PostgreSQL**. Complete el formulario con los parámetros de conexión al Data Warehouse central:
+    *   **Host**: `host.docker.internal` (o el nombre de red del contenedor postgres).
+    *   **Port**: `5432` (puerto interno de Docker).
+    *   **Database**: `dw_tyg`.
+    *   **Username / Password**: Credenciales con privilegios de escritura.
+    *   **Default Schema**: Establezca el valor en `airbyte_raw` para aislar los datos crudos del resto del Data Warehouse.
+    
+    Haga clic en **Set up destination** para guardar y testear la conectividad.
 
-* **Docker y Docker Compose** instalados.
-* **DBeaver** (o cualquier cliente SQL) para validación.
-* **Git** para clonar el repositorio del proyecto.
-* **dbt Core** (o dbt CLI) instalado en el entorno de desarrollo.
-* Al menos 8GB de RAM y 20GB de disco disponible en el host.
+5.  **Crear la conexión y definir los modos de sincronización**:  
+    Vaya a **Connections** > **New Connection**, asocie el origen MySQL con el destino PostgreSQL y defina el comportamiento de los streams de negocio:
+    *   **Selección de streams**: Marque las tablas `ventas`, `vendedores`, `pdv`, `oficinas` y `metas`.
+    *   **Modos de Replicación**:
+        *   Para hechos/transacciones (`ventas`): Configure **Incremental | Append** utilizando el ID o fecha de control, asegurando que los nuevos registros se añadan progresivamente.
+        *   Para dimensiones/catálogos (`vendedores`, `pdv`, `oficinas`, `metas`): Configure **Full Refresh | Overwrite** para mantener una copia exacta y actualizada de los catálogos en cada ejecución.
 
-## 12. Cómo levantar el stack
-Para levantar la interfaz de Airbyte localmente mediante Docker:
+6.  **Ejecutar la sincronización inicial**:  
+    En el panel de control de la conexión recién creada, haga clic en el botón **Sync Now**. Monitoree los logs en tiempo real para verificar que no existan fallos de formato o conexión. Espere hasta que el estado cambie a exitoso con la etiqueta **Completed**.
+    
+    !!! success "Sincronización Completada"
+        El panel de Airbyte mostrará la cantidad de registros transmitidos para cada una de las 5 tablas configuradas.
 
-1. Clona el repositorio oficial de Airbyte (si se usa la versión local open-source):
-```bash
-git clone https://github.com/airbytehq/airbyte.git
-cd airbyte
-```
-2. Ejecuta el script de inicio o levanta los contenedores:
-```bash
-./run-ab-platform.sh
-# O alternativamente: docker-compose up -d
-```
-3. Espera unos minutos y accede a la UI desde tu navegador en `http://localhost:8010`.
+7.  **Validar la cuadratura fáctica en el Data Warehouse**:  
+    Abra DBeaver y conéctese a la base de datos PostgreSQL `dw_tyg` a través del puerto expuesto `5452`. Ejecute consultas de agregación para comprobar la integridad de la información y la coincidencia con el origen:
+    ```sql
+    SELECT COUNT(*) FROM airbyte_raw._airbyte_raw_ventas;
+    ```
+    Verifique que el conteo arroje exactamente **1,670 filas**, confirmando que la replicación se ha realizado sin pérdida de datos en el canal de comunicación.
 
-![Inicio Airbyte](assets/airbyte_inicio.png)
+8.  **Integrar el origen de Airbyte en dbt Core**:  
+    Declare el esquema crudo creado por Airbyte dentro del proyecto dbt. En el archivo `models/staging/sources.yml`, defina la fuente `airbyte_raw` con sus respectivas tablas para que dbt pueda procesarlas en las fases de transformación subsiguientes:
+    
+    ```yaml
+    version: 2
+    
+    sources:
+      - name: airbyte_raw
+        database: dw_tyg
+        schema: airbyte_raw
+        description: "Esquema transitorio que contiene los datos crudos replicados desde MySQL por Airbyte."
+        tables:
+          - name: ventas
+            description: "Historial transaccional de ventas y activaciones de kits."
+          - name: vendedores
+            description: "Registro de asesores y personal de venta directa."
+          - name: pdv
+            description: "Catálogo de puntos de venta autorizados."
+          - name: oficinas
+            description: "Sedes geográficas del distribuidor."
+          - name: metas
+            description: "Metas de activaciones de kits asignadas mensualmente."
+    ```
 
-## 13. Cómo poblar el origen MySQL
-Si estás levantando el entorno desde cero para pruebas:
+---
 
-1. Accede a tu contenedor de MySQL o instancia local.
-2. Ejecuta el archivo de volcado `dump_ventas_td_angeles.sql` (o el script DDL/DML correspondiente a tu proyecto) para crear las tablas e insertar los registros de prueba.
+## 4. Componente Visual (Referencias de la Interfaz)
 
-## 14. Ejecución manual desde cero
-Sigue estos pasos enumerados para configurar la sincronización de tu proyecto:
+A continuación, se presentan las capturas correspondientes al proceso de configuración en el entorno local:
 
-1. **Crear el Origen (Source):**
-   * En la UI de Airbyte, ve a *Sources* > *New Source*.
-   * Selecciona **MySQL**.
-   * Ingresa las credenciales (Host, Puerto 3306, Usuario, Contraseña y nombre de la BD).
-   * Configura el método de replicación (estándar o CDC si habilitaste los binlogs).
+### Panel Inicial de Control en Airbyte
+Muestra el estado general del orquestador y la lista de conexiones configuradas en el entorno local.
+![Panel de inicio de Airbyte](assets/airbyte_inicio.png)
 
+### Configuración del Source MySQL
+Formulario técnico con las credenciales de origen y la validación del protocolo de lectura CDC.
+![Formulario de origen MySQL](assets/airbyte_source.png)
 
-![Configuración Source MySQL](assets/airbyte_source.png)
+### Configuración del Destination PostgreSQL
+Formulario de destino que apunta al puerto de escritura del Data Warehouse centralizado en el esquema crudo.
+![Formulario de destino Postgres](assets/airbyte_destination.png)
 
-2. **Crear el Destino (Destination):**
-   * Ve a *Destinations* > *New Destination*.
-   * Selecciona **PostgreSQL**.
-   * Ingresa credenciales (Host, Puerto 5432, Usuario, Contraseña, BD: `dw_td_angeles`).
-   * Define el esquema por defecto, por ejemplo: `airbyte_raw`.
+### Sincronización Exitosa
+Confirmación visual del estado "Completed" tras culminar la ingesta del volumen total de registros.
+![Éxito de sincronización en Airbyte](assets/airbyte_success.png)
 
-*(Inserta aquí captura del formulario de conexión al Destination Postgres)*
+---
 
-![Configuración Destination Postgres](assets/airbyte_destination.png)
+## 5. Limitaciones y Próximos Pasos
 
-3. **Crear la Conexión:**
-   * Ve a *Connections* > *New Connection*.
-   * Selecciona el Source (MySQL) y el Destination (PostgreSQL) recién creados.
-   * Selecciona los *Streams* (tablas) que deseas sincronizar: `ventas`, `asesores`, `pdv`, `oficinas`, `metas`.
-   * Define el modo de sincronización: **Incremental | Append** (recomendado para ventas) o **Full Refresh | Overwrite** (recomendado para dimensiones pequeñas como oficinas).
+Aunque el flujo de replicación funciona de manera óptima, la arquitectura actual presenta las siguientes limitaciones de integración:
 
-*(Inserta aquí captura de la selección de tablas/streams en Airbyte)*
-
-![Configuración de la Conexión](assets/airbyte_connection.png)
-
-4. **Ejecutar la Sincronización:**
-   * Haz clic en **Sync Now**.
-   * Espera a que el log muestre el estado de *Completed*.
-
-![Sync Exitoso](assets/airbyte_success.png)
-
-## 15. Cómo validar que quedó operativo
-1. Abre **DBeaver** y conéctate a tu base de datos **PostgreSQL**.
-2. Navega al esquema configurado (ej: `airbyte_raw`).
-3. Comprueba que las tablas existan. Normalmente, Airbyte las crea con un prefijo o como tablas crudas (ej. `_airbyte_raw_ventas`).
-4. Haz un `SELECT COUNT(*)` y compáralo con la tabla de origen en MySQL para asegurar que no hubo pérdida de datos.
-
-## 16. Flujo recomendado de migración
-El ciclo de vida del dato (Data Pipeline) que se recomienda ejecutar en el día a día es el siguiente:
-
-1. **(Airbyte) Ingesta Cruda:** MySQL -> PostgreSQL (Esquema `raw`).
-2. **(dbt) Staging:** Limpieza de nulos y casteo de tipos (ej. solventar la sincronización de fechas y zonas horarias entre MySQL y Postgres) -> Esquema `staging`.
-3. **(dbt) Marts:** Creación del modelo en estrella (Dimensiones y tabla de Hechos con cálculo de S/.220 para asesores y S/.160 para PDV) -> Esquema `dw_marts`.
-4. **(Power BI) Consumo:** Lectura directa del esquema `dw_marts`.
-
-## 17. Integración con dbt
-Una vez que Airbyte finaliza su trabajo, `dbt` toma el control. Para que dbt reconozca los datos de Airbyte, se definen como `sources` en el archivo `src_td_angeles.yml`:
-
-```yaml
-version: 2
-
-sources:
-  - name: airbyte_raw
-    schema: public
-    tables:
-      - name: ventas
-      - name: vendedores
-      - name: pdv
-```
-
-Luego, en los modelos de la capa Silver (ej: `stg_ventas.sql`), se extraen con la sintaxis:
-`SELECT * FROM {{ source('airbyte_raw', 'ventas') }}`
-
-## 18. Limitaciones actuales del proyecto
-Según los hallazgos en las sesiones de desarrollo, identificamos las siguientes restricciones:
-
-1. **Procesamiento acoplado al Host:** La ejecución de Airbyte y los comandos `dbt run` dependen de los recursos y la activación manual desde la máquina local o servidor host. Si la terminal se cierra, no hay automatización nativa.
-2. **Sincronización de Fechas:** Hubo un grado de complejidad al sincronizar los formatos de fecha (`DATETIME` vs `TIMESTAMP`) entre MySQL y Postgres, lo que requirió tratamiento adicional en los scripts de dbt.
-3. **Falta de test automáticos:** Aunque se hicieron pruebas genéricas, queda pendiente optimizar la ejecución de `dbt test` para que prevenga que datos corruptos lleguen al Dashboard.
-
-## 19. Próximos pasos sugeridos
-* **Implementar un Orquestador:** Integrar Apache Airflow o Prefect para programar el pipeline completo (gatillar `dbt run` automáticamente justo después de que Airbyte termine su sincronización exitosamente).
-* **Mejorar las estrategias incrementales:** Configurar modelos incrementales en dbt para que no reprocese los históricos de ventas que ya están limpios y cargados en el DataMart.
-* **Alertas:** Configurar notificaciones (vía Slack o correo) si falla una extracción en Airbyte o un test en dbt.
-
-## 20. Referencias
-* [Documentación oficial de Airbyte](https://docs.airbyte.com/)
-* [Conector Airbyte MySQL Source](https://docs.airbyte.com/integrations/sources/mysql)
-* [Conector Airbyte Postgres Destination](https://docs.airbyte.com/integrations/destinations/postgres)
-* [Documentación oficial de dbt](https://docs.getdbt.com/)
+*   **Acoplamiento y Activación Manual**: El proceso actual requiere que la sincronización en Airbyte se dispare de manera autónoma en base a intervalos de tiempo fijos, pero la ejecución subsiguiente de comandos como `dbt run` y `dbt test` en el host debe invocarse manualmente o mediante scripts locales secuenciales. Si un paso intermedio falla, no existe control nativo de errores cruzados.
+*   **Orquestación Unificada (Propuesta)**: Se plantea como paso futuro inmediato la incorporación de un orquestador de workflows como **Apache Airflow** o **Prefect**. Esto permitirá:
+    1.  Gatillar la sincronización de Airbyte programáticamente.
+    2.  Escuchar el estado de finalización del Job de Airbyte.
+    3.  Desencadenar inmediatamente la ejecución de los modelos de dbt (`dbt run` y `dbt test`) únicamente si la ingesta fue exitosa.
+    4.  Enviar alertas inmediatas ante fallos en cualquiera de las fases del pipeline.

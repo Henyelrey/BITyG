@@ -366,7 +366,15 @@ El producto final consta de tableros directivos.
 ---
 
 ### 10.1 Páginas del dashboard
-(Inserta aquí las capturas de cada página del Dashboard. Ej: Resumen General, Detalle por Oficina)
+
+#### Vista 1: Anual
+![Anual](../assets/comparativa_anual.jpeg)
+
+#### Vista 2: Mensual y Anual
+![Mensual y Anual](../assets/comparativo_anual_mensual.jpeg)
+
+#### Vista 3: KPI's
+![KPI's](../assets/dashboard_kpis.jpeg)
 
 ---
 
@@ -384,10 +392,6 @@ El dashboard incluye: Tarjetas superiores con KPIs principales (Monto Total, Kit
 
 ---
 
-### 10.4 Capturas obligatorias
-(Inserta aquí acercamientos a los gráficos más importantes)
-
----
 
 ## 11. Validación de KPIs
 ### 11.1 Conciliación SQL vs Power BI
@@ -438,16 +442,24 @@ Recomendación Gerencial: Se sugiere reestructurar la asignación de metas por p
 
 ## 15. Sustentación técnica
 ### 15.1 Presentación PPT de sustentación
-(Enlace a la presentación de Canva, Google Slides o archivo subido)
+Link de la presentación: [Ver Presentacion en Canva](https://canva.link/flpaogyv4xgmfio)
 
-## 16. Evidencias obligatorias
-(Espacio designado para colocar pantallazos de: el modelo físico, ejecuciones y repositorios)
+---
 
-## 17. Aporte individual del equipo
-IntegranteComponente / Actividad RealizadaEvidencia / AutoevaluaciónNick Saim Mayta JaraSesión 1/2: Creación del proceso y sincronización de fechas.Resolución de complejidad en fechas MySQL-PostgreSQL.Henyelrey Lucio Garcia ChuraSesión 5/6: Implementación del flujo de Airbyte e ingesta.Operación y validación de conectores; pendiente optimizar test automáticos.Jhan Logan Ramos QuispeModelos Marts (dbt): Armado de tablas de hechos.Resolución de relaciones de fact tables para la estructura en estrella.Brayan Raul Condori QuispePower BI y DAX: Modelo semántico y dashboards.Diseño visual y aplicación de las medidas en tarjetas y gráficos.
+## 16. Aporte individual del equipo
 
-## 18. Conclusiones
+| Integrante | Componente / Actividad Realizada | Evidencia / Autoevaluación |
+| :--- | :--- | :--- |
+| **Nick Saim Mayta Jara** | Sesión 1/2: Creación del proceso y sincronización de fechas. | Resolución de complejidad en fechas MySQL-PostgreSQL. |
+| **Henyelrey Lucio Garcia Chura** | Sesión 5/6: Implementación del flujo de Airbyte e ingesta. | Operación y validación de conectores; pendiente optimizar test automáticos. |
+| **Jhan Logan Ramos Quispe** | Modelos Marts (dbt): Armado de tablas de hechos, dashboards.| Resolución de relaciones de fact tables para la estructura en estrella. |
+| **Brayan Raul Condori Quispe** | Power BI y DAX: Modelo semántico y dashboards. | Diseño visual y aplicación de las medidas en tarjetas y gráficos. |
+
+
+## 17. Conclusiones
 La integración de Airbyte, dbt y Power BI sobre un DataMart en PostgreSQL ha logrado superar con éxito las limitaciones del sistema transaccional de T&D Angeles E.I.R.L. El equipo logró desacoplar el origen de datos de la capa analítica, logrando automatización, estandarización de indicadores (precios y activaciones) y una escalabilidad sólida para el futuro. Este proyecto evidencia la superioridad de un pipeline de datos moderno sobre las tradicionales extracciones manuales.
+
+--- 
 
 ## Documentacion Completa
 
