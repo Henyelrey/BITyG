@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#guia-de-ingesta-con-airbyte" class="md-skip">
+        <a href="#guia-de-ingesta-y-replicacion-de-datos-con-airbyte" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -340,10 +340,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-introduccion" class="md-nav__link">
+  <a href="#1-introduccion-y-objetivo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Introducción
+        1. Introducción y Objetivo
       
     </span>
   </a>
@@ -351,10 +351,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-objetivo" class="md-nav__link">
+  <a href="#2-requisitos-previos-y-componentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Objetivo
+        2. Requisitos Previos y Componentes
       
     </span>
   </a>
@@ -362,10 +362,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-que-contiene-hoy" class="md-nav__link">
+  <a href="#3-guia-de-ejecucion-paso-a-paso" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Qué contiene hoy
+        3. Guía de Ejecución Paso a Paso
       
     </span>
   </a>
@@ -373,88 +373,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-que-hace-este-stack" class="md-nav__link">
+  <a href="#4-componente-visual-referencias-de-la-interfaz" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Qué hace este stack
+        4. Componente Visual (Referencias de la Interfaz)
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-que-no-hace-todavia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Qué no hace todavía
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-origen-mysql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Origen MySQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-conectores-incluidos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Conectores incluidos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-cuando-usar-este-enfoque" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Cuándo usar este enfoque
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-cdc-change-data-capture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        9. CDC (Change Data Capture)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-componentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        10. Componentes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="10. Componentes">
+    <nav class="md-nav" aria-label="4. Componente Visual (Referencias de la Interfaz)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#101-mysql" class="md-nav__link">
+  <a href="#panel-inicial-de-control-en-airbyte" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.1 MySQL
+        Panel Inicial de Control en Airbyte
       
     </span>
   </a>
@@ -462,10 +396,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#102-postgresql-dw" class="md-nav__link">
+  <a href="#configuracion-del-source-mysql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.2 PostgreSQL DW
+        Configuración del Source MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-destination-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración del Destination PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sincronizacion-exitosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sincronización Exitosa
       
     </span>
   </a>
@@ -478,109 +434,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-requisitos" class="md-nav__link">
+  <a href="#5-limitaciones-y-proximos-pasos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. Requisitos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-como-levantar-el-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        12. Cómo levantar el stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#13-como-poblar-el-origen-mysql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        13. Cómo poblar el origen MySQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#14-ejecucion-manual-desde-cero" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        14. Ejecución manual desde cero
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#15-como-validar-que-quedo-operativo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        15. Cómo validar que quedó operativo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#16-flujo-recomendado-de-migracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        16. Flujo recomendado de migración
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#17-integracion-con-dbt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        17. Integración con dbt
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#18-limitaciones-actuales-del-proyecto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        18. Limitaciones actuales del proyecto
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#19-proximos-pasos-sugeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        19. Próximos pasos sugeridos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#20-referencias" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        20. Referencias
+        5. Limitaciones y Próximos Pasos
       
     </span>
   </a>
@@ -622,6 +479,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_creacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Creación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -649,10 +533,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-introduccion" class="md-nav__link">
+  <a href="#1-introduccion-y-objetivo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Introducción
+        1. Introducción y Objetivo
       
     </span>
   </a>
@@ -660,10 +544,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-objetivo" class="md-nav__link">
+  <a href="#2-requisitos-previos-y-componentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Objetivo
+        2. Requisitos Previos y Componentes
       
     </span>
   </a>
@@ -671,10 +555,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-que-contiene-hoy" class="md-nav__link">
+  <a href="#3-guia-de-ejecucion-paso-a-paso" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Qué contiene hoy
+        3. Guía de Ejecución Paso a Paso
       
     </span>
   </a>
@@ -682,88 +566,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-que-hace-este-stack" class="md-nav__link">
+  <a href="#4-componente-visual-referencias-de-la-interfaz" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Qué hace este stack
+        4. Componente Visual (Referencias de la Interfaz)
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-que-no-hace-todavia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Qué no hace todavía
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-origen-mysql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Origen MySQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-conectores-incluidos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Conectores incluidos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-cuando-usar-este-enfoque" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Cuándo usar este enfoque
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-cdc-change-data-capture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        9. CDC (Change Data Capture)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-componentes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        10. Componentes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="10. Componentes">
+    <nav class="md-nav" aria-label="4. Componente Visual (Referencias de la Interfaz)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#101-mysql" class="md-nav__link">
+  <a href="#panel-inicial-de-control-en-airbyte" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.1 MySQL
+        Panel Inicial de Control en Airbyte
       
     </span>
   </a>
@@ -771,10 +589,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#102-postgresql-dw" class="md-nav__link">
+  <a href="#configuracion-del-source-mysql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.2 PostgreSQL DW
+        Configuración del Source MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-destination-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración del Destination PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sincronizacion-exitosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sincronización Exitosa
       
     </span>
   </a>
@@ -787,109 +627,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-requisitos" class="md-nav__link">
+  <a href="#5-limitaciones-y-proximos-pasos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. Requisitos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-como-levantar-el-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        12. Cómo levantar el stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#13-como-poblar-el-origen-mysql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        13. Cómo poblar el origen MySQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#14-ejecucion-manual-desde-cero" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        14. Ejecución manual desde cero
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#15-como-validar-que-quedo-operativo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        15. Cómo validar que quedó operativo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#16-flujo-recomendado-de-migracion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        16. Flujo recomendado de migración
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#17-integracion-con-dbt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        17. Integración con dbt
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#18-limitaciones-actuales-del-proyecto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        18. Limitaciones actuales del proyecto
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#19-proximos-pasos-sugeridos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        19. Próximos pasos sugeridos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#20-referencias" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        20. Referencias
+        5. Limitaciones y Próximos Pasos
       
     </span>
   </a>
@@ -913,163 +654,157 @@
 
 
 
-<h1 id="guia-de-ingesta-con-airbyte">Guía de Ingesta con Airbyte</h1>
-<p>Esta guía detalla el proceso técnico para implementar, configurar y ejecutar el pipeline de extracción y carga (EL) de datos para T&amp;D Angeles E.I.R.L., utilizando <strong>Airbyte</strong> como motor principal.</p>
+<h1 id="guia-de-ingesta-y-replicacion-de-datos-con-airbyte">Guía de Ingesta y Replicación de Datos con Airbyte</h1>
+<p>Esta guía técnica describe el proceso detallado para implementar, configurar y ejecutar el pipeline de Extracción y Carga (EL) en el proyecto de Business Intelligence de <strong>T&amp;D Angeles E.I.R.L.</strong> El flujo de datos consiste en replicar los datos transaccionales desde el sistema origen (MySQL) hacia el Data Warehouse analítico (PostgreSQL) utilizando <strong>Airbyte</strong> como motor de ingesta de datos.</p>
 <hr />
-<h2 id="1-introduccion">1. Introducción</h2>
-<p>En el entorno de distribución de kits DIRECTV de T&amp;D Angeles, los datos operativos se generan en una base de datos transaccional MySQL. Para evitar sobrecargar este sistema con consultas analíticas pesadas, implementamos una arquitectura de ingesta que replica estos datos hacia un Data Warehouse centralizado en PostgreSQL utilizando Airbyte.</p>
-<h2 id="2-objetivo">2. Objetivo</h2>
-<p>Automatizar y estandarizar la extracción de datos (tablas de ventas, asesores, PDV, oficinas y metas) desde el sistema OLTP (MySQL) y su carga en bruto (Raw Data) hacia el DataMart (PostgreSQL), preparando el terreno para su posterior transformación con dbt.</p>
-<h2 id="3-que-contiene-hoy">3. Qué contiene hoy</h2>
-<p>El repositorio y la arquitectura actual contienen:</p>
+<h2 id="1-introduccion-y-objetivo">1. Introducción y Objetivo</h2>
+<p>El pipeline de Extracción y Carga (EL) está diseñado para mover los datos operativos de la empresa sin impactar el rendimiento del entorno transaccional. La arquitectura técnica establece un flujo directo desde el motor de base de datos OLTP <strong>MySQL 8.4</strong> (expuesto en el puerto <code>23306</code>) hacia el Data Warehouse analítico en <strong>PostgreSQL 16</strong> (expuesto en el puerto <code>5452</code>, base de datos centralizada <code>dw_tyg</code>). </p>
+<p>El objetivo principal es consolidar la ingesta en bruto (Raw Data) de las tablas esenciales del negocio (<code>ventas</code>, <code>vendedores</code>, <code>pdv</code>, <code>oficinas</code> y <code>metas</code>) de forma automatizada y consistente. Esto establece la base de datos de entrada limpia en el esquema de destino, facilitando las posteriores transformaciones y modelado de datos con <strong>dbt</strong>.</p>
+<hr />
+<h2 id="2-requisitos-previos-y-componentes">2. Requisitos Previos y Componentes</h2>
+<p>Para el despliegue del entorno y la ejecución del pipeline de ingesta se requieren las siguientes herramientas:</p>
 <ul>
-<li>Archivos de configuración y <em>scripts</em> para levantar la base de datos de origen (MySQL) y destino (PostgreSQL).</li>
-<li>Configuración de contenedores Docker para ejecutar la interfaz y el <em>scheduler</em> de Airbyte.</li>
-<li>Definición de la conexión (Source - Destination) para la replicación de tablas de negocio.</li>
+<li><strong>Docker &amp; Docker Compose</strong>: Para la virtualización y orquestación del stack multi-contenedor.</li>
+<li><strong>DBeaver (o cliente SQL equivalente)</strong>: Para conectarse a los motores de base de datos, validar el estado físico y ejecutar consultas de cuadratura.</li>
+<li><strong>dbt Core (versión v1.11)</strong>: Para compilar e integrar los esquemas crudos generados por Airbyte.</li>
 </ul>
-<h2 id="4-que-hace-este-stack">4. Qué hace este stack</h2>
+<p>!!! warning "Configuración Obligatoria de MySQL para CDC (Change Data Capture)"
+    Para permitir que Airbyte lea las transacciones de MySQL en tiempo real sin sobrecargar el servidor mediante consultas recurrentes, se debe configurar la replicación basada en registros binarios (CDC).</p>
+<pre><code>Es obligatorio editar el archivo de configuración `my.cnf` (o `mysqld.cnf`) de MySQL con los siguientes parámetros antes de iniciar el motor:
+
+```ini
+[mysqld]
+log-bin=mysql-bin
+binlog_format=ROW
+binlog_row_image=FULL
+expire_logs_days=10
+```
+
+*   `log-bin=mysql-bin`: Habilita la generación de archivos binlog.
+*   `binlog_format=ROW`: Fuerza a que los registros binarios contengan los cambios a nivel de fila individual.
+*   `binlog_row_image=FULL`: Registra el estado completo (anterior y posterior) de cada fila modificada.
+</code></pre>
+<hr />
+<h2 id="3-guia-de-ejecucion-paso-a-paso">3. Guía de Ejecución Paso a Paso</h2>
+<p>Siga de forma secuencial la siguiente lista numerada para levantar el stack e iniciar la sincronización de datos:</p>
 <ol>
-<li><strong>Conecta:</strong> Establece un puente seguro entre MySQL y PostgreSQL.</li>
-<li><strong>Extrae:</strong> Lee los registros de ventas y catálogos directamente de MySQL.</li>
-<li><strong>Carga:</strong> Deposita los datos en su formato original en un esquema transitorio (generalmente <code>public</code> o <code>airbyte_internal</code> / <code>raw</code> en Postgres).</li>
-<li><strong>Tipifica:</strong> Realiza una normalización básica de los tipos de datos en la llegada.</li>
-</ol>
-<h2 id="5-que-no-hace-todavia">5. Qué no hace todavía</h2>
+<li>
+<p><strong>Levantar el entorno multi-contenedor</strong>:<br />
+    Clone el repositorio del proyecto y navegue a la carpeta raíz que contiene el archivo <code>docker-compose.yml</code>. Inicie los contenedores en segundo plano ejecutando la infraestructura de bases de datos y la plataforma Airbyte:
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Henyelrey/BITyG.git
+<span class="nb">cd</span><span class="w"> </span>BITyG
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+    Asegúrese de que todos los servicios estén en estado <em>Running</em> utilizando el comando <code>docker compose ps</code>.</p>
+</li>
+<li>
+<p><strong>Cargar el histórico en el origen MySQL</strong>:<br />
+    Restaurar el esquema y poblar la base de datos transaccional con el histórico de 1,670 transacciones. Utilice DBeaver conectándose al puerto <code>23306</code> (credenciales del entorno de desarrollo) o ejecute la importación directamente en el contenedor de MySQL a través de la terminal:
+    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>mysql_db<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-pSecurePass123!<span class="w"> </span>transactional_db<span class="w"> </span>&lt;<span class="w"> </span>bd_transaccional.sql
+</code></pre></div>
+    !!! note "Confirmación de registros"
+        Valide en su gestor SQL que la tabla <code>ventas</code> del origen contenga exactamente <strong>1,670 filas</strong> antes de proceder a la ingesta.</p>
+</li>
+<li>
+<p><strong>Configurar el origen (Source) en la interfaz de Airbyte</strong>:<br />
+    Acceda al panel de administración de Airbyte ingresando a <code>http://localhost:8000</code> (o al puerto configurado en el archivo de entorno). Diríjase a <strong>Sources</strong> &gt; <strong>New Source</strong> y seleccione el conector oficial de <strong>MySQL</strong>. Configure los siguientes parámetros:</p>
 <ul>
-<li><strong>Orquestación automatizada:</strong> Actualmente no cuenta con una herramienta como Apache Airflow o Dagster; las ejecuciones de Airbyte y dbt dependen de activaciones manuales o <em>cron jobs</em> básicos en el host.</li>
-<li><strong>Transformación (T):</strong> Airbyte <strong>solo</strong> hace Extracción y Carga (EL). La limpieza, unión y lógicas de negocio (como el cálculo de ingresos por tipo de canal) están delegadas estrictamente a dbt.</li>
+<li><strong>Host</strong>: <code>host.docker.internal</code> (o el nombre de red del contenedor mysql).</li>
+<li><strong>Port</strong>: <code>3306</code> (puerto interno de Docker).</li>
+<li><strong>Database Name</strong>: Nombre de la base de datos transaccional.</li>
+<li><strong>Username / Password</strong>: Credenciales de lectura.</li>
+<li><strong>Replication Method</strong>: Seleccione <strong>CDC (Change Data Capture)</strong> para habilitar la lectura incremental basada en el binlog.</li>
 </ul>
-<h2 id="6-origen-mysql">6. Origen MySQL</h2>
-<p>El sistema fuente es una base de datos relacional MySQL que soporta la operación diaria de la empresa. Contiene un histórico de más de 1500 transacciones mensuales de salidas y activaciones de kits.</p>
-<h2 id="7-conectores-incluidos">7. Conectores incluidos</h2>
+<p>Haga clic en <strong>Set up source</strong> para validar la conexión.</p>
+</li>
+<li>
+<p><strong>Configurar el destino (Destination) en Airbyte</strong>:<br />
+    Vaya a <strong>Destinations</strong> &gt; <strong>New Destination</strong> y seleccione el conector de <strong>PostgreSQL</strong>. Complete el formulario con los parámetros de conexión al Data Warehouse central:</p>
 <ul>
-<li><strong>Source:</strong> <code>MySQL</code> (Conector oficial de Airbyte para lectura de bases relacionales).</li>
-<li><strong>Destination:</strong> <code>PostgreSQL</code> (Conector oficial de Airbyte para escritura en bases relacionales).</li>
+<li><strong>Host</strong>: <code>host.docker.internal</code> (o el nombre de red del contenedor postgres).</li>
+<li><strong>Port</strong>: <code>5432</code> (puerto interno de Docker).</li>
+<li><strong>Database</strong>: <code>dw_tyg</code>.</li>
+<li><strong>Username / Password</strong>: Credenciales con privilegios de escritura.</li>
+<li><strong>Default Schema</strong>: Establezca el valor en <code>airbyte_raw</code> para aislar los datos crudos del resto del Data Warehouse.</li>
 </ul>
-<h2 id="8-cuando-usar-este-enfoque">8. Cuándo usar este enfoque</h2>
-<p>Este enfoque (Batch / Micro-batch con Airbyte) es ideal para T&amp;D Angeles porque:</p>
-<ol>
-<li>Las decisiones gerenciales sobre metas y stock no requieren latencia de milisegundos (tiempo real), sino cortes diarios o intradía (cada 6 o 12 horas).</li>
-<li>Permite desacoplar el servidor de producción del esfuerzo computacional de los dashboards de Power BI.</li>
-</ol>
-<h2 id="9-cdc-change-data-capture">9. CDC (Change Data Capture)</h2>
-<p>Aunque actualmente las cargas pueden funcionar en modo "Full Refresh" o "Incremental" (basado en columnas como <code>fecha_venta</code>), Airbyte soporta <strong>CDC</strong> leyendo el <em>binlog</em> (Binary Log) de MySQL. Esto significa que puede identificar exactamente qué filas de kits insertaron, actualizaron (ej: pasaron de "Inactivo" a "Activo") o eliminaron, sincronizando solo esos cambios hacia PostgreSQL para mayor eficiencia.</p>
-<h2 id="10-componentes">10. Componentes</h2>
-<h3 id="101-mysql">10.1 MySQL</h3>
-<p>Servidor transaccional que contiene las tablas: <code>ventas</code>, <code>vendedores</code>, <code>pdv</code>, <code>oficinas</code> y <code>metas</code>.</p>
-<h3 id="102-postgresql-dw">10.2 PostgreSQL DW</h3>
-<p>Data Warehouse analítico. Recibe los datos crudos en un esquema inicial y posteriormente aloja los esquemas intermedios y el DataMart final (<code>dw_marts</code>) modelado en estrella.</p>
-<h2 id="11-requisitos">11. Requisitos</h2>
-<p>Para desplegar este ecosistema en una máquina local o servidor, necesitas:</p>
+<p>Haga clic en <strong>Set up destination</strong> para guardar y testear la conectividad.</p>
+</li>
+<li>
+<p><strong>Crear la conexión y definir los modos de sincronización</strong>:<br />
+    Vaya a <strong>Connections</strong> &gt; <strong>New Connection</strong>, asocie el origen MySQL con el destino PostgreSQL y defina el comportamiento de los streams de negocio:</p>
 <ul>
-<li><strong>Docker y Docker Compose</strong> instalados.</li>
-<li><strong>DBeaver</strong> (o cualquier cliente SQL) para validación.</li>
-<li><strong>Git</strong> para clonar el repositorio del proyecto.</li>
-<li><strong>dbt Core</strong> (o dbt CLI) instalado en el entorno de desarrollo.</li>
-<li>Al menos 8GB de RAM y 20GB de disco disponible en el host.</li>
+<li><strong>Selección de streams</strong>: Marque las tablas <code>ventas</code>, <code>vendedores</code>, <code>pdv</code>, <code>oficinas</code> y <code>metas</code>.</li>
+<li><strong>Modos de Replicación</strong>:<ul>
+<li>Para hechos/transacciones (<code>ventas</code>): Configure <strong>Incremental | Append</strong> utilizando el ID o fecha de control, asegurando que los nuevos registros se añadan progresivamente.</li>
+<li>Para dimensiones/catálogos (<code>vendedores</code>, <code>pdv</code>, <code>oficinas</code>, <code>metas</code>): Configure <strong>Full Refresh | Overwrite</strong> para mantener una copia exacta y actualizada de los catálogos en cada ejecución.</li>
 </ul>
-<h2 id="12-como-levantar-el-stack">12. Cómo levantar el stack</h2>
-<p>Para levantar la interfaz de Airbyte localmente mediante Docker:</p>
-<ol>
-<li>Clona el repositorio oficial de Airbyte (si se usa la versión local open-source):
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/airbytehq/airbyte.git
-<span class="nb">cd</span><span class="w"> </span>airbyte
-</code></pre></div></li>
-<li>Ejecuta el script de inicio o levanta los contenedores:
-<div class="highlight"><pre><span></span><code>./run-ab-platform.sh
-<span class="c1"># O alternativamente: docker-compose up -d</span>
-</code></pre></div></li>
-<li>Espera unos minutos y accede a la UI desde tu navegador en <code>http://localhost:8010</code>.</li>
-</ol>
-<p><img alt="Inicio Airbyte" src="../assets/airbyte_inicio.png" /></p>
-<h2 id="13-como-poblar-el-origen-mysql">13. Cómo poblar el origen MySQL</h2>
-<p>Si estás levantando el entorno desde cero para pruebas:</p>
-<ol>
-<li>Accede a tu contenedor de MySQL o instancia local.</li>
-<li>Ejecuta el archivo de volcado <code>dump_ventas_td_angeles.sql</code> (o el script DDL/DML correspondiente a tu proyecto) para crear las tablas e insertar los registros de prueba.</li>
-</ol>
-<h2 id="14-ejecucion-manual-desde-cero">14. Ejecución manual desde cero</h2>
-<p>Sigue estos pasos enumerados para configurar la sincronización de tu proyecto:</p>
-<ol>
-<li><strong>Crear el Origen (Source):</strong></li>
-<li>En la UI de Airbyte, ve a <em>Sources</em> &gt; <em>New Source</em>.</li>
-<li>Selecciona <strong>MySQL</strong>.</li>
-<li>Ingresa las credenciales (Host, Puerto 3306, Usuario, Contraseña y nombre de la BD).</li>
-<li>Configura el método de replicación (estándar o CDC si habilitaste los binlogs).</li>
-</ol>
-<p><img alt="Configuración Source MySQL" src="../assets/airbyte_source.png" /></p>
-<ol>
-<li><strong>Crear el Destino (Destination):</strong></li>
-<li>Ve a <em>Destinations</em> &gt; <em>New Destination</em>.</li>
-<li>Selecciona <strong>PostgreSQL</strong>.</li>
-<li>Ingresa credenciales (Host, Puerto 5432, Usuario, Contraseña, BD: <code>dw_td_angeles</code>).</li>
-<li>Define el esquema por defecto, por ejemplo: <code>airbyte_raw</code>.</li>
-</ol>
-<p><em>(Inserta aquí captura del formulario de conexión al Destination Postgres)</em></p>
-<p><img alt="Configuración Destination Postgres" src="../assets/airbyte_destination.png" /></p>
-<ol>
-<li><strong>Crear la Conexión:</strong></li>
-<li>Ve a <em>Connections</em> &gt; <em>New Connection</em>.</li>
-<li>Selecciona el Source (MySQL) y el Destination (PostgreSQL) recién creados.</li>
-<li>Selecciona los <em>Streams</em> (tablas) que deseas sincronizar: <code>ventas</code>, <code>asesores</code>, <code>pdv</code>, <code>oficinas</code>, <code>metas</code>.</li>
-<li>Define el modo de sincronización: <strong>Incremental | Append</strong> (recomendado para ventas) o <strong>Full Refresh | Overwrite</strong> (recomendado para dimensiones pequeñas como oficinas).</li>
-</ol>
-<p><em>(Inserta aquí captura de la selección de tablas/streams en Airbyte)</em></p>
-<p><img alt="Configuración de la Conexión" src="assets/airbyte_connection.png" /></p>
-<ol>
-<li><strong>Ejecutar la Sincronización:</strong></li>
-<li>Haz clic en <strong>Sync Now</strong>.</li>
-<li>Espera a que el log muestre el estado de <em>Completed</em>.</li>
-</ol>
-<p><img alt="Sync Exitoso" src="../assets/airbyte_success.png" /></p>
-<h2 id="15-como-validar-que-quedo-operativo">15. Cómo validar que quedó operativo</h2>
-<ol>
-<li>Abre <strong>DBeaver</strong> y conéctate a tu base de datos <strong>PostgreSQL</strong>.</li>
-<li>Navega al esquema configurado (ej: <code>airbyte_raw</code>).</li>
-<li>Comprueba que las tablas existan. Normalmente, Airbyte las crea con un prefijo o como tablas crudas (ej. <code>_airbyte_raw_ventas</code>).</li>
-<li>Haz un <code>SELECT COUNT(*)</code> y compáralo con la tabla de origen en MySQL para asegurar que no hubo pérdida de datos.</li>
-</ol>
-<h2 id="16-flujo-recomendado-de-migracion">16. Flujo recomendado de migración</h2>
-<p>El ciclo de vida del dato (Data Pipeline) que se recomienda ejecutar en el día a día es el siguiente:</p>
-<ol>
-<li><strong>(Airbyte) Ingesta Cruda:</strong> MySQL -&gt; PostgreSQL (Esquema <code>raw</code>).</li>
-<li><strong>(dbt) Staging:</strong> Limpieza de nulos y casteo de tipos (ej. solventar la sincronización de fechas y zonas horarias entre MySQL y Postgres) -&gt; Esquema <code>staging</code>.</li>
-<li><strong>(dbt) Marts:</strong> Creación del modelo en estrella (Dimensiones y tabla de Hechos con cálculo de S/.220 para asesores y S/.160 para PDV) -&gt; Esquema <code>dw_marts</code>.</li>
-<li><strong>(Power BI) Consumo:</strong> Lectura directa del esquema <code>dw_marts</code>.</li>
-</ol>
-<h2 id="17-integracion-con-dbt">17. Integración con dbt</h2>
-<p>Una vez que Airbyte finaliza su trabajo, <code>dbt</code> toma el control. Para que dbt reconozca los datos de Airbyte, se definen como <code>sources</code> en el archivo <code>src_td_angeles.yml</code>:</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejecutar la sincronización inicial</strong>:<br />
+    En el panel de control de la conexión recién creada, haga clic en el botón <strong>Sync Now</strong>. Monitoree los logs en tiempo real para verificar que no existan fallos de formato o conexión. Espere hasta que el estado cambie a exitoso con la etiqueta <strong>Completed</strong>.</p>
+<p>!!! success "Sincronización Completada"
+    El panel de Airbyte mostrará la cantidad de registros transmitidos para cada una de las 5 tablas configuradas.</p>
+</li>
+<li>
+<p><strong>Validar la cuadratura fáctica en el Data Warehouse</strong>:<br />
+    Abra DBeaver y conéctese a la base de datos PostgreSQL <code>dw_tyg</code> a través del puerto expuesto <code>5452</code>. Ejecute consultas de agregación para comprobar la integridad de la información y la coincidencia con el origen:
+    <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">airbyte_raw</span><span class="p">.</span><span class="n">_airbyte_raw_ventas</span><span class="p">;</span>
+</code></pre></div>
+    Verifique que el conteo arroje exactamente <strong>1,670 filas</strong>, confirmando que la replicación se ha realizado sin pérdida de datos en el canal de comunicación.</p>
+</li>
+<li>
+<p><strong>Integrar el origen de Airbyte en dbt Core</strong>:<br />
+    Declare el esquema crudo creado por Airbyte dentro del proyecto dbt. En el archivo <code>models/staging/sources.yml</code>, defina la fuente <code>airbyte_raw</code> con sus respectivas tablas para que dbt pueda procesarlas en las fases de transformación subsiguientes:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 
 <span class="nt">sources</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airbyte_raw</span>
-<span class="w">    </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">public</span>
+<span class="w">    </span><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dw_tyg</span>
+<span class="w">    </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airbyte_raw</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Esquema</span><span class="nv"> </span><span class="s">transitorio</span><span class="nv"> </span><span class="s">que</span><span class="nv"> </span><span class="s">contiene</span><span class="nv"> </span><span class="s">los</span><span class="nv"> </span><span class="s">datos</span><span class="nv"> </span><span class="s">crudos</span><span class="nv"> </span><span class="s">replicados</span><span class="nv"> </span><span class="s">desde</span><span class="nv"> </span><span class="s">MySQL</span><span class="nv"> </span><span class="s">por</span><span class="nv"> </span><span class="s">Airbyte.&quot;</span>
 <span class="w">    </span><span class="nt">tables</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ventas</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Historial</span><span class="nv"> </span><span class="s">transaccional</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">ventas</span><span class="nv"> </span><span class="s">y</span><span class="nv"> </span><span class="s">activaciones</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">kits.&quot;</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendedores</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Registro</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">asesores</span><span class="nv"> </span><span class="s">y</span><span class="nv"> </span><span class="s">personal</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">venta</span><span class="nv"> </span><span class="s">directa.&quot;</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdv</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Catálogo</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">puntos</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">venta</span><span class="nv"> </span><span class="s">autorizados.&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oficinas</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Sedes</span><span class="nv"> </span><span class="s">geográficas</span><span class="nv"> </span><span class="s">del</span><span class="nv"> </span><span class="s">distribuidor.&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metas</span>
+<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Metas</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">activaciones</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">kits</span><span class="nv"> </span><span class="s">asignadas</span><span class="nv"> </span><span class="s">mensualmente.&quot;</span>
 </code></pre></div>
-<p>Luego, en los modelos de la capa Silver (ej: <code>stg_ventas.sql</code>), se extraen con la sintaxis:
-<code>SELECT * FROM {{ source('airbyte_raw', 'ventas') }}</code></p>
-<h2 id="18-limitaciones-actuales-del-proyecto">18. Limitaciones actuales del proyecto</h2>
-<p>Según los hallazgos en las sesiones de desarrollo, identificamos las siguientes restricciones:</p>
-<ol>
-<li><strong>Procesamiento acoplado al Host:</strong> La ejecución de Airbyte y los comandos <code>dbt run</code> dependen de los recursos y la activación manual desde la máquina local o servidor host. Si la terminal se cierra, no hay automatización nativa.</li>
-<li><strong>Sincronización de Fechas:</strong> Hubo un grado de complejidad al sincronizar los formatos de fecha (<code>DATETIME</code> vs <code>TIMESTAMP</code>) entre MySQL y Postgres, lo que requirió tratamiento adicional en los scripts de dbt.</li>
-<li><strong>Falta de test automáticos:</strong> Aunque se hicieron pruebas genéricas, queda pendiente optimizar la ejecución de <code>dbt test</code> para que prevenga que datos corruptos lleguen al Dashboard.</li>
+</li>
 </ol>
-<h2 id="19-proximos-pasos-sugeridos">19. Próximos pasos sugeridos</h2>
+<hr />
+<h2 id="4-componente-visual-referencias-de-la-interfaz">4. Componente Visual (Referencias de la Interfaz)</h2>
+<p>A continuación, se presentan las capturas correspondientes al proceso de configuración en el entorno local:</p>
+<h3 id="panel-inicial-de-control-en-airbyte">Panel Inicial de Control en Airbyte</h3>
+<p>Muestra el estado general del orquestador y la lista de conexiones configuradas en el entorno local.
+<img alt="Panel de inicio de Airbyte" src="../assets/airbyte_inicio.png" /></p>
+<h3 id="configuracion-del-source-mysql">Configuración del Source MySQL</h3>
+<p>Formulario técnico con las credenciales de origen y la validación del protocolo de lectura CDC.
+<img alt="Formulario de origen MySQL" src="../assets/airbyte_source.png" /></p>
+<h3 id="configuracion-del-destination-postgresql">Configuración del Destination PostgreSQL</h3>
+<p>Formulario de destino que apunta al puerto de escritura del Data Warehouse centralizado en el esquema crudo.
+<img alt="Formulario de destino Postgres" src="../assets/airbyte_destination.png" /></p>
+<h3 id="sincronizacion-exitosa">Sincronización Exitosa</h3>
+<p>Confirmación visual del estado "Completed" tras culminar la ingesta del volumen total de registros.
+<img alt="Éxito de sincronización en Airbyte" src="../assets/airbyte_success.png" /></p>
+<hr />
+<h2 id="5-limitaciones-y-proximos-pasos">5. Limitaciones y Próximos Pasos</h2>
+<p>Aunque el flujo de replicación funciona de manera óptima, la arquitectura actual presenta las siguientes limitaciones de integración:</p>
 <ul>
-<li><strong>Implementar un Orquestador:</strong> Integrar Apache Airflow o Prefect para programar el pipeline completo (gatillar <code>dbt run</code> automáticamente justo después de que Airbyte termine su sincronización exitosamente).</li>
-<li><strong>Mejorar las estrategias incrementales:</strong> Configurar modelos incrementales en dbt para que no reprocese los históricos de ventas que ya están limpios y cargados en el DataMart.</li>
-<li><strong>Alertas:</strong> Configurar notificaciones (vía Slack o correo) si falla una extracción en Airbyte o un test en dbt.</li>
-</ul>
-<h2 id="20-referencias">20. Referencias</h2>
-<ul>
-<li><a href="https://docs.airbyte.com/">Documentación oficial de Airbyte</a></li>
-<li><a href="https://docs.airbyte.com/integrations/sources/mysql">Conector Airbyte MySQL Source</a></li>
-<li><a href="https://docs.airbyte.com/integrations/destinations/postgres">Conector Airbyte Postgres Destination</a></li>
-<li><a href="https://docs.getdbt.com/">Documentación oficial de dbt</a></li>
+<li><strong>Acoplamiento y Activación Manual</strong>: El proceso actual requiere que la sincronización en Airbyte se dispare de manera autónoma en base a intervalos de tiempo fijos, pero la ejecución subsiguiente de comandos como <code>dbt run</code> y <code>dbt test</code> en el host debe invocarse manualmente o mediante scripts locales secuenciales. Si un paso intermedio falla, no existe control nativo de errores cruzados.</li>
+<li><strong>Orquestación Unificada (Propuesta)</strong>: Se plantea como paso futuro inmediato la incorporación de un orquestador de workflows como <strong>Apache Airflow</strong> o <strong>Prefect</strong>. Esto permitirá:<ol>
+<li>Gatillar la sincronización de Airbyte programáticamente.</li>
+<li>Escuchar el estado de finalización del Job de Airbyte.</li>
+<li>Desencadenar inmediatamente la ejecución de los modelos de dbt (<code>dbt run</code> y <code>dbt test</code>) únicamente si la ingesta fue exitosa.</li>
+<li>Enviar alertas inmediatas ante fallos en cualquiera de las fases del pipeline.</li>
+</ol>
+</li>
 </ul>
 
 

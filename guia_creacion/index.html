@@ -1,0 +1,1585 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Henyelrey.github.io/BITyG/guia_creacion/">
+      
+      
+        <link rel="prev" href="../comparativos/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Guía de Creación - T&D Angeles E.I.R.L. Business Intelligence</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-de-creacion-del-proyecto" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="T&amp;D Angeles E.I.R.L. Business Intelligence" class="md-header__button md-logo" aria-label="T&D Angeles E.I.R.L. Business Intelligence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            T&D Angeles E.I.R.L. Business Intelligence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guía de Creación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="T&amp;D Angeles E.I.R.L. Business Intelligence" class="md-nav__button md-logo" aria-label="T&D Angeles E.I.R.L. Business Intelligence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    T&D Angeles E.I.R.L. Business Intelligence
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentacion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_airbyte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia Airbyte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comparativos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparativos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Creación
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Creación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-configuracion-inicial-del-entorno-y-directorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Configuración Inicial del Entorno y Directorios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Configuración Inicial del Entorno y Directorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-directorios-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de Directorios del Repositorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-de-python-y-entorno-virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicialización de Python y Entorno Virtual
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-configuracion-e-inicializacion-del-origen-mysql-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Configuración e Inicialización del Origen (MySQL OLTP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Configuración e Inicialización del Origen (MySQL OLTP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orquestacion-multi-contenedor-docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orquestación Multi-contenedor (docker-compose.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-motor-para-cdc-mycnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración del Motor para CDC (my.cnf)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-y-carga-de-datos-transaccionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicialización y Carga de Datos Transaccionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacion-de-carga-en-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validación de Carga en MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configuracion-del-data-warehouse-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Configuración del Data Warehouse (PostgreSQL)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Configuración del Data Warehouse (PostgreSQL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aprovisionamiento-del-contenedor-postgres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aprovisionamiento del contenedor Postgres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-del-esquema-y-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicialización del Esquema y Permisos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-la-arquitectura-analitica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de la Arquitectura Analítica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-despliegue-y-configuracion-de-la-ingesta-airbyte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Despliegue y Configuración de la Ingesta (Airbyte)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Despliegue y Configuración de la Ingesta (Airbyte)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-la-plataforma-airbyte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de la Plataforma Airbyte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-en-la-interfaz-web-httplocalhost8000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración en la Interfaz Web (http://localhost:8000)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replicacion-y-panel-de-conexiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replicación y Panel de Conexiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-desarrollo-desde-cero-del-proyecto-dbt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Desarrollo desde Cero del Proyecto dbt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Desarrollo desde Cero del Proyecto dbt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicialización del Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-perfil-de-conexion-profilesyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración del perfil de conexión (profiles.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construccion-del-modelo-modular-por-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Construcción del Modelo Modular por Capas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Construcción del Modelo Modular por Capas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-capa-bronze-raw-declaracion-de-fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Capa Bronze / Raw (Declaración de Fuentes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-capa-silver-staging-limpieza-e-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Capa Silver / Staging (Limpieza e Integración)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-capa-gold-marts-esquema-estrella" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Capa Gold / Marts (Esquema Estrella)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-del-modelo-dimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura del Modelo Dimensional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-estructurales-y-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas Estructurales y Validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-de-procesamiento-y-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia de Procesamiento y Validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conexion-del-modelo-semantico-en-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Conexión del Modelo Semántico en Power BI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Conexión del Modelo Semántico en Power BI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importación de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapeo-relacional-esquema-en-estrella" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapeo Relacional (Esquema en Estrella)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-medidas-dax-criticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación de Medidas DAX Críticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-configuracion-inicial-del-entorno-y-directorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Configuración Inicial del Entorno y Directorios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Configuración Inicial del Entorno y Directorios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-directorios-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura de Directorios del Repositorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-de-python-y-entorno-virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicialización de Python y Entorno Virtual
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-configuracion-e-inicializacion-del-origen-mysql-oltp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Configuración e Inicialización del Origen (MySQL OLTP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Configuración e Inicialización del Origen (MySQL OLTP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orquestacion-multi-contenedor-docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orquestación Multi-contenedor (docker-compose.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-motor-para-cdc-mycnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración del Motor para CDC (my.cnf)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-y-carga-de-datos-transaccionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicialización y Carga de Datos Transaccionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacion-de-carga-en-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validación de Carga en MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-configuracion-del-data-warehouse-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Configuración del Data Warehouse (PostgreSQL)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Configuración del Data Warehouse (PostgreSQL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aprovisionamiento-del-contenedor-postgres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aprovisionamiento del contenedor Postgres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-del-esquema-y-permisos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicialización del Esquema y Permisos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-la-arquitectura-analitica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de la Arquitectura Analítica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-despliegue-y-configuracion-de-la-ingesta-airbyte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Despliegue y Configuración de la Ingesta (Airbyte)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Despliegue y Configuración de la Ingesta (Airbyte)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-la-plataforma-airbyte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de la Plataforma Airbyte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-en-la-interfaz-web-httplocalhost8000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración en la Interfaz Web (http://localhost:8000)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replicacion-y-panel-de-conexiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replicación y Panel de Conexiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-desarrollo-desde-cero-del-proyecto-dbt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Desarrollo desde Cero del Proyecto dbt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Desarrollo desde Cero del Proyecto dbt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inicializacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicialización del Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-del-perfil-de-conexion-profilesyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración del perfil de conexión (profiles.yml)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construccion-del-modelo-modular-por-capas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Construcción del Modelo Modular por Capas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Construcción del Modelo Modular por Capas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-capa-bronze-raw-declaracion-de-fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Capa Bronze / Raw (Declaración de Fuentes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-capa-silver-staging-limpieza-e-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Capa Silver / Staging (Limpieza e Integración)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-capa-gold-marts-esquema-estrella" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C. Capa Gold / Marts (Esquema Estrella)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-del-modelo-dimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura del Modelo Dimensional
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pruebas-estructurales-y-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pruebas Estructurales y Validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-de-procesamiento-y-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia de Procesamiento y Validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conexion-del-modelo-semantico-en-power-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Conexión del Modelo Semántico en Power BI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Conexión del Modelo Semántico en Power BI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importación de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapeo-relacional-esquema-en-estrella" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapeo Relacional (Esquema en Estrella)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-medidas-dax-criticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación de Medidas DAX Críticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-de-creacion-del-proyecto">Guía de Creación del Proyecto</h1>
+<p>Esta guía técnica detalla la bitácora cronológica de ingeniería utilizada para construir desde cero el ecosistema analítico de Business Intelligence de <strong>T&amp;D Angeles E.I.R.L.</strong> El documento está diseñado como un manual de referencia técnica para recrear toda la solución, abarcando desde la configuración del entorno hasta el modelado dimensional y la conexión con la capa de presentación en Power BI.</p>
+<hr />
+<h2 id="1-configuracion-inicial-del-entorno-y-directorios">1. Configuración Inicial del Entorno y Directorios</h2>
+<p>El punto de partida del proyecto consistió en estructurar un repositorio local limpio y modular, aislando los entornos de documentación, transformación de datos e infraestructura física.</p>
+<h3 id="estructura-de-directorios-del-repositorio">Estructura de Directorios del Repositorio</h3>
+<p>Se ejecutaron los siguientes comandos en el host para inicializar el árbol de carpetas base del proyecto:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Crear la carpeta raíz del proyecto</span>
+mkdir<span class="w"> </span>tyg_bi
+<span class="nb">cd</span><span class="w"> </span>tyg_bi
+
+<span class="c1"># Crear subdirectorios del stack</span>
+mkdir<span class="w"> </span>docs<span class="w">            </span><span class="c1"># Documentación MkDocs</span>
+mkdir<span class="w"> </span>dbt_project<span class="w">     </span><span class="c1"># Modelado con dbt Core</span>
+mkdir<span class="w"> </span>docker-services<span class="w"> </span><span class="c1"># Archivos YAML y configuraciones de contenedores</span>
+</code></pre></div>
+<h3 id="inicializacion-de-python-y-entorno-virtual">Inicialización de Python y Entorno Virtual</h3>
+<p>Para evitar conflictos de librerías en la máquina local, se aprovisionó un entorno virtual de Python 3.11 para instalar los ejecutables y dependencias de dbt y MkDocs:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Crear el entorno virtual en la carpeta raíz</span>
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+
+<span class="c1"># Activar el entorno virtual (Windows PowerShell)</span>
+.<span class="se">\v</span>env<span class="se">\S</span>cripts<span class="se">\A</span>ctivate.ps1
+
+<span class="c1"># Actualizar el gestor de paquetes pip</span>
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+
+<span class="c1"># Instalar los paquetes necesarios del Modern Data Stack</span>
+pip<span class="w"> </span>install<span class="w"> </span>dbt-core<span class="w"> </span>dbt-postgres<span class="w"> </span>mkdocs-material
+</code></pre></div>
+<p>!!! success "Instalación Exitosa"
+    Puede comprobar las versiones instaladas en el entorno ejecutando <code>dbt --version</code> y <code>mkdocs --version</code>. Esto asegura que contamos con la infraestructura necesaria para compilar modelos y servir la documentación.</p>
+<hr />
+<h2 id="2-configuracion-e-inicializacion-del-origen-mysql-oltp">2. Configuración e Inicialización del Origen (MySQL OLTP)</h2>
+<p>El origen de datos (sistema transaccional) es una base de datos MySQL que registra el inventario y las ventas diarias. Para aislar este entorno, se desplegó un contenedor virtualizado mediante Docker.</p>
+<h3 id="orquestacion-multi-contenedor-docker-composeyml">Orquestación Multi-contenedor (docker-compose.yml)</h3>
+<p>En el directorio <code>docker-services/</code>, se creó el archivo de orquestación <code>docker-compose.yml</code> para instanciar el contenedor de MySQL expuesto en el puerto personalizado <code>23306</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mysql-tyg-oltp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:8.4</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql-tyg-oltp</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecurePass123!</span>
+<span class="w">      </span><span class="nt">MYSQL_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transactional_db</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;23306:3306&quot;</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mysql/my.cnf:/etc/mysql/conf.d/my.cnf</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mysql/data:/var/lib/mysql</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./mysql/init:/docker-entrypoint-initdb.d</span>
+</code></pre></div>
+<h3 id="configuracion-del-motor-para-cdc-mycnf">Configuración del Motor para CDC (my.cnf)</h3>
+<p>Para habilitar Change Data Capture (CDC), fue imperativo mapear un archivo de configuración de lectura obligatoria para el motor MySQL. Se guardó el archivo en <code>./mysql/my.cnf</code> con los siguientes parámetros habilitadores:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[mysqld]</span>
+<span class="c1"># Identificador único del servidor de base de datos en el cluster</span>
+<span class="na">server-id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
+
+<span class="c1"># Habilitación y nombre base del registro binario de transacciones</span>
+<span class="na">log_bin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">mysql-bin</span>
+
+<span class="c1"># Formato de registro binario estructurado por fila</span>
+<span class="na">binlog_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ROW</span>
+
+<span class="c1"># Captura el estado completo de la fila (obligatorio para Airbyte CDC)</span>
+<span class="na">binlog_row_image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FULL</span>
+
+<span class="c1"># Retención mínima de logs binarios para evitar pérdida en caídas de red</span>
+<span class="na">binlog_expire_logs_seconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">864000</span>
+</code></pre></div>
+<p>!!! warning "Reinicio Obligatorio"
+    Cualquier modificación en el archivo <code>my.cnf</code> requiere la reconstrucción o reinicio del contenedor MySQL para que las variables del sistema se carguen en memoria.</p>
+<h3 id="inicializacion-y-carga-de-datos-transaccionales">Inicialización y Carga de Datos Transaccionales</h3>
+<p>Con la configuración binaria lista, se levantó el contenedor y se importó el archivo de respaldo transaccional (<code>bd_transaccional.sql</code>) para establecer el histórico inicial de <strong>1,670 transacciones</strong> de kits prepago:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Levantar el contenedor en segundo plano</span>
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>mysql-tyg-oltp
+
+<span class="c1"># Verificar logs de inicialización del motor</span>
+docker<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>mysql-tyg-oltp
+
+<span class="c1"># Poblar la base de datos MySQL con el script del histórico</span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-i<span class="w"> </span>mysql-tyg-oltp<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-pSecurePass123!<span class="w"> </span>transactional_db<span class="w"> </span>&lt;<span class="w"> </span>bd_transaccional.sql
+</code></pre></div>
+<h3 id="validacion-de-carga-en-mysql">Validación de Carga en MySQL</h3>
+<p>A continuación, se presenta la validación del estado físico de las tablas inicializadas en el origen transaccional:</p>
+<p><img alt="Evidencia de base de datos MySQL" src="../assets/evidencia_mysql.png" /></p>
+<hr />
+<h2 id="3-configuracion-del-data-warehouse-postgresql">3. Configuración del Data Warehouse (PostgreSQL)</h2>
+<p>Como repositorio de datos analíticos (Data Warehouse), se seleccionó un motor PostgreSQL 16 estructurado por esquemas, con el fin de organizar y segmentar los datos crudos, limpios y finalmente modelados.</p>
+<h3 id="aprovisionamiento-del-contenedor-postgres">Aprovisionamiento del contenedor Postgres</h3>
+<p>Se añadió la definición del servicio Postgres al archivo de orquestación <code>docker-compose.yml</code> bajo las siguientes especificaciones:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">postgres-bi</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:16</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres-bi</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dw_tyg</span>
+<span class="w">      </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bi_user</span>
+<span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecureDwPass456!</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;5452:5432&quot;</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./postgres/data:/var/lib/postgresql/data</span>
+</code></pre></div>
+<p>Se levantó el servicio ejecutando <code>docker compose up -d postgres-bi</code>.</p>
+<h3 id="inicializacion-del-esquema-y-permisos">Inicialización del Esquema y Permisos</h3>
+<p>Una vez activo el contenedor en el puerto <code>5452</code>, se utilizó DBeaver para ejecutar el script SQL de creación de base de datos y esquemas para las distintas capas del Data Warehouse:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Conectado como superusuario a postgres:bi_user</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">dw_tyg</span><span class="p">;</span>
+
+<span class="c1">-- Conectarse a la nueva BD &#39;dw_tyg&#39; y crear esquemas lógicos</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">airbyte_raw</span><span class="p">;</span><span class="w"> </span><span class="c1">-- Destino de ingesta cruda</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">staging</span><span class="p">;</span><span class="w">     </span><span class="c1">-- Capa intermedia de limpieza y normalización</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">marts</span><span class="p">;</span><span class="w">       </span><span class="c1">-- Capa final expuesta a Power BI (Esquema Estrella)</span>
+
+<span class="c1">-- Asignación de permisos al rol de análisis</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">airbyte_raw</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">bi_user</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">staging</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">bi_user</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">marts</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">bi_user</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="diagrama-de-la-arquitectura-analitica">Diagrama de la Arquitectura Analítica</h3>
+<p>El flujo general de la información a través de los componentes físicos se ilustra en el siguiente diagrama de arquitectura:</p>
+<p><img alt="Diagrama de Arquitectura de Datos" src="../assets/arquitectura_bi.png" /></p>
+<hr />
+<h2 id="4-despliegue-y-configuracion-de-la-ingesta-airbyte">4. Despliegue y Configuración de la Ingesta (Airbyte)</h2>
+<p>Airbyte Open Source gestiona la replicación incremental de datos del entorno transaccional al Data Warehouse sin interferir con la lógica de base de datos origen.</p>
+<h3 id="instalacion-de-la-plataforma-airbyte">Instalación de la Plataforma Airbyte</h3>
+<p>Se clonó la versión oficial del orquestador open source de Airbyte e inició la plataforma local:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/airbytehq/airbyte.git
+<span class="nb">cd</span><span class="w"> </span>airbyte
+./run-ab-platform.sh
+</code></pre></div>
+<h3 id="configuracion-en-la-interfaz-web-httplocalhost8000">Configuración en la Interfaz Web (http://localhost:8000)</h3>
+<ol>
+<li>
+<p><strong>Configuración del Source (MySQL)</strong>:</p>
+<ul>
+<li>Seleccione el conector de <strong>MySQL</strong>.</li>
+<li>Defina el host de origen (<code>host.docker.internal</code> para alcanzar el puerto expuesto del host desde la red de contenedores).</li>
+<li>Indique el puerto <code>23306</code> (o <code>3306</code> si está dentro de la misma red virtual de Docker).</li>
+<li>Ingrese credenciales seguras.</li>
+<li>Seleccione <strong>CDC</strong> como método de replicación, ingresando el usuario administrador con permisos para leer el <code>binlog</code>.</li>
+</ul>
+<p><img alt="Configuración del Origen MySQL en Airbyte" src="../assets/airbyte_source.png" /></p>
+</li>
+<li>
+<p><strong>Configuración del Destination (PostgreSQL)</strong>:</p>
+<ul>
+<li>Seleccione el conector de <strong>PostgreSQL</strong>.</li>
+<li>Host: <code>host.docker.internal</code> / Puerto: <code>5452</code> (o <code>5432</code> de manera interna).</li>
+<li>Base de datos: <code>dw_tyg</code>.</li>
+<li>Esquema por defecto: <code>airbyte_raw</code>.</li>
+</ul>
+<p><img alt="Configuración del Destino PostgreSQL en Airbyte" src="../assets/airbyte_destination.png" /></p>
+</li>
+<li>
+<p><strong>Configuración de la Conexión</strong>:</p>
+<ul>
+<li>Asocie el Source MySQL con el Destination Postgres.</li>
+<li><strong>Estrategia de replicación para hechos (<code>ventas</code>, <code>recepciones</code>)</strong>: Se determinó configurar el modo <strong>Incremental | Append</strong> debido al volumen dinámico y crecimiento constante de las transacciones. Esto optimiza el consumo de red y disco.</li>
+<li><strong>Estrategia de replicación para dimensiones</strong>: Se configuró el modo <strong>Full Refresh | Overwrite</strong> para tablas catálogo relativamente estables (<code>vendedores</code>, <code>pdv</code>, <code>oficinas</code>, <code>metas</code>), asegurando consistencia absoluta en el warehouse en cada sincronización.</li>
+</ul>
+</li>
+</ol>
+<h3 id="replicacion-y-panel-de-conexiones">Replicación y Panel de Conexiones</h3>
+<p>El panel de control muestra el estado general y la validación de las sincronizaciones completadas con éxito en el entorno local:</p>
+<p><img alt="Panel de inicio de conexiones en Airbyte" src="../assets/airbyte_inicio.png" /></p>
+<p><img alt="Sincronización exitosa en Airbyte" src="../assets/airbyte_success.png" /></p>
+<hr />
+<h2 id="5-desarrollo-desde-cero-del-proyecto-dbt">5. Desarrollo desde Cero del Proyecto dbt</h2>
+<p>Una vez cargados los datos crudos en <code>airbyte_raw</code>, se procedió al desarrollo estructurado de las transformaciones analíticas con dbt Core.</p>
+<h3 id="inicializacion-del-proyecto">Inicialización del Proyecto</h3>
+<p>Dentro de la carpeta raíz <code>tyg_bi/</code>, se ejecutó el asistente para estructurar el proyecto:</p>
+<p><div class="highlight"><pre><span></span><code>dbt<span class="w"> </span>init<span class="w"> </span>tyg_bi_transform
+</code></pre></div>
+Durante el asistente, se seleccionó el adaptador <code>postgres</code>.</p>
+<h3 id="configuracion-del-perfil-de-conexion-profilesyml">Configuración del perfil de conexión (profiles.yml)</h3>
+<p>Se configuró el archivo <code>~/.dbt/profiles.yml</code> para permitir la comunicación segura entre dbt Core y la instancia analítica de PostgreSQL:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">tyg_bi_transform</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">dev</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5452</span>
+<span class="w">      </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bi_user</span>
+<span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecureDwPass456!</span>
+<span class="w">      </span><span class="nt">dbname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dw_tyg</span>
+<span class="w">      </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staging</span>
+<span class="w">      </span><span class="nt">threads</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">  </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev</span>
+</code></pre></div>
+<h3 id="construccion-del-modelo-modular-por-capas">Construcción del Modelo Modular por Capas</h3>
+<h4 id="a-capa-bronze-raw-declaracion-de-fuentes">A. Capa Bronze / Raw (Declaración de Fuentes)</h4>
+<p>Se creó el manifiesto de fuentes en <code>models/staging/sources.yml</code> indicando a dbt dónde leer las tablas crudas generadas por Airbyte:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+
+<span class="nt">sources</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airbyte_raw</span>
+<span class="w">    </span><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dw_tyg</span>
+<span class="w">    </span><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airbyte_raw</span>
+<span class="w">    </span><span class="nt">tables</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ventas</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendedores</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdv</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oficinas</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metas</span>
+</code></pre></div>
+<h4 id="b-capa-silver-staging-limpieza-e-integracion">B. Capa Silver / Staging (Limpieza e Integración)</h4>
+<p>Se desarrollaron modelos de staging (<code>stg_*.sql</code>) para aplicar limpieza de datos, casteo de tipos, reemplazo de nulos mediante <code>coalesce</code>, expresiones regulares <code>regexp_replace</code>, y la eliminación crítica del efecto Fan-out en las series utilizando funciones de ventana:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Ejemplo en models/staging/stg_ventas.sql</span>
+<span class="k">with</span><span class="w"> </span><span class="n">source_data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="k">source</span><span class="p">(</span><span class="s1">&#39;airbyte_raw&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ventas&#39;</span><span class="p">)</span><span class="w"> </span><span class="err">}}</span>
+<span class="p">),</span>
+<span class="n">deduplicated</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">select</span>
+<span class="w">        </span><span class="k">coalesce</span><span class="p">(</span><span class="n">id_venta</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">id_venta</span><span class="p">,</span>
+<span class="w">        </span><span class="k">coalesce</span><span class="p">(</span><span class="n">lote_serie</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;SIN_SERIE&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">lote_serie</span><span class="p">,</span>
+<span class="w">        </span><span class="k">coalesce</span><span class="p">(</span><span class="n">monto</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">monto_venta</span><span class="p">,</span>
+<span class="w">        </span><span class="c1">-- Estandarización de texto con regexp_replace</span>
+<span class="w">        </span><span class="n">regexp_replace</span><span class="p">(</span><span class="k">upper</span><span class="p">(</span><span class="n">canal</span><span class="p">),</span><span class="w"> </span><span class="s1">&#39;[^A-Z]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">canal_venta</span><span class="p">,</span>
+<span class="w">        </span><span class="k">cast</span><span class="p">(</span><span class="n">fecha_venta</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">timestamp</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">fecha_venta</span><span class="p">,</span>
+<span class="w">        </span><span class="n">id_oficina</span><span class="p">,</span>
+<span class="w">        </span><span class="n">id_vendedor</span><span class="p">,</span>
+<span class="w">        </span><span class="c1">-- ROW_NUMBER para eliminar duplicidad en el número de serie de kit</span>
+<span class="w">        </span><span class="n">row_number</span><span class="p">()</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="p">(</span>
+<span class="w">            </span><span class="n">partition</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">lote_serie</span><span class="w"> </span>
+<span class="w">            </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">fecha_venta</span><span class="w"> </span><span class="k">desc</span>
+<span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">row_num</span>
+<span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">source_data</span>
+<span class="p">)</span>
+<span class="k">select</span>
+<span class="w">    </span><span class="n">id_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">lote_serie</span><span class="p">,</span>
+<span class="w">    </span><span class="n">monto_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">canal_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">fecha_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">id_oficina</span><span class="p">,</span>
+<span class="w">    </span><span class="n">id_vendedor</span>
+<span class="k">from</span><span class="w"> </span><span class="n">deduplicated</span>
+<span class="c1">-- Filtro crítico para eliminar registros duplicados del histórico (Fan-out)</span>
+<span class="k">where</span><span class="w"> </span><span class="n">row_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div>
+<h4 id="c-capa-gold-marts-esquema-estrella">C. Capa Gold / Marts (Esquema Estrella)</h4>
+<p>En esta capa final, los datos se materializaron como tablas físicas en el esquema <code>marts</code> utilizando dimensiones conformadas y tablas de hechos para optimizar las uniones:</p>
+<ul>
+<li><strong>Dimensiones (<code>dim_vendedores.sql</code>, <code>dim_oficinas.sql</code>, <code>dim_tiempo.sql</code>)</strong>: Catálogos limpios con llaves primarias únicas.</li>
+<li><strong>Tabla de Hechos (<code>fact_ventas.sql</code>)</strong>: Transacciones históricas enlazadas con llaves foráneas a las dimensiones.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Ejemplo en models/marts/fact_ventas.sql</span>
+<span class="err">{{</span><span class="w"> </span><span class="n">config</span><span class="p">(</span><span class="n">materialized</span><span class="o">=</span><span class="s1">&#39;table&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">schema</span><span class="o">=</span><span class="s1">&#39;marts&#39;</span><span class="p">)</span><span class="w"> </span><span class="err">}}</span>
+
+<span class="k">select</span>
+<span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">id_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">lote_serie</span><span class="p">,</span>
+<span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">monto_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">canal_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">fecha_venta</span><span class="p">,</span>
+<span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">id_oficina</span><span class="p">,</span>
+<span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">id_vendedor</span>
+<span class="k">from</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="k">ref</span><span class="p">(</span><span class="s1">&#39;stg_ventas&#39;</span><span class="p">)</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="n">v</span>
+</code></pre></div>
+<h4 id="estructura-del-modelo-dimensional">Estructura del Modelo Dimensional</h4>
+<p>El modelado en estrella resultante de las transformaciones de dbt y sus llaves primarias y foráneas se detallan a continuación:</p>
+<p><img alt="Diagrama del Modelo de Datos" src="../assets/diagrama_modelo.png" /></p>
+<h3 id="pruebas-estructurales-y-validacion">Pruebas Estructurales y Validación</h3>
+<p>Para garantizar la integridad referencial y asegurar la calidad del dato, se definieron tests automáticos de dbt en el archivo <code>models/marts/schema.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+
+<span class="nt">models</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dim_vendedores</span>
+<span class="w">    </span><span class="nt">columns</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id_vendedor</span>
+<span class="w">        </span><span class="nt">tests</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unique</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not_null</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fact_ventas</span>
+<span class="w">    </span><span class="nt">columns</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id_venta</span>
+<span class="w">        </span><span class="nt">tests</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unique</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">not_null</span>
+</code></pre></div>
+<p>Se corrió el pipeline completo y los tests automáticos mediante:
+<div class="highlight"><pre><span></span><code>dbt<span class="w"> </span>run
+dbt<span class="w"> </span><span class="nb">test</span>
+</code></pre></div></p>
+<h3 id="evidencia-de-procesamiento-y-validacion">Evidencia de Procesamiento y Validación</h3>
+<p>A continuación, se adjunta la captura que evidencia el paso correcto de todas las pruebas analíticas definidas:</p>
+<p><img alt="Evidencia de Ejecución de dbt y Tests" src="../assets/evidencia_ejecucion.png" /></p>
+<hr />
+<h2 id="6-conexion-del-modelo-semantico-en-power-bi">6. Conexión del Modelo Semántico en Power BI</h2>
+<p>La fase final del proyecto involucró conectar la capa semántica de Power BI con las tablas modeladas de la capa Gold (<code>marts</code>) para habilitar la visualización interactiva.</p>
+<h3 id="importacion-de-datos">Importación de Datos</h3>
+<ol>
+<li>Abra <strong>Power BI Desktop</strong>.</li>
+<li>Seleccione <strong>Obtener Datos</strong> &gt; <strong>Base de datos de PostgreSQL</strong>.</li>
+<li>Configure los parámetros de conexión:<ul>
+<li><strong>Servidor</strong>: <code>localhost:5452</code></li>
+<li><strong>Base de datos</strong>: <code>dw_tyg</code></li>
+<li><strong>Modo de conectividad</strong>: Seleccione <strong>Import</strong> para cargar los datos en memoria y permitir cálculos DAX de alto rendimiento.</li>
+</ul>
+</li>
+<li>En el navegador, seleccione las tablas del esquema <code>marts</code> (<code>dim_vendedores</code>, <code>dim_oficinas</code>, <code>dim_tiempo</code>, <code>fact_ventas</code>, <code>fact_metas_pedidos</code>).</li>
+</ol>
+<h3 id="mapeo-relacional-esquema-en-estrella">Mapeo Relacional (Esquema en Estrella)</h3>
+<p>En la vista de modelo de Power BI, se relacionaron las tablas de hechos con las dimensiones conformadas en relaciones clásicas <code>1 a Varios (1:*)</code> con filtro unidireccional para garantizar una jerarquía de filtrado limpia y evitar la ambigüedad:</p>
+<ul>
+<li><code>dim_oficinas[id_oficina]</code> (1) ───&gt; (*) <code>fact_ventas[id_oficina]</code></li>
+<li><code>dim_vendedores[id_vendedor]</code> (1) ───&gt; (*) <code>fact_ventas[id_vendedor]</code></li>
+<li><code>dim_tiempo[fecha]</code> (1) ───&gt; (*) <code>fact_ventas[fecha_venta]</code></li>
+</ul>
+<h3 id="creacion-de-medidas-dax-criticas">Creación de Medidas DAX Críticas</h3>
+<p>Se implementaron medidas de negocio explícitas para consolidar los KPIs analizados:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Ingresos Monetarios Consolidados</span>
+Ingresos_Totales = SUM(fact_ventas[monto_venta])
+
+<span class="c1">// Tasa de Activación (%)</span>
+Tasa_Activacion_Kits = 
+<span class="nf">DIVIDE</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">CALCULATE</span><span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="na">fact_ventas[lote_serie]</span><span class="p">),</span><span class="w"> </span><span class="na">fact_ventas[estado]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Activo&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">COUNT</span><span class="p">(</span><span class="na">fact_ventas[lote_serie]</span><span class="p">),</span>
+<span class="w">    </span><span class="m">0</span>
+<span class="p">)</span>
+
+<span class="c1">// Contribución Porcentual por Oficina comercial</span>
+Contribucion_Oficina = 
+<span class="nf">DIVIDE</span><span class="p">(</span>
+<span class="w">    </span><span class="na">[Ingresos_Totales]</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">CALCULATE</span><span class="p">(</span><span class="na">[Ingresos_Totales]</span><span class="p">,</span><span class="w"> </span><span class="nf">ALL</span><span class="p">(</span>dim_oficinas)),
+<span class="w">    </span><span class="m">0</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
